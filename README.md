@@ -8,4 +8,4 @@
 > Aplicación Desarrollada bajo html, css, javascript y php. 
 
 ## Imagen Aplicación ChuguisApp
-<img src="../img/module_table_top.png" alt="imagen panel de control"/>
+<img src="images/logo.png" alt="imagen panel de control"/>
