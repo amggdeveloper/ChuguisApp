@@ -20,7 +20,7 @@ $row=mysqli_fetch_array($result);
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ChuguisApp - Panel de Control</title>
+        <title>ChuguisApp | Panel de Control</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -117,16 +117,7 @@ $row=mysqli_fetch_array($result);
                                 </div>
                             </div>
                             <button type="button" class="nav-link ml-10" id="apps_modal_btn" data-toggle="modal" data-target="#appsModal"><i class="ik ik-grid"></i></button>
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.jpg" alt=""></a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="profile.html"><i class="ik ik-user dropdown-icon"></i> Perfil</a>
-                                    <a class="dropdown-item" href="#"><i class="ik ik-settings dropdown-icon"></i> Configuración</a>
-                                    <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="ik ik-mail dropdown-icon"></i> Recibidos</a>
-                                    <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> Mensajes</a>
-                                    <a class="dropdown-item" href="../includes/salirSesion.php"><i class="ik ik-power dropdown-icon"></i> Cerrar Sesión</a>
-                                </div>
-                            </div>
+                            <?php include'pages/menuModal.php';?>
 
                         </div>
                     </div>
@@ -1064,12 +1055,7 @@ $row=mysqli_fetch_array($result);
                     </div>
                 </div>
 
-                <footer class="footer">
-                    <div class="w-100 clearfix">
-                        <span class="text-center text-sm-left d-md-inline-block">Copyright © 2021 ChuguisApp. Todos los derechos reservados.</span>
-                        <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Desarrollado por <i class="fa fa-code text-danger"></i><a href="http://amggdeveloper.pythonanywhere.com/" class="text-dark" target="_blank"> amgg Developer</a></span>
-                    </div>
-                </footer>
+                <?php include 'pages/footer.php';?>
                 
             </div>
         </div>

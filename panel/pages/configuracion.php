@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Navbar | ThemeKit - Admin Template</title>
+        <title>ChuguisApp | Configuración</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,12 +23,9 @@
     </head>
 
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
+     
         <div class="wrapper">
-            <header class="header-top" header-theme="light">
+            <header class="header-top" header-theme="blue">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
@@ -98,16 +95,7 @@
                                 </div>
                             </div>
                             <button type="button" class="nav-link ml-10" id="apps_modal_btn" data-toggle="modal" data-target="#appsModal"><i class="ik ik-grid"></i></button>
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="../img/user.jpg" alt=""></a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="profile.html"><i class="ik ik-user dropdown-icon"></i> Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="ik ik-settings dropdown-icon"></i> Settings</a>
-                                    <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="ik ik-mail dropdown-icon"></i> Inbox</a>
-                                    <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> Message</a>
-                                    <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
-                                </div>
-                            </div>
+                            <?php include 'menuModal.php';?>
 
                         </div>
                     </div>
@@ -274,8 +262,8 @@
                                     <div class="page-header-title">
                                         <i class="ik ik-menu bg-blue"></i>
                                         <div class="d-inline">
-                                            <h5>Navbar</h5>
-                                            <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                            <h5>Configuración</h5>
+                                            <span>podrás cambiar el color de la barra superior</span>
                                         </div>
                                     </div>
                                 </div>
@@ -295,34 +283,34 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3>Header Color</h3>
+                                        <h3>Color Barra Cabecera</h3>
                                     </div>
                                     <div class="card-body">
-                                        <h4 class="sub-title">header-theme="light"</h4>
+                                        <h4 class="sub-title">Blanco</h4>
                                         <p class="mb-10">Add <code>header-theme="light"</code> attribute in <code>.header-top</code> class</p>
                                         <img src="../img/navbar/light.jpg" class="img-fluid border p-1 rounded" alt="">
 
-                                        <h4 class="sub-title mt-30">header-theme="dark"</h4>
+                                        <h4 class="sub-title mt-30">Negro</h4>
                                         <p class="mb-10">Add <code>header-theme="dark"</code> attribute in <code>.header-top</code> class</p>
                                         <img src="../img/navbar/dark.jpg" class="img-fluid border p-1 rounded" alt="">
 
-                                        <h4 class="sub-title mt-30">header-theme="blue"</h4>
+                                        <h4 class="sub-title mt-30">Azul</h4>
                                         <p class="mb-10">Add <code>header-theme="blue"</code> attribute in <code>.header-top</code> class</p>
                                         <img src="../img/navbar/blue.jpg" class="img-fluid border p-1 rounded" alt="">
 
-                                        <h4 class="sub-title mt-30">header-theme="red"</h4>
+                                        <h4 class="sub-title mt-30">Rojo</h4>
                                         <p class="mb-10">Add <code>header-theme="red"</code> attribute in <code>.header-top</code> class</p>
                                         <img src="../img/navbar/red.jpg" class="img-fluid border p-1 rounded" alt="">
 
-                                        <h4 class="sub-title mt-30">header-theme="orange"</h4>
+                                        <h4 class="sub-title mt-30">Naranja</h4>
                                         <p class="mb-10">Add <code>header-theme="orange"</code> attribute in <code>.header-top</code> class</p>
                                         <img src="../img/navbar/orange.jpg" class="img-fluid border p-1 rounded" alt="">
 
-                                        <h4 class="sub-title mt-30">header-theme="green"</h4>
+                                        <h4 class="sub-title mt-30">Verde</h4>
                                         <p class="mb-10">Add <code>header-theme="green"</code> attribute in <code>.header-top</code> class</p>
                                         <img src="../img/navbar/green.jpg" class="img-fluid border p-1 rounded" alt="">
 
-                                        <h4 class="sub-title mt-30">header-theme="purple"</h4>
+                                        <h4 class="sub-title mt-30">Morado</h4>
                                         <p class="mb-10">Add <code>header-theme="purple"</code> attribute in <code>.header-top</code> class</p>
                                         <img src="../img/navbar/purple.jpg" class="img-fluid border p-1 rounded" alt="">
                                     </div>
@@ -331,155 +319,11 @@
                         </div>
                     </div>
                 </div>
-
-                <aside class="right-sidebar">
-                    <div class="sidebar-chat" data-plugin="chat-sidebar">
-                        <div class="sidebar-chat-info">
-                            <h6>Chat List</h6>
-                            <form class="mr-t-10">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search for friends ..."> 
-                                    <i class="ik ik-search"></i>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="chat-list">
-                            <div class="list-group row">
-                                <a href="javascript:void(0)" class="list-group-item" data-chat-user="Gene Newman">
-                                    <figure class="user--online">
-                                        <img src="../img/users/1.jpg" class="rounded-circle" alt="">
-                                    </figure><span><span class="name">Gene Newman</span>  <span class="username">@gene_newman</span> </span>
-                                </a>
-                                <a href="javascript:void(0)" class="list-group-item" data-chat-user="Billy Black">
-                                    <figure class="user--online">
-                                        <img src="../img/users/2.jpg" class="rounded-circle" alt="">
-                                    </figure><span><span class="name">Billy Black</span>  <span class="username">@billyblack</span> </span>
-                                </a>
-                                <a href="javascript:void(0)" class="list-group-item" data-chat-user="Herbert Diaz">
-                                    <figure class="user--online">
-                                        <img src="../img/users/3.jpg" class="rounded-circle" alt="">
-                                    </figure><span><span class="name">Herbert Diaz</span>  <span class="username">@herbert</span> </span>
-                                </a>
-                                <a href="javascript:void(0)" class="list-group-item" data-chat-user="Sylvia Harvey">
-                                    <figure class="user--busy">
-                                        <img src="../img/users/4.jpg" class="rounded-circle" alt="">
-                                    </figure><span><span class="name">Sylvia Harvey</span>  <span class="username">@sylvia</span> </span>
-                                </a>
-                                <a href="javascript:void(0)" class="list-group-item active" data-chat-user="Marsha Hoffman">
-                                    <figure class="user--busy">
-                                        <img src="../img/users/5.jpg" class="rounded-circle" alt="">
-                                    </figure><span><span class="name">Marsha Hoffman</span>  <span class="username">@m_hoffman</span> </span>
-                                </a>
-                                <a href="javascript:void(0)" class="list-group-item" data-chat-user="Mason Grant">
-                                    <figure class="user--offline">
-                                        <img src="../img/users/1.jpg" class="rounded-circle" alt="">
-                                    </figure><span><span class="name">Mason Grant</span>  <span class="username">@masongrant</span> </span>
-                                </a>
-                                <a href="javascript:void(0)" class="list-group-item" data-chat-user="Shelly Sullivan">
-                                    <figure class="user--offline">
-                                        <img src="../img/users/2.jpg" class="rounded-circle" alt="">
-                                    </figure><span><span class="name">Shelly Sullivan</span>  <span class="username">@shelly</span></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-                <div class="chat-panel" hidden>
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between">
-                            <a href="javascript:void(0);"><i class="ik ik-message-square text-success"></i></a>  
-                            <span class="user-name">John Doe</span> 
-                            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>
-                        </div>
-                        <div class="card-body">
-                            <div class="widget-chat-activity flex-1">
-                                <div class="messages">
-                                    <div class="message media reply">
-                                        <figure class="user--online">
-                                            <a href="#">
-                                                <img src="../img/users/3.jpg" class="rounded-circle" alt="">
-                                            </a>
-                                        </figure>
-                                        <div class="message-body media-body">
-                                            <p>Epic Cheeseburgers come in all kind of styles.</p>
-                                        </div>
-                                    </div>
-                                    <div class="message media">
-                                        <figure class="user--online">
-                                            <a href="#">
-                                                <img src="../img/users/1.jpg" class="rounded-circle" alt="">
-                                            </a>
-                                        </figure>
-                                        <div class="message-body media-body">
-                                            <p>Cheeseburgers make your knees weak.</p>
-                                        </div>
-                                    </div>
-                                    <div class="message media reply">
-                                        <figure class="user--offline">
-                                            <a href="#">
-                                                <img src="../img/users/5.jpg" class="rounded-circle" alt="">
-                                            </a>
-                                        </figure>
-                                        <div class="message-body media-body">
-                                            <p>Cheeseburgers will never let you down.</p>
-                                            <p>They'll also never run around or desert you.</p>
-                                        </div>
-                                    </div>
-                                    <div class="message media">
-                                        <figure class="user--online">
-                                            <a href="#">
-                                                <img src="../img/users/1.jpg" class="rounded-circle" alt="">
-                                            </a>
-                                        </figure>
-                                        <div class="message-body media-body">
-                                            <p>A great cheeseburger is a gastronomical event.</p>
-                                        </div>
-                                    </div>
-                                    <div class="message media reply">
-                                        <figure class="user--busy">
-                                            <a href="#">
-                                                <img src="../img/users/5.jpg" class="rounded-circle" alt="">
-                                            </a>
-                                        </figure>
-                                        <div class="message-body media-body">
-                                            <p>There's a cheesy incarnation waiting for you no matter what you palete preferences are.</p>
-                                        </div>
-                                    </div>
-                                    <div class="message media">
-                                        <figure class="user--online">
-                                            <a href="#">
-                                                <img src="../img/users/1.jpg" class="rounded-circle" alt="">
-                                            </a>
-                                        </figure>
-                                        <div class="message-body media-body">
-                                            <p>If you are a vegan, we are sorry for you loss.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <form action="javascript:void(0)" class="card-footer" method="post">
-                            <div class="d-flex justify-content-end">
-                                <textarea class="border-0 flex-1" rows="1" placeholder="Type your message here"></textarea>
-                                <button class="btn btn-icon" type="submit"><i class="ik ik-arrow-right text-success"></i></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <footer class="footer">
-                    <div class="w-100 clearfix">
-                        <span class="text-center text-sm-left d-md-inline-block">Copyright © 2018 ThemeKit v2.0. All Rights Reserved.</span>
-                        <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://lavalite.org/" class="text-dark" target="_blank">Lavalite</a></span>
-                    </div>
-                </footer>
+                <!--Footer-->
+                <?php include 'footer.php';?>
             </div>
         </div>
-        
-        
-        
-
+          
         <div class="modal fade apps-modal" id="appsModal" tabindex="-1" role="dialog" aria-labelledby="appsModalLabel" aria-hidden="true" data-backdrop="false">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ik ik-x-circle"></i></button>
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -564,7 +408,7 @@
         <script src="../plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
         <script src="../plugins/screenfull/dist/screenfull.js"></script>
         <script src="../dist/js/theme.min.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
