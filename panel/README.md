@@ -3,3 +3,6 @@
 ## Instrucciones
 
 > Panel de Control en el cual vamos a seleccionar todas las opciones que tiene la aplicación 'ChuguisApp'. En el encontraremos varias opciones, entre ellas el propio perfil del usuario y la configuración del mismo. Dentro del propio panel hay una sección de ayudas en la cual se explicará con ejemplos lo que podemos realizar con este panel de control en todas sus opciones y casos de uso.
+
+## Imagen Inicio Panel de Control
+<img src="img/portfolio-1.jpg" alt="imagen panel de control"/>
