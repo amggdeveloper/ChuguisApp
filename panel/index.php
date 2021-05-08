@@ -66,7 +66,16 @@ $row=mysqli_fetch_array($result);
                                 <div class="dropdown-menu dropdown-menu-right notification-dropdown" aria-labelledby="notiDropdown">                                    
                                 </div>
                             </div>                           
-                            <?php include'pages/menuModal.php';?>
+                        <!--Menu modal-->
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.jpg" alt=""></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="pages/perfil.php"><i class="ik ik-user dropdown-icon"></i> Perfil</a>
+                                <a class="dropdown-item" href="pages/configuracion.php"><i class="ik ik-settings dropdown-icon"></i> Configuración</a>
+                                <a class="dropdown-item" href="pages/ayuda.php"><i class="ik ik-navigation dropdown-icon"></i> Ayuda</a>
+                                <a class="dropdown-item" href="../includes/salirSesion.php"><i class="ik ik-power dropdown-icon"></i> Cerrar Sesión</a>
+                        </div>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +125,7 @@ $row=mysqli_fetch_array($result);
                                     </div>
                                 </div>
                                 <div class="nav-item has-sub">
-                                    <a href="#"><i class="ik ik-gitlab"></i><span>Peso</span> <span class="badge badge-success">New</span></a>
+                                    <a href="#"><i class="ik ik-gitlab"></i><span>Peso</span></a>
                                     <div class="submenu-content">
                                         <a href="pages/ui/modals.html" class="menu-item">Modals</a>
                                         <a href="pages/ui/notifications.html" class="menu-item">Notifications</a>
@@ -1003,33 +1012,12 @@ $row=mysqli_fetch_array($result);
                     </div>
                 </div>
 
+                <!--Footer-->
                 <?php include 'pages/footer.php';?>
                 
             </div>
         </div>
-        
-        
-        
 
-        <div class="modal fade apps-modal" id="appsModal" tabindex="-1" role="dialog" aria-labelledby="appsModalLabel" aria-hidden="true" data-backdrop="false">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ik ik-x-circle"></i></button>
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                < class="modal-content">
-                    <div class="quick-search">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4 ml-auto mr-auto">
-                                    <div class="input-wrap">
-                                        <input type="text" id="quick-search" class="form-control" placeholder="Search..." />
-                                        <i class="ik ik-search"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        
         <!--Ficheros Javascript-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
@@ -1051,7 +1039,7 @@ $row=mysqli_fetch_array($result);
         <script src="js/widgets.js"></script>
         <script src="js/charts.js"></script>
         <script src="dist/js/theme.min.js"></script>
-        
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
