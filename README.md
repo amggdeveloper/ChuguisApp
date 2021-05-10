@@ -5,7 +5,7 @@
 
 ## Desarrollo
 
-> Aplicación Desarrollada bajo html, css, javascript y php. 
+> Aplicación Desarrollada bajo html, css, javascript, php y Django (python). 
 
 ## Imagen Aplicación ChuguisApp
 <img src="images/logo.png" alt="imagen panel de control"/>
