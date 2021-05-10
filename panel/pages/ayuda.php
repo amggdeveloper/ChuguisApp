@@ -5,7 +5,7 @@
         <!--Metas-->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ChuguisApp | Perfil</title>
+        <title>ChuguisApp | Ayuda</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,10 +64,10 @@
                             <div class="row align-items-end">
                                 <div class="col-lg-8">
                                     <div class="page-header-title">
-                                        <i class="ik ik-user bg-blue"></i>
+                                        <i class="ik ik-help-circle bg-blue"></i>
                                         <div class="d-inline">
-                                            <h5>Perfil</h5>
-                                            <span>bienvenido a tu perfil, podrás actualizar y cambiar los datos que quieras</span>
+                                            <h5>Ayuda</h5>
+                                            <span>aquí podrás encontrar los casos de uso de la aplicación</span>
                                         </div>
                                     </div>
                                 </div>
@@ -78,60 +78,46 @@
                                             <li class="breadcrumb-item">
                                                 <a href="../index.php"><i class="ik ik-home"></i></a>
                                             </li>                                          
-                                            <li class="breadcrumb-item active" aria-current="page">Perfil</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Ayuda</li>
                                         </ol>
                                     </nav>
                                 </div>
                             </div>
-                        </div>
-                        <!--Tarjeta Presentación-->
-                        <div class="row">
-                            <div class="col-lg-4 col-md-5">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="text-center"> 
-                                            <img src="../img/user.jpg" class="rounded-circle" width="150" />
-                                            <h4 class="card-title mt-10">Nombre Usuario</h4>
-                                            <p class="card-subtitle">Descripción usuario</p>
-                                            <div class="row text-center justify-content-md-center">
-                                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-user"></i> <font class="font-medium">254</font></a></div>
-                                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-image"></i> <font class="font-medium">54</font></a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="mb-0"> 
-                                    <div class="card-body"> 
-                                        <small class="text-muted d-block">Email </small>
-                                        <h6>email usuario</h6> 
-                                        <small class="text-muted d-block pt-10">Móvil</small>
-                                        <h6>movil usuario</h6> 
-                                        <small class="text-muted d-block pt-10">Dirección</small>
-                                        <h6>dirección usuario</h6>
-                                        <div class="map-box">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085452149588!3d12.953959988118836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1542005497600" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                        </div> 
-                                        <small class="text-muted d-block pt-30">Redes Sociales</small>
-                                        <br/>
-                                        <button class="btn btn-icon btn-facebook"><i class="fab fa-facebook-f"></i></button>
-                                        <button class="btn btn-icon btn-twitter"><i class="fab fa-twitter"></i></button>
-                                        <button class="btn btn-icon btn-instagram"><i class="fab fa-instagram"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Cajas de Contenido Perfil-->
-                            <div class="col-lg-8 col-md-7">
+                        </div>                      
+                            <!--Pestañas de la Ayuda-->
+                            <div class="col-lg-12 col-md-9">
                                 <div class="card">
                                     <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="true">Tablón</a>
+                                            <a class="nav-link active" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="true">Inicio</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Perfil</a>
+                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Bebés</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Configuración</a>
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Altura</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Peso</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Percentil</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Tomas</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Vacunación</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos Introducidos</a>
                                         </li>
                                     </ul>
+                                   
+                                    <!--Pestañas individuales-->
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="current-month" role="tabpanel" aria-labelledby="pills-timeline-tab">
                                             <div class="card-body">

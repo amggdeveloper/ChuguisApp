@@ -17,18 +17,20 @@ $row=mysqli_fetch_array($result);
 
 <!doctype html>
 <html class="no-js" lang="es">
+    <!--Empieza HEAD-->
     <head>
+        <!--Metas de la aplicación-->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ChuguisApp | Panel de Control</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <!--Icono de la apliación-->
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+        <!--Fuentes -->
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
-        
+        <!--Hojas de estilos de la aplicación-->
         <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
@@ -44,14 +46,17 @@ $row=mysqli_fetch_array($result);
         <link rel="stylesheet" href="dist/css/theme.min.css">
         <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-
+    <!--Termina HEAD-->
+    <!--Empieza BODY-->
     <body>
+        <!--Barra de la Cabecera-->
         <div class="wrapper">
             <header class="header-top" header-theme="blue">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
                             <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+                            <!--Sección buscar de la cabecera-->
                             <div class="header-search">
                                 <div class="input-group">
                                     <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
@@ -59,6 +64,7 @@ $row=mysqli_fetch_array($result);
                                     <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
                                 </div>
                             </div>
+                            <!--Botón maximizar de la cabecera-->
                             <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button>
                         </div>
                         <div class="top-menu d-flex align-items-center">
@@ -74,11 +80,11 @@ $row=mysqli_fetch_array($result);
                                 <a class="dropdown-item" href="pages/configuracion.php"><i class="ik ik-settings dropdown-icon"></i> Configuración</a>
                                 <a class="dropdown-item" href="pages/ayuda.php"><i class="ik ik-navigation dropdown-icon"></i> Ayuda</a>
                                 <a class="dropdown-item" href="../includes/salirSesion.php"><i class="ik ik-power dropdown-icon"></i> Cerrar Sesión</a>
-                        </div>
-                    </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </header>
             <!--Cabecera barra lateral-->
             <div class="page-wrap">
@@ -100,140 +106,44 @@ $row=mysqli_fetch_array($result);
                             <nav id="main-menu-navigation" class="navigation-main">
                                 <div class="nav-lavel">Panel de Control</div>
                                 <div class="nav-item active">
-                                    <a href="index.php"><i class="ik ik-bar-chart-2"></i><span>Inicio</span></a>
+                                    <a href="index.php"><i class="ik ik-home"></i><span>Inicio</span></a>
                                 </div>
                                 <div class="nav-item">
-                                    <a href="pages/navbar.html"><i class="ik ik-menu"></i><span>Usuarios</span> <span class="badge badge-success">New</span></a>
-                                </div>
-                                <div class="nav-item has-sub">
-                                    <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Blog</span> <span class="badge badge-danger">150+</span></a>
-                                    <div class="submenu-content">
-                                        <a href="pages/widgets.html" class="menu-item">Basic</a>
-                                        <a href="pages/widget-statistic.html" class="menu-item">Statistic</a>
-                                        <a href="pages/widget-data.html" class="menu-item">Data</a>
-                                        <a href="pages/widget-chart.html" class="menu-item">Chart Widget</a>
-                                    </div>
-                                </div>
+                                    <a href="pages/bebes.php"><i class="ik ik-users"></i><span>Bebés</span></a>
+                                </div>                               
                                 <div class="nav-lavel">Fisico</div>
-                                <div class="nav-item has-sub">
-                                    <a href="#"><i class="ik ik-box"></i><span>Altura</span></a>
-                                    <div class="submenu-content">
-                                        <a href="pages/ui/alerts.html" class="menu-item">Alerts</a>
-                                        <a href="pages/ui/badges.html" class="menu-item">Badges</a>
-                                        <a href="pages/ui/buttons.html" class="menu-item">Buttons</a>
-                                        <a href="pages/ui/navigation.html" class="menu-item">Navigation</a>
-                                    </div>
-                                </div>
-                                <div class="nav-item has-sub">
-                                    <a href="#"><i class="ik ik-gitlab"></i><span>Peso</span></a>
-                                    <div class="submenu-content">
-                                        <a href="pages/ui/modals.html" class="menu-item">Modals</a>
-                                        <a href="pages/ui/notifications.html" class="menu-item">Notifications</a>
-                                        <a href="pages/ui/carousel.html" class="menu-item">Slider</a>
-                                        <a href="pages/ui/range-slider.html" class="menu-item">Range Slider</a>
-                                        <a href="pages/ui/rating.html" class="menu-item">Rating</a>
-                                    </div>
-                                </div>
-                                <div class="nav-item has-sub">
-                                    <a href="#"><i class="ik ik-package"></i><span>Percentil</span></a>
-                                    <div class="submenu-content">
-                                        <a href="pages/ui/session-timeout.html" class="menu-item">Session Timeout</a>
-                                    </div>
+                                <div class="nav-item">
+                                    <a href="altura.php"><i class="ik ik-star"></i><span>Altura</span></a>                                   
                                 </div>
                                 <div class="nav-item">
-                                    <a href="pages/ui/icons.html"><i class="ik ik-command"></i><span>Icons</span></a>
+                                    <a href="peso.php"><i class="ik ik-target"></i><span>Peso</span></a>                                   
                                 </div>
+                                <div class="nav-item">
+                                    <a href="percentil.php"><i class="ik ik-trending-up"></i><span>Percentil</span></a>                                   
+                                </div>                               
                                 <div class="nav-lavel">Alimentación</div>
-                                <div class="nav-item has-sub">
-                                    <a href="#"><i class="ik ik-edit"></i><span>Tomas</span></a>
-                                    <div class="submenu-content">
-                                        <a href="pages/form-components.html" class="menu-item">Components</a>
-                                        <a href="pages/form-addon.html" class="menu-item">Add-On</a>
-                                        <a href="pages/form-advance.html" class="menu-item">Advance</a>
-                                    </div>
+                                <div class="nav-item">
+                                    <a href="tomas.php"><i class="ik ik-watch"></i><span>Tomas</span></a>                                   
                                 </div>
                                 <div class="nav-item">
-                                    <a href="pages/form-picker.html"><i class="ik ik-terminal"></i><span>Alimentos</span> <span class="badge badge-success">New</span></a>
+                                    <a href="pages/alimentos.php"><i class="ik ik-pie-chart"></i><span>Alimentos</span></a>
                                 </div>
 
                                 <div class="nav-lavel">Calendario</div>
                                 <div class="nav-item">
-                                    <a href="pages/table-bootstrap.html"><i class="ik ik-credit-card"></i><span>Vacunación</span></a>
+                                    <a href="pages/vacunacion.php"><i class="ik ik-shield"></i><span>Vacunación</span></a>
                                 </div>
                                 <div class="nav-item">
-                                    <a href="pages/table-datatable.html"><i class="ik ik-inbox"></i><span>Alimentos</span></a>
-                                </div>
-
-                                <div class="nav-lavel">Charts</div>
-                                <div class="nav-item has-sub">
-                                    <a href="#"><i class="ik ik-pie-chart"></i><span>Charts</span> <span class="badge badge-success">New</span></a>
-                                    <div class="submenu-content">
-                                        <a href="pages/charts-chartist.html" class="menu-item active">Chartist</a>
-                                        <a href="pages/charts-flot.html" class="menu-item">Flot</a>
-                                        <a href="pages/charts-knob.html" class="menu-item">Knob</a>
-                                        <a href="pages/charts-amcharts.html" class="menu-item">Amcharts</a>
-                                    </div>
-                                </div>
-
-                                <div class="nav-lavel">Apps</div>
-                                <div class="nav-item">
-                                    <a href="pages/calendar.html"><i class="ik ik-calendar"></i><span>Calendar</span></a>
+                                    <a href="pages/alimentosInt.php"><i class="ik ik-clipboard"></i><span>Alimentos Introducidos</span></a>
                                 </div>
                                 <div class="nav-item">
-                                    <a href="pages/taskboard.html"><i class="ik ik-server"></i><span>Taskboard</span></a>
-                                </div>
-
-                                <div class="nav-lavel">Pages</div>
-
-                                <div class="nav-item has-sub">
-                                    <a href="#"><i class="ik ik-lock"></i><span>Authentication</span></a>
-                                    <div class="submenu-content">
-                                        <a href="pages/login.html" class="menu-item">Login</a>
-                                        <a href="pages/register.html" class="menu-item">Register</a>
-                                        <a href="pages/forgot-password.html" class="menu-item">Forgot Password</a>
-                                    </div>
-                                </div>
-                                <div class="nav-item has-sub">
-                                    <a href="#"><i class="ik ik-file-text"></i><span>Other</span></a>
-                                    <div class="submenu-content">
-                                        <a href="pages/profile.html" class="menu-item">Profile</a>
-                                        <a href="pages/invoice.html" class="menu-item">Invoice</a>
-                                    </div>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="pages/layouts.html"><i class="ik ik-layout"></i><span>Layouts</span><span class="badge badge-success">New</span></a>
-                                </div>
-                                <div class="nav-lavel">Other</div>
-                                <div class="nav-item has-sub">
-                                    <a href="javascript:void(0)"><i class="ik ik-list"></i><span>Menu Levels</span></a>
-                                    <div class="submenu-content">
-                                        <a href="javascript:void(0)" class="menu-item">Menu Level 2.1</a>
-                                        <div class="nav-item has-sub">
-                                            <a href="javascript:void(0)" class="menu-item">Menu Level 2.2</a>
-                                            <div class="submenu-content">
-                                                <a href="javascript:void(0)" class="menu-item">Menu Level 3.1</a>
-                                            </div>
-                                        </div>
-                                        <a href="javascript:void(0)" class="menu-item">Menu Level 2.3</a>
-                                    </div>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="javascript:void(0)" class="disabled"><i class="ik ik-slash"></i><span>Disabled Menu</span></a>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="javascript:void(0)"><i class="ik ik-award"></i><span>Sample Page</span></a>
-                                </div>
-                                <div class="nav-lavel">Support</div>
-                                <div class="nav-item">
-                                    <a href="javascript:void(0)"><i class="ik ik-monitor"></i><span>Documentation</span></a>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="javascript:void(0)"><i class="ik ik-help-circle"></i><span>Submit Issue</span></a>
+                                    <a href="pages/ayuda.php"><i class="ik ik-help-circle"></i><span>Ayuda</span></a>
                                 </div>
                             </nav>
                         </div>
                     </div>
                 </div>
+                <!--Contenidos de la página Inicio-->
                 <div class="main-content">
                     <div class="container-fluid">
                         <div class="row clearfix">
