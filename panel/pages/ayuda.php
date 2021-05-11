@@ -21,11 +21,13 @@
         <link rel="stylesheet" href="../plugins/perfect-scrollbar/css/perfect-scrollbar.css">
         <link rel="stylesheet" href="../dist/css/theme.min.css">
         <!--Script-->
-        <script src="../src/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="../src/js/vendor/modernizr-2.8.3.min.js"></script>    
+
     </head>
     <!--Termina HEAD-->
     <!--Empieza BODY-->
     <body>    
+    
          <!--Barra de la Cabecera-->
          <div class="wrapper">
             <header class="header-top" header-theme="blue">
@@ -36,9 +38,9 @@
                             <!--Sección buscar de la cabecera-->
                             <div class="header-search">
                                 <div class="input-group">
-                                    <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
-                                    <input type="text" class="form-control">
-                                    <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
+                                    <span class="input-group-addon search-close"><i id="cerrarBusqueda" class="ik ik-x" ></i></span>
+                                    <input type="text" class="form-control" placeholder="buscar..." id="buscarTexto">
+                                    <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>                                   
                                 </div>
                             </div>
                             <!--Botón maximizar de la cabecera-->
@@ -58,7 +60,7 @@
             <!--Cabecera barra lateral-->
             <?php include 'menuLateral.php';?>
                 <!--Empieza Contenido de la página-->
-                <div class="main-content">
+                <div class="main-content" id="content">
                     <div class="container-fluid">
                         <div class="page-header">
                             <div class="row align-items-end">
@@ -288,6 +290,10 @@
         <script src="../plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
         <script src="../plugins/screenfull/dist/screenfull.js"></script>
         <script src="../dist/js/theme.min.js"></script>
+
+        <!--Script para realizar la busqueda en la página-->
+        <script src="../js/buscar.js"></script>
+
         <!-- Google Analytics -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -37,8 +37,8 @@
                             <!--Sección buscar de la cabecera-->
                             <div class="header-search">
                                 <div class="input-group">
-                                    <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
-                                    <input type="text" class="form-control">
+                                    <span class="input-group-addon search-close"><i id="cerrarBusqueda" class="ik ik-x"></i></span>
+                                    <input type="text" class="form-control" id="buscarTexto">
                                     <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
                                 </div>
                             </div>
@@ -133,6 +133,10 @@
         <script src="../plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
         <script src="../plugins/screenfull/dist/screenfull.js"></script>
         <script src="../dist/js/theme.min.js"></script>
+
+        <!--Script para realizar la busqueda en la página-->
+        <script src="../js/buscar.js"></script>
+
         <!-- Google Analytics -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
