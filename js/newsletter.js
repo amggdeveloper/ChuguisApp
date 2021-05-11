@@ -1,121 +1,122 @@
-/* Contact Form Script */
+/* Script para el formulario del Boletin de noticias */
 
 (function() {
 
-	"use strict";
+    "use strict";
 
-	var newsletterForm = {
+    var newsletterForm = {
 
-		initialized: false,
+        initialized: false,
 
-		initialize: function() {
+        initialize: function() {
 
-			if (this.initialized) return;
-			this.initialized = true;
+            if (this.initialized) return;
+            this.initialized = true;
 
-			this.build();
-			this.events();
+            this.build();
+            this.events();
 
-		},
+        },
 
-		build: function() {
+        build: function() {
 
-			this.validations();
+            this.validations();
 
-		},
+        },
 
-		events: function() {
+        events: function() {
 
 
 
-		},
+        },
 
-		validations: function() {
+        //Función para validar el formulario
+        validations: function() {
 
-			var newsletterform = $("#newsletter-form"),
-				url = newsletterform.attr("action");
+            var newsletterform = $("#newsletter-form"),
+                url = newsletterform.attr("action");
 
-			newsletterform.validate({
-				submitHandler: function(form) {
+            newsletterform.validate({
+                submitHandler: function(form) {
 
-					// Loading State
-					var submitButton = $(this.submitButton);
-					submitButton.button("loading");
+                    // Loading State
+                    var submitButton = $(this.submitButton);
+                    submitButton.button("loading");
 
-					// Ajax Submit
-					$.ajax({
-						type: "POST",
-						url: url,
-						data: {
-							"email": $("#newsletter-form #email").val()
-						},
-						dataType: "json",
-						success: function (data) {
-							if (data.response == "success") {
+                    // Ajax Submit
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: {
+                            "email": $("#newsletter-form #email").val()
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            if (data.response == "success") {
 
-								$("#newsletter-alert-success").removeClass("hidden");
-								$("#newsletter-alert-error").addClass("hidden");
+                                $("#newsletter-alert-success").removeClass("hidden");
+                                $("#newsletter-alert-error").addClass("hidden");
 
-								// Reset Form
-								$("#newsletter-form .form-control")
-									.val("")
-									.blur()
-									.parent()
-									.removeClass("has-success")
-									.removeClass("has-error")
-									.find("label.error")
-									.remove();
+                                // Reset Form
+                                $("#newsletter-form .form-control")
+                                    .val("")
+                                    .blur()
+                                    .parent()
+                                    .removeClass("has-success")
+                                    .removeClass("has-error")
+                                    .find("label.error")
+                                    .remove();
 
-									if(($("#newsletter-alert-success").position().top - 80) < $(window).scrollTop()){
-										$("html, body").animate({
-											 scrollTop: $("#newsletter-alert-success").offset().top - 80
-										}, 300);
-									}
+                                if (($("#newsletter-alert-success").position().top - 80) < $(window).scrollTop()) {
+                                    $("html, body").animate({
+                                        scrollTop: $("#newsletter-alert-success").offset().top - 80
+                                    }, 300);
+                                }
 
-							} else {
+                            } else {
 
-								$("#newsletter-alert-error").removeClass("hidden");
-								$("#newsletter-alert-success").addClass("hidden");
+                                $("#newsletter-alert-error").removeClass("hidden");
+                                $("#newsletter-alert-success").addClass("hidden");
 
-								if(($("#newsletter-alert-error").position().top - 80) < $(window).scrollTop()){
-									$("html, body").animate({
-										scrollTop: $("#newsletter-alert-error").offset().top - 80
-									}, 300);
-								}
+                                if (($("#newsletter-alert-error").position().top - 80) < $(window).scrollTop()) {
+                                    $("html, body").animate({
+                                        scrollTop: $("#newsletter-alert-error").offset().top - 80
+                                    }, 300);
+                                }
 
-							}
-						},
-						complete: function () {
-							submitButton.button("reset");
-						}
-					});
-				},
-				rules: {
-					email: {
-						required: true,
-						email: true
-					}
-				},
-				highlight: function (element) {
-					$(element)
-						.parent()
-						.removeClass("has-success")
-						.addClass("has-error");
-				},
-				success: function (element) {
-					$(element)
-						.parent()
-						.removeClass("has-error")
-						.addClass("has-success")
-						.find("label.error")
-						.remove();
-				}
-			});
+                            }
+                        },
+                        complete: function() {
+                            submitButton.button("reset");
+                        }
+                    });
+                },
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                highlight: function(element) {
+                    $(element)
+                        .parent()
+                        .removeClass("has-success")
+                        .addClass("has-error");
+                },
+                success: function(element) {
+                    $(element)
+                        .parent()
+                        .removeClass("has-error")
+                        .addClass("has-success")
+                        .find("label.error")
+                        .remove();
+                }
+            });
 
-		}
+        }
 
-	};
+    };
 
-	newsletterForm.initialize();
+    newsletterForm.initialize();
 
 })();
