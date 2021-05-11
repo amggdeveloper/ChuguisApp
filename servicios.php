@@ -91,7 +91,7 @@
 						</div>
 						<div class="col-md-6">
 							<ul class="breadcrumb">
-								<li><a href="index.php">Inicio</a></li>								
+								<li><a href="index.php"><i class="fa fa-home"></i></a></li>								
 								<li class="active">Servicios</li>
 							</ul>
 						</div>

@@ -5,7 +5,7 @@
         <!--Metas-->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ChuguisApp | Ayuda</title>
+        <title>ChuguisApp | Alimentos</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,8 +59,8 @@
             </header>
             <!--Cabecera barra lateral-->
             <?php include 'menuLateral.php';?>
-            <!--Contenidos barra lateral-->
-            <div class="sidebar-content">
+             <!--Contenidos barra lateral-->
+             <div class="sidebar-content">
                         <div class="nav-container">
                             <nav id="main-menu-navigation" class="navigation-main">
                                 <div class="nav-lavel">Panel de Control</div>
@@ -84,7 +84,7 @@
                                 <div class="nav-item">
                                     <a href="tomas.php"><i class="ik ik-watch"></i><span>Tomas</span></a>                                    
                                 </div>
-                                <div class="nav-item">
+                                <div class="nav-item active">
                                     <a href="alimentos.php"><i class="ik ik-pie-chart"></i><span>Alimentos</span></a>
                                 </div>
 
@@ -95,7 +95,7 @@
                                 <div class="nav-item">
                                     <a href="alimentosInt.php"><i class="ik ik-clipboard"></i><span>Alimentos Introducidos</span></a>
                                 </div>                              
-                                <div class="nav-item active">
+                                <div class="nav-item">
                                     <a href="ayuda.php"><i class="ik ik-help-circle"></i><span>Ayuda</span></a>
                                 </div>
                             </nav>
@@ -109,10 +109,10 @@
                             <div class="row align-items-end">
                                 <div class="col-lg-8">
                                     <div class="page-header-title">
-                                        <i class="ik ik-help-circle bg-blue"></i>
+                                        <i class="ik ik ik-pie-chart bg-blue"></i>
                                         <div class="d-inline">
-                                            <h5>Ayuda</h5>
-                                            <span>aquí podrás encontrar los casos de uso de la aplicación</span>
+                                            <h5>Alimentos</h5>
+                                            <span>aquí podrás llevar un control sobre la introducción de alimentos para tu bebé</span>
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                                             <li class="breadcrumb-item">
                                                 <a href="../index.php"><i class="ik ik-home"></i></a>
                                             </li>                                          
-                                            <li class="breadcrumb-item active" aria-current="page">Ayuda</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Alimentos</li>
                                         </ol>
                                     </nav>
                                 </div>

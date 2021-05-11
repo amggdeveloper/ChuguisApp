@@ -87,7 +87,7 @@
 						</div>
 						<div class="col-md-6">
 							<ul class="breadcrumb">
-								<li><a href="index.php">Home</a></li>
+								<li><a href="index.php"><i class="fa fa-home"></i></a></li>
 								<li><a href="blog.php">Blog</a></li>
 								<li class="active">Entrada</li>
 							</ul>

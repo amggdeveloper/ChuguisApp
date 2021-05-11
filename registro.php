@@ -164,7 +164,7 @@ if (isset($_POST['registro'])) {
 						<div class="col-md-6">
 						<!--Breadcrumbs-->
 							<ul class="breadcrumb">
-								<li><a href="index.php">Inicio</a></li>								
+								<li><a href="index.php"><i class="fa fa-home"></i></a></li>								
 								<li class="active">Registrar</li>
 							</ul>
 						</div>

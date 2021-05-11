@@ -53,40 +53,53 @@
                         <?php include 'menuModal.php';?>
                     </div>
                 </div>
-            </div>
-            </header>
-
-        <!--Barra de la Cabecera-->
-         <div class="wrapper">
-            <header class="header-top" header-theme="blue">
-                <div class="container-fluid">
-                    <div class="d-flex justify-content-between">
-                        <div class="top-menu d-flex align-items-center">
-                            <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
-                            <!--Sección buscar de la cabecera-->
-                            <div class="header-search">
-                                <div class="input-group">
-                                    <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
-                                    <input type="text" class="form-control">
-                                    <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
-                                </div>
-                            </div>
-                            <!--Botón maximizar de la cabecera-->
-                            <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button>
-                        </div>
-                        <div class="top-menu d-flex align-items-center">
-                            <div class="dropdown">
-                                <div class="dropdown-menu dropdown-menu-right notification-dropdown" aria-labelledby="notiDropdown">                                    
-                                </div>
-                            </div>                           
-                        <!--Menu modal-->
-                        <?php include 'menuModal.php';?>
-                    </div>
-                </div>
-            </div>
+            </div>           
             </header>
             <!--Cabecera barra lateral-->
             <?php include 'menuLateral.php';?>
+            <!--Contenidos barra lateral-->
+            <div class="sidebar-content">
+                        <div class="nav-container">
+                            <nav id="main-menu-navigation" class="navigation-main">
+                                <div class="nav-lavel">Panel de Control</div>
+                                <div class="nav-item">
+                                    <a href="../index.php"><i class="ik ik-home"></i><span>Inicio</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="bebes.php"><i class="ik ik-users"></i><span>Bebés</span></a>
+                                </div>                                
+                                <div class="nav-lavel">Fisico</div>
+                                <div class="nav-item">
+                                    <a href="altura.php"><i class="ik ik-star"></i><span>Altura</span></a>                                    
+                                </div>
+                                <div class="nav-item">
+                                    <a href="peso.php"><i class="ik ik-target"></i><span>Peso</span></a>                                  
+                                </div>
+                                <div class="nav-item">
+                                    <a href="percentil.php"><i class="ik ik-trending-up"></i><span>Percentil</span></a>                                   
+                                </div>                                
+                                <div class="nav-lavel">Alimentación</div>
+                                <div class="nav-item">
+                                    <a href="tomas.php"><i class="ik ik-watch"></i><span>Tomas</span></a>                                    
+                                </div>
+                                <div class="nav-item">
+                                    <a href="alimentos.php"><i class="ik ik-pie-chart"></i><span>Alimentos</span></a>
+                                </div>
+
+                                <div class="nav-lavel">Calendario</div>
+                                <div class="nav-item">
+                                    <a href="vacunacion.php"><i class="ik ik-shield"></i><span>Vacunación</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="alimentosInt.php"><i class="ik ik-clipboard"></i><span>Alimentos Introducidos</span></a>
+                                </div>                              
+                                <div class="nav-item">
+                                    <a href="ayuda.php"><i class="ik ik-help-circle"></i><span>Ayuda</span></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
                 <!--Empieza Contenido de la página-->
                 <div class="main-content">
                     <div class="container-fluid">
