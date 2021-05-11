@@ -275,11 +275,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>               
-                <!--Footer-->
-                <?php include 'footer.php';?>
+                        </div>  
+                    </div>   
+                    <!--Footer-->
+                    <?php include 'footer.php';?>
+                </div>                                        
             </div>
         </div>
         <!--Scripts-->   
