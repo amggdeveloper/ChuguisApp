@@ -39,12 +39,16 @@
 									<div class="widget-content">
 										<ul class="latest-posts-list">
 											<li>
-												<h5 class="title"><a href="blog.php">Como Loguearte en ChuguisApp</a></h5>
-												<span class="date">Abril, 27 2021</span>
+												<h5 class="title"><a href="blog.php">¿Pañales de Tela?</a></h5>
+												<span class="date">18 Mayo 2021</span>
 											</li>
 											<li>
-												<h5 class="title"><a href="blog.php">Como Registrarte en ChuguisApp</a></h5>
-												<span class="date">Abril, 27 2021</span>
+												<h5 class="title"><a href="blog.php">¿Cómo puedo Loguearme en ChuguisApp?</a></h5>
+												<span class="date">27 Abril 2021</span>
+											</li>
+											<li>
+												<h5 class="title"><a href="blog.php">¿Cómo puedo Registrarme en ChuguisApp?</a></h5>
+												<span class="date">16 Abril 2021</span>
 											</li>
 										</ul>
 									</div>

@@ -119,7 +119,7 @@
 							<p>ChuguisApp es una aplicación desarrollada de manera independiente, que surge por la necesidad de poder tener un seguimiento adecuado sobre las rutinas que llevamos a cabo con nuestros bebés.</p> 
 							<div class="spacer-sm"></div>
 							
-							<a href="blog.html" class="btn btn-primary">Leer Más</a>
+							<a href="blog.php" class="btn btn-primary">Leer Más</a>
 						</div>
 					</div>
 
@@ -135,7 +135,7 @@
 								</div>
 								<div class="icon-box-body">
 									<h3>Servicios que ofrecemos</h3>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales lacinia faucibus.
+									Ofrecemos resolución de dudas en un máximo de 24 horas. Las incidencias son resueltas al instante. Actualizaciones periodicas de la aplicación para resolver errores.
 								</div>
 							</div>
 							
@@ -148,7 +148,7 @@
 								</div>
 								<div class="icon-box-body">
 									<h3>Monitorización</h3>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales lacinia faucibus.
+									Podrá monitorizar todo lo relacionado con la vida diaria de su bebé, haciendo más fácil las actividades cotidianas.
 								</div>
 							</div>
 							
@@ -161,7 +161,7 @@
 								</div>
 								<div class="icon-box-body">
 									<h3>Seguimiento</h3>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales lacinia faucibus.
+									Seguimiento de la evolución de su bebé en cada etapa evolutiva, llevando un control visual de las distintas características de su bebé.
 								</div>
 							</div>
 							
@@ -180,7 +180,7 @@
 								</div>
 								<div class="icon-box-body">
 									<h3>Testeo de Marcas</h3>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales lacinia faucibus.
+									Ofrecemos información sobre las distintas marcas testeadas, gracias a un equipo de testeadores profesionales, los cuales practican las actividades necesarias para probar los productos.
 								</div>
 							</div>
 							
@@ -193,7 +193,7 @@
 								</div>
 								<div class="icon-box-body">
 									<h3>Ejercicios</h3>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales lacinia faucibus.
+									Tablas de ejercicios que pueden llevar a cabo los bebés para poder desarrollar las distintas capacidades evolutivas.
 								</div>
 							</div>
 							
@@ -206,7 +206,7 @@
 								</div>
 								<div class="icon-box-body">
 									<h3>Juegos</h3>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales lacinia faucibus.
+									Ejemplos de juegos a realizar con nuestros bebés para desarrollar capacidades evolutivas.
 								</div>
 							</div>
 							<!-- Termina Recuadros Informativos con Iconos -->

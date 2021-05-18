@@ -86,12 +86,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<h1>Ayudas</h1>
+							<h1>Ayuda</h1>
 						</div>
 						<div class="col-md-6">
 							<ul class="breadcrumb">
 								<li><a href="index.php"><i class="fa fa-home"></i></a></li>								
-								<li class="active">Ayudas</li>
+								<li class="active">Ayuda</li>
 							</ul>
 						</div>
 					</div>
@@ -154,15 +154,14 @@
 									<div class="panel-heading">
 										<h4 class="panel-title">
 											<a data-toggle="collapse" data-parent="#accordion" href="#accordion-4" class="collapsed">
-												Nulla eget nibh neque. Phasellus bibendum erat ligula?
+												¿Se puede comentar las entradas del blog?
 											</a>
 										</h4>
 									</div>
 									<div id="accordion-4" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>Vivamus eget elit ultricies, convallis urna in, sagittis nulla. Duis sollicitudin suscipit nisi. Etiam sit amet ipsum urna. Etiam mi diam, tincidunt in libero vel, commodo suscipit risus. Nam pharetra auctor volutpat.</p>
+											<p>Para comentar las entradas del blog puedes ponerte en contacto con nosotros desde el formulario de contacto y poner tu opinión sobre ellas. En unos días subiremos o actualizaremos la información según nos comenteis.</p>
 
-											Vivamus malesuada at nisl quis posuere. Aliquam interdum urna nec ligula viverra, non rhoncus enim iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 										</div>
 									</div>
 								</div>
@@ -170,15 +169,13 @@
 									<div class="panel-heading">
 										<h4 class="panel-title">
 											<a data-toggle="collapse" data-parent="#accordion" href="#accordion-5" class="collapsed">
-												Vestibulum ante ipsum primis in faucibus orci?
+												¿Se pueden introducir varios bebés en la aplicación?
 											</a>
 										</h4>
 									</div>
 									<div id="accordion-5" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>Vivamus eget elit ultricies, convallis urna in, sagittis nulla. Duis sollicitudin suscipit nisi. Etiam sit amet ipsum urna. Etiam mi diam, tincidunt in libero vel, commodo suscipit risus. Nam pharetra auctor volutpat.</p>
-
-											Vivamus malesuada at nisl quis posuere. Aliquam interdum urna nec ligula viverra, non rhoncus enim iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+											<p>Sí, en la pestaña bebés del panel de control, podemos añadir todos los bebés que queramos para ir haciendo el seguimiento y la monitorización con ellos. </p>
 										</div>
 									</div>
 								</div>
@@ -186,15 +183,13 @@
 									<div class="panel-heading">
 										<h4 class="panel-title">
 											<a data-toggle="collapse" data-parent="#accordion" href="#accordion-6" class="collapsed">
-												In sed interdum nibh. Pellentesque ornare turpis velit?
+												¿Si tuviera un problema con la aplicación en fin de semana, se podría solucionar?
 											</a>
 										</h4>
 									</div>
 									<div id="accordion-6" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>Vivamus eget elit ultricies, convallis urna in, sagittis nulla. Duis sollicitudin suscipit nisi. Etiam sit amet ipsum urna. Etiam mi diam, tincidunt in libero vel, commodo suscipit risus. Nam pharetra auctor volutpat.</p>
-
-											Vivamus malesuada at nisl quis posuere. Aliquam interdum urna nec ligula viverra, non rhoncus enim iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+											<p>Si, nuestro servicio de atención a incidencias se pondrá en contacto con usted antes de las 48 horas para solucionar la incidencia. </p>
 										</div>
 									</div>
 								</div>
@@ -202,15 +197,13 @@
 									<div class="panel-heading">
 										<h4 class="panel-title">
 											<a data-toggle="collapse" data-parent="#accordion" href="#accordion-7" class="collapsed">
-												Donec ultricies leo ut lacus feugiat pulvinar?
+												¿Qué unidades métricas se utilizan en la aplicación?
 											</a>
 										</h4>
 									</div>
 									<div id="accordion-7" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>Vivamus eget elit ultricies, convallis urna in, sagittis nulla. Duis sollicitudin suscipit nisi. Etiam sit amet ipsum urna. Etiam mi diam, tincidunt in libero vel, commodo suscipit risus. Nam pharetra auctor volutpat.</p>
-
-											Vivamus malesuada at nisl quis posuere. Aliquam interdum urna nec ligula viverra, non rhoncus enim iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+											<p>Actualmente las medidas métricas para altura y peso son:  cm para la altura y gramos para el peso. </p>
 										</div>
 									</div>
 								</div>
@@ -218,15 +211,13 @@
 									<div class="panel-heading">
 										<h4 class="panel-title">
 											<a data-toggle="collapse" data-parent="#accordion" href="#accordion-8" class="collapsed">
-												Nulla eget nibh neque. Phasellus bibendum erat ligula?
+												¿Para qué sirve suscribirte al Boletín de Noticias?
 											</a>
 										</h4>
 									</div>
 									<div id="accordion-8" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>Vivamus eget elit ultricies, convallis urna in, sagittis nulla. Duis sollicitudin suscipit nisi. Etiam sit amet ipsum urna. Etiam mi diam, tincidunt in libero vel, commodo suscipit risus. Nam pharetra auctor volutpat.</p>
-
-											Vivamus malesuada at nisl quis posuere. Aliquam interdum urna nec ligula viverra, non rhoncus enim iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+											<p>Si decides suscribirte al boletín de noticias, recibiras las últimas novedades de las funcionalidades de la aplicación, así como información de como utilizar más detalladamente estas.</p>
 										</div>
 									</div>
 								</div>
@@ -243,7 +234,7 @@
 									<p>¡Pongase en contacto con nosotros!</p>
 								</div>
 								<div class="cta-btn">
-									<a href="contacto.html" class="btn btn-primary">Contactar</a>
+									<a href="contacto.php" class="btn btn-primary">Contactar</a>
 								</div>
 							</div>
 							<!-- Termina recuadro de información-->

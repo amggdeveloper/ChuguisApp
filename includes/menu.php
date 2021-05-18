@@ -4,7 +4,7 @@
 
 					<!-- Empieza Logotipo -->
 					<div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt="ChuguisApp"></a>						
+						<a href="index.php"><img src="images/logo.png" alt="ChuguisApp"></a>						
 						<span class="tagline hidden-xs hidden-sm">Monitorización y seguimiento para Bebés</span>
 					</div>
 					<!-- Termina Logotipo -->
