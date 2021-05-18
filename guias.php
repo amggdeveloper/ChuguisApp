@@ -107,200 +107,110 @@
 					<div class="row">
 						<div class="content col-md-12">
 
-							<!-- Post (Standard Format) -->
+							<!-- Empieza Contenido Guías -->
 							<article class="entry entry__standard entry__with-icon">
 								<figure class="alignnone entry-thumb">
-									<a href="images/samples/bebe1.jpg"><img src="images/samples/bebe1.jpg" alt=""></a>
+									<a href="images/samples/guias1.jpg"><img src="images/samples/guias1.jpg" alt="mujer con bebe"></a>
 								</figure>
 								<header class="entry-header">
 									<div class="entry-icon visible-md visible-lg">
 										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
+										<span class="date-sm">Mar, 2021</span>
 										<i class="entypo text-doc"></i>
 									</div>
-									<h2><a href="blog-post.html">Standard Post Format (with Image)</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
+									<h2><a href="">Cada Bebé Es Un Mundo</a></h2>									
 								</header>
 								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
-							</article>
-							<!-- Post (Standard Format) / End -->
+									Cada bebé es un individuo diferente y único con necesidades e intereses propios. Si bien es cierto que existen características
+									comunes correspondientes a una edad u otra, cada uno tiene su propio ritmo de desarrollo.
+									Algunos niños pueden conseguir conductas, desarrollar habilidades y destrezas antes, otros pueden hacerlo más tarde.
+									Siempres se tiende a hacer comparaciones de las cosas que no han logrado los pequeños en relación a otros. Las comparaciones
+									no son buenas, especialmente si está presente el niño y ya es más mayor, porque estas comparaciones de "él si y tú no" pueden
+									lesionar su autoestima.
+									Esto no significa que no estimulemos a nuestros hijos, debemos presentarle un ambiente que lo incite a realizar ensayos de 
+									conducas que aún están por establecerse, elogiando los logros conseguidos y respetando siempre su ritmo de desarrollo.
+								</div>								
+							</article>	
 
-							<!-- Post (Gallery Format) -->
-							<article class="entry entry__gallery entry__with-icon">
-								<!-- Project Slider -->
-								<div class="owl-carousel owl-theme owl-slider thumbnail">
-									<div class="item">
-										<a href="#"><img src="http://placehold.it/1125x480" alt=""></a>
-									</div>
-									<div class="item">
-										<a href="#"><img src="http://placehold.it/1125x480" alt=""></a>
-									</div>
-									<div class="item">
-										<a href="#"><img src="http://placehold.it/1125x480" alt=""></a>
-									</div>
-								</div>
-								<!-- Project Slider / End -->
-								<header class="entry-header">
-									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
-										<i class="entypo picture"></i>
-									</div>
-									<h2><a href="blog-post.html">Gallery Post Format</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
-								</header>
-								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
-							</article>
-							<!-- Post (Gallery Format) / End -->
-
-							<!-- Post (Image Format) -->
-							<article class="entry entry__image entry__with-icon">
+							<article class="entry entry__standard entry__with-icon">
 								<figure class="alignnone entry-thumb">
-									<a href="#"><img src="http://placehold.it/1125x480" alt=""></a>
+									<a href="images/samples/guias2.jpg"><img src="images/samples/guias2.jpg" alt="hermanos"></a>
 								</figure>
 								<header class="entry-header">
 									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
-										<i class="entypo camera"></i>
+										<span class="date-lg">15</span>
+										<span class="date-sm">Mar, 2021</span>
+										<i class="entypo text-doc"></i>
 									</div>
-									<h2><a href="blog-post.html">Image Post Format</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
+									<h2><a href="">Hermanit@s</a></h2>									
 								</header>
 								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
-							</article>
-							<!-- Post (Image Format) / End -->
+									Según vaya adquiriendo mayor movilidad, el bebé querrá jugar con sus hermanos mayores y utilizar sus juguetes.
+									Por lo general los hermanos estarán contentos de que esto suceda, ya que los niños suelen ver a los bebés como 
+									un estupendo entretenimiento. 
+									A cualquier edad, un hermano es un estupendo regalo. Compartir vivencias con hermanos es una cancha de entrenamiento 
+									para la competitividad de la vida de adulto, para asimilar reglas de relación social, para compartir emociones.
+									El bebé que tiene hermanos mayores se beneficia de mayores dosis de estimulos para su desarrollo.
+									Suele observarse que, cuando el bebé divisa a su hermano o hermana, sonría, se agita, se alegra.
+									Para el mayor significa un aprendizaje de responsabilidades, pero también es una gran satisfacción comprobar lo
+									'importante' que es para el pequeño.
+									El bebé intentará invadir el 'territorio' de los mayores y apropiarse de todo aquello que le llame la atención. Los
+									hermanos deberán estar advertidos de que sus juguetes son peligrosos para él y evitarán que los cojan.
+									Es fundamental que los padres desarrollen actividades en las que puedan participar todos los hijos, como poner 
+									música para bailar, entretenerse con revistas, cuentos, muñecos de materiales blandos...
 
-							<!-- Post (Video Format) -->
+								</div>								
+							</article>			
+
 							<article class="entry entry__video entry__with-icon">
-								<figure class="alignnone video-holder">
-									<iframe src="http://player.vimeo.com/video/7449107?title=0&byline=0&portrait=0&color=a7cf3b" width="612" height="343" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+								<figure class="alignnone video-holder">		
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/FZok9aECm0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
 								</figure>
 								<header class="entry-header">
 									<div class="entry-icon visible-md visible-lg">
 										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
+										<span class="date-sm">Feb, 2021</span>
 										<i class="entypo video"></i>
 									</div>
-									<h2><a href="blog-post.html">Video Post Format</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
+									<h2><a href="blog-post.html">Trucos Desde el Canal 'Ideas en 5 Mínutos'</a></h2>								
 								</header>
 								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
-							</article>
-							<!-- Post (Video Format) / End -->
+								¡Consejos de crianza increíbles para los nuevos padres!
+								Convertirse en un padre puede ser una de las experiencias más increíbles y estresantes que cualquiera puede 
+								pasar. No solo porque tienes que cuidar a un pequeño bebé lindo, sino también porque cambia completamente 
+								tu vida. Entonces, en este video, quisimos compartir con ustedes algunos de nuestros trucos más interesantes
+								y sorprendentes que todos los padres deben aprender antes de que nazca tu bebé.
+								Para calmar a tu bebé y ayudarlo a volver a dormir sin llorar, simplemente llena una bolsa con algo de arroz y colócalo sobre la bolsa para ayudarlo a dormir.
+								Si tu hijo se esfuerza por alcanzar el fregadero cuando está tratando de lavarse las manos, no te preocupes porque tenemos el mejor truco para ti. Te mostramos cómo puedes extender el grifo de tu fregadero simplemente cortando una botella de acondicionador.
+								Los pequeños tienden a crear un gran desorden cuando comen, por lo que un babero no hace el trabajo cuando lo necesitas. Bueno, en este video, te mostramos cómo puedes cambiar el uso de una toalla de baño en un vestido tipo babero que puede dejar que tu hijo use cuando está comiendo.
+								¡Para aquellos de ustedes que no pueden deshacerse de sus juguetes viejos y están buscando maneras de reutilizarlos, tenemos algunas ideas brillantes para compartir!
+								Puedes reutilizar un viejo oso de peluche y convertirlo en un pequeño escondite para tus dulces o dinero.
+								Si tu hijo está empezando a crecer y no tiene ganas de tirar sus juguetitos, te mostramos cómo convertirlo en un tazón hermoso para tus frutas y verduras simplemente derritiendo algunos de ellos en el horno.
+								Para animar a tus hijos a que se cepillen los dientes con más frecuencia, te mostramos cómo puedes convertir sus pequeños dinosaurios en bonitos soportes para cepillos de dientes que pueden guardar en el baño.
+								¡Mira nuestro video completo para ver todos nuestros trucos más creativos y brillantes que tenemos para ti que pueden inspirarte como padre! ¡También te mostramos algunos juguetes de bricolaje increíbles para tus hijos que les ayudarán a mantenerse entretenidos sin que tengas que gastar mucho dinero en comprarlos nuevos!
 
-							<!-- Post (Link Format) -->
-							<article class="entry entry__link entry__with-icon">
-								<header class="entry-header">
-									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
-										<i class="entypo link"></i>
-									</div>
-									<h2><a href="blog-post.html">Link Post Format</a></h2>
-									<span class="entry-url"><a href="#">http://www.google.com</a></span>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
-								</header>
-							</article>
-							<!-- Post (Link Format) / End -->
-
-							<!-- Post (Quote Format) -->
-							<article class="entry entry__quote entry__with-icon">
-								<header class="entry-header">
-									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
-										<i class="entypo quote"></i>
-									</div>
-								</header>
-								<div class="quote-holder">
-									<blockquote>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales lacinia. Curabitur ut purus tincidunt. Iaculis elit a, eleifend augue. Ut gravida justo purus, ac sodales orci tincidunt non.</p>
-										<p>Phasellus blandit augue vel sollicitudin blandit. Curabitur eget rhoncus quam, vel elementum arcu. In accumsan tincidunt varius. Nunc vel ligula sit amet nibh hendrerit gravida id et orci. lectus sagittis faucibus at in mauris. Quisque id placerat elit.</p> 
-									</blockquote>
-									<cite>Timothy Black <span>Developer, Compay Name</span></cite>
-								</div>
-							</article>
-							<!-- Post (Quote Format) / End -->
-
-							<!-- Post (Standard Format) -->
-							<article class="entry entry__standard entry__with-icon">
-								<header class="entry-header">
-									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
-										<i class="entypo text-doc"></i>
-									</div>
-									<h2><a href="blog-post.html">Standard Post Format (without Image)</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
-								</header>
-								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
-							</article>
-							<!-- Post (Standard Format) / End -->
-
+								Marcas de tiempo:
+								0:07 - Cómo conseguir que un bebé duerma rápido
+								2:17 - Convierte los juguetes viejos en algo nuevo.
+								3:01 - Hermoso frutero de oro
+								4:51 - Marcos de fotos increíbles para niños
+								6:01 - conejito de pompones
+								7:17 - Cómo medir tu papel higiénico
+								7:57 - Ayuda a tus hijos a identificar izquierda y derecha 
+								</div>								
+							</article>					
 							<div class="text-center">
 								<ul class="pagination-custom list-unstyled list-inline">
 									<li><a href="#" class="btn btn-sm">&laquo;</a></li>
-									<li class="active"><a href="#" class="btn btn-sm">1</a></li>
-									<li><a href="#" class="btn btn-sm">2</a></li>									
+									<li class="active"><a href="#" class="btn btn-sm">1</a></li>																	
 									<li><a href="#" class="btn btn-sm">&raquo;</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</section>
-			<!-- Page Content / End -->
+			<!-- Termina Contenido Guías -->
 
 			<!-- Empieza Footer -->
 			<?php include 'includes/footer.php';?>
