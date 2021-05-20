@@ -171,7 +171,7 @@
 									<p>Si deseas saber información de como utilizar nuestra aplicación o nuestra página web, pincha en el siguiente botón. </p>
 								</div>
 								<div class="cta-btn">
-									<a href="ayuda.php" class="btn btn-primary btn-lg">Ayudas</a>
+									<a href="ayuda.php" class="btn btn-primary btn-lg">Ayuda</a>
 								</div>
 							</div>
 							<!-- Termina Caja con Información-->
