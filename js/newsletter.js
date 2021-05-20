@@ -41,7 +41,7 @@
 
                     // Loading State
                     var submitButton = $(this.submitButton);
-                    submitButton.button("loading");
+                    submitButton.button("Cargando");
 
                     // Ajax Submit
                     $.ajax({

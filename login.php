@@ -59,7 +59,6 @@ if(!empty($_SESSION['active'])){
 	}
 }
 ?>
-
 <!DOCTYPE html>
 <html class="not-ie no-js" lang="es"> 
 
@@ -219,7 +218,7 @@ if(!empty($_SESSION['active'])){
 
 	<!-- Formulario Boletin de Noticias -->
 	<script src="vendor/jquery.validate.js"></script>
-	<script src="js/newsletter.js"></script>
+	<!--<script src="js/newsletter.js"></script>-->
 	<script src="js/custom.js"></script>
 	
   </body>

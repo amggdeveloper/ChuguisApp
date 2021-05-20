@@ -1,3 +1,4 @@
+<?php include 'newsletter.php'?>
 <!DOCTYPE html>
 <html class="not-ie no-js" lang="es"> 
 <head>
@@ -163,7 +164,7 @@
 						</div>
 						<div class="col-md-8">
 							<h2>Formulario de Contacto</h2>
-							<form action="php/contact-form.php" id="contact-form">
+							<form action="contact-form.php" id="contact-form">
 
 								<div class="alert alert-success hidden" id="contact-alert-success">
 									<strong>¡Enviado!</strong> Gracias por su mensaje. 
@@ -259,7 +260,7 @@
 	<script src="js/contact.js"></script>
 
 	<!-- Formulario Boletín de Noticias -->
-	<script src="js/newsletter.js"></script>
+	<!--<script src="js/newsletter.js"></script>-->
 
 </body>
 </html>

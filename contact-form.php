@@ -4,7 +4,7 @@ header('Expires: ' . gmdate('r', 0));
 
 header('Content-type: application/json');
 
-// Enter your email address
+// Introducimos nuestro email para que nos llegue el mensaje
 $to = 'chuguisapp@gmail.com';
 
 $subject = $_POST['subject'];

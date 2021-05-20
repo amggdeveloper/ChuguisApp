@@ -1,3 +1,4 @@
+<?php include 'newsletter.php'?>
 <!DOCTYPE html>
 <html class="not-ie no-js" lang="es"> 
 
@@ -405,7 +406,7 @@
 
 	<!-- Formulario Boletín de Noticias -->
 	<script src="vendor/jquery.validate.js"></script>
-	<script src="js/newsletter.js"></script>
+	<!--<script src="js/newsletter.js"></script>-->
 	<script src="js/custom.js"></script>
 
   </body>

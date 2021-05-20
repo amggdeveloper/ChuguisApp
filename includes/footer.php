@@ -61,25 +61,21 @@
 									<h3 class="widget-title">Boletín de Noticias</h3>
 									<div class="widget-content">
 										<p>Si quieres recibir noticias sobre la app al instante, solo debe introducir tu email en el siguiente cuadro de texto y darle a enviar. </p>
-
-										<form action="php/newsletter-form.php" method="POST" id="newsletter-form">
+										<form action="" method="POST" id="newsletter-form">	
 											<div class="alert alert-success hidden" id="newsletter-alert-success">
 												<strong>¡Perfecto!</strong> Gracias por suscribirte.
 											</div>
 											<div class="alert alert-danger hidden" id="newsletter-alert-error">
 												<strong>¡Error!</strong> Comprueba los datos introducidos.
-											</div>
+											</div>										
 											<div class="input-group">
-												<input type="email" 
-													value=""
-													data-msg-required="Por favor introduce un email."
-													data-msg-email="Por favor introduce un email correcto."
+												<input type="text" 												
 													class="form-control"
 													placeholder="Introduce tu email aquí..."
 													name="subscribe-email"
 													id="subscribe-email">
 												<span class="input-group-btn">
-													<button type="submit" class="btn btn-success btn-block" data-loading-text="Cargando...">Enviar</button>
+													<button name="newsletter" type="submit" class="btn btn-success btn-block" data-loading-text="Cargando...">Enviar</button>
 												</span>
 											</div>
 										</form>
