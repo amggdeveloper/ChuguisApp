@@ -121,85 +121,20 @@
 									</div>
 									<h2><a href="entrada.html">¿Pañales de Tela?</a></h2>
 									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Pañalesr</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">amgg Developer</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comentarios</a></span>
+										<span class="entry-category"><i class="fa fa-folder"></i> <a href="entrada.php">Pañales</a></span>
+										<span class="entry-author"><i class="fa fa-user"></i> <a href="nosotros.php">amgg Developer</a></span>										
 									</div>
 								</header>
 								<div class="excerpt">
 									Los pañales de tela eran utilizados muy a menudo por nuestras madres o abuelas, se utilizaban gasas las cuales se lavaban tras su uso. Generalmente eran de algodon. Actualmente hay muchos modelos de estos pañales. ¿Te atreverías a usarlos?. 
 								</div>
 								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Leer Más</a>
+									<a href="entrada.php" class="btn btn-primary">Leer Más</a>
 								</footer>
 							</article>
 							<!-- Termina Entradas del Blog -->
 
-							<!-- Post (Gallery Format) -->
-							<article class="entry entry__gallery entry__with-icon">
-								<!-- Project Slider -->
-								<div class="owl-carousel owl-theme owl-slider thumbnail">
-									<div class="item">
-										<a href="#"><img src="http://placehold.it/858x400" alt=""></a>
-									</div>
-									<div class="item">
-										<a href="#"><img src="http://placehold.it/858x400" alt=""></a>
-									</div>
-									<div class="item">
-										<a href="#"><img src="http://placehold.it/858x400" alt=""></a>
-									</div>
-								</div>
-								<!-- Project Slider / End -->
-								<header class="entry-header">
-									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
-										<i class="entypo picture"></i>
-									</div>
-									<h2><a href="blog-post.html">Gallery Post Format</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
-								</header>
-								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
-							</article>
-							<!-- Post (Gallery Format) / End -->
-
-							<!-- Post (Image Format) -->
-							<article class="entry entry__image entry__with-icon">
-								<figure class="alignnone entry-thumb">
-									<a href="#"><img src="http://placehold.it/858x400" alt=""></a>
-								</figure>
-								<header class="entry-header">
-									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
-										<i class="entypo camera"></i>
-									</div>
-									<h2><a href="blog-post.html">Image Post Format</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
-								</header>
-								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
-							</article>
-							<!-- Post (Image Format) / End -->
-
-							<!-- Post (Video Format) -->
+							<!-- Empieza Post con Video -->
 							<article class="entry entry__video entry__with-icon">
 								<figure class="alignnone video-holder">
 									<iframe src="http://player.vimeo.com/video/7449107?title=0&byline=0&portrait=0&color=a7cf3b" width="612" height="343" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
@@ -207,95 +142,62 @@
 								<header class="entry-header">
 									<div class="entry-icon visible-md visible-lg">
 										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
+										<span class="date-sm">Feb, 2021</span>
 										<i class="entypo video"></i>
 									</div>
-									<h2><a href="blog-post.html">Video Post Format</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
+									<h2><a href="blog-post.html">Video Funcionamiento de ChuguisApp</a></h2>
+									<div class="entry-meta">										
+										<span class="entry-author"><i class="fa fa-user"></i> <a href="nosotros.php">amgg Developer</a></span>										
 									</div>
 								</header>
 								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
+									En este video mostramos todas las funcionalidades de la aplicación y como puedes ir paso a paso conociendola. 
+									Explicamos como puedes registrarte y como puedes entrar en el panel de control. También se explica las distintas
+									secciones de las que se compone la página principal y las partes que forman parte del panel de control. 
+								</div>								
 							</article>
-							<!-- Post (Video Format) / End -->
+							<!-- Termina Post con Video -->
 
-							<!-- Post (Link Format) -->
+							<!-- Empieza post con link al Portfolio -->
 							<article class="entry entry__link entry__with-icon">
 								<header class="entry-header">
 									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
+										<span class="date-lg">14</span>
+										<span class="date-sm">Feb, 2021</span>
 										<i class="entypo link"></i>
 									</div>
-									<h2><a href="blog-post.html">Link Post Format</a></h2>
-									<span class="entry-url"><a href="#">http://www.google.com</a></span>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
+									<h2><a href="blog-post.html">PortFolio amgg Developer</a></h2>
+									<span class="entry-url"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'>Portfolio amgg Developer desarrollado en Django</a></span>
+									<div class="entry-meta">										
+										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">amgg Developer</a></span>										
 									</div>
 								</header>
 							</article>
-							<!-- Post (Link Format) / End -->
+							<!-- Termina post con link al Portfolio -->
 
-							<!-- Post (Quote Format) -->
+							<!-- Empieza post con consejo -->
 							<article class="entry entry__quote entry__with-icon">
 								<header class="entry-header">
 									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
+										<span class="date-lg">01</span>
+										<span class="date-sm">Feb, 2021</span>
 										<i class="entypo quote"></i>
 									</div>
 								</header>
 								<div class="quote-holder">
 									<blockquote>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales lacinia. Curabitur ut purus tincidunt. Iaculis elit a, eleifend augue. Ut gravida justo purus, ac sodales orci tincidunt non.</p>
-										<p>Phasellus blandit augue vel sollicitudin blandit. Curabitur eget rhoncus quam, vel elementum arcu. In accumsan tincidunt varius. Nunc vel ligula sit amet nibh hendrerit gravida id et orci. lectus sagittis faucibus at in mauris. Quisque id placerat elit.</p> 
+										<p>ChuguisApp nos permitirá llevar un seguimiento y monitorización de nuestros bebés en tiempo real, teniendo un mayor control sobre los datos recogidos.</p>
+										<p>Con un solo vistazo podremos saber las últimas actividades llevadas a cabo con nuestro bebé. También podremos saber cuales son las últimas tomas y a que horas se las hemos dado.</p> 
 									</blockquote>
-									<cite>Timothy Black <span>Developer, Compay Name</span></cite>
+									<cite>amgg <span>Developer, ChuguisApp</span></cite>
 								</div>
 							</article>
-							<!-- Post (Quote Format) / End -->
-
-							<!-- Post (Standard Format) -->
-							<article class="entry entry__standard entry__with-icon">
-								<header class="entry-header">
-									<div class="entry-icon visible-md visible-lg">
-										<span class="date-lg">28</span>
-										<span class="date-sm">Feb, 2014</span>
-										<i class="entypo text-doc"></i>
-									</div>
-									<h2><a href="blog-post.html">Standard Post Format (without Image)</a></h2>
-									<div class="entry-meta">
-										<span class="entry-category"><i class="fa fa-folder"></i> <a href="#">Cat Sitter</a></span>
-										<span class="entry-author"><i class="fa fa-user"></i> <a href="#">Dan Fisher</a></span>
-										<span class="entry-comments"><i class="fa fa-comments"></i> <a href="#">0 Comments</a></span>
-									</div>
-								</header>
-								<div class="excerpt">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet, condimentum id nunc. Donec ornare mattis suscipit. Praesent fermentum accumsan vulputate. Sed velit nulla, sagittis non erat id, dictum vestibulum ligula. 
-								</div>
-								<footer class="entry-footer">
-									<a href="#" class="btn btn-primary">Read More</a>
-								</footer>
-							</article>
-							<!-- Post (Standard Format) / End -->
+							<!-- Termina post con consejo -->
 
 							<div class="text-center">
 								<ul class="pagination-custom list-unstyled list-inline">
 									<li><a href="#" class="btn btn-sm">&laquo;</a></li>
-									<li class="active"><a href="#" class="btn btn-sm">1</a></li>
-									<li><a href="#" class="btn btn-sm">2</a></li>
-									<li><a href="#" class="btn btn-sm">3</a></li>
-									<li><a href="#" class="btn btn-sm">4</a></li>
-									<li><a href="#" class="btn btn-sm">5</a></li>
+									<li class="active"><a href="#" class="btn btn-sm">1</a></li>									
 									<li><a href="#" class="btn btn-sm">&raquo;</a></li>
 								</ul>
 							</div>
@@ -305,158 +207,147 @@
 							
 							<hr class="visible-sm visible-xs lg">
 
-							<!-- Widget :: Latest Posts -->
+							<!-- Empieza Widget Lateral Post Populares -->
 							<div class="latest-posts-widget widget widget__sidebar">
-								<h3 class="widget-title">Popular Posts</h3>
+								<h3 class="widget-title">Posts Populares</h3>
 								<div class="widget-content">
 									<ul class="latest-posts-list">
 										<li>
-											<figure class="thumbnail"><a href="#"><img src="http://placehold.it/112x82" alt=""></a></figure>
-											<span class="date">24/07/2013</span>
-											<h5 class="title"><a href="#">Duis placerat rhoncus arcu, sit amet aliquam leo</a></h5>
+											<figure class="thumbnail"><a href="entrada.php"><img src="./images/samples/pañalesPost.jpg" alt="entrada pañales tela"></a></figure>
+											<span class="date">03/05/2021</span>
+											<h5 class="title"><a href="entrada.php">¿Pañales de Tela?</a></h5>
+										</li>										
+										<li>
+											<figure class="thumbnail"><a href="#"><img src="./images/samples/iconoPost.jpg" alt="icono post"></a></figure>
+											<span class="date">28/02/2021</span>
+											<h5 class="title"><a href="#">Video Funcionamiento de ChuguisApp</a></h5>
 										</li>
 										<li>
-											<figure class="thumbnail"><a href="#"><img src="http://placehold.it/112x82" alt=""></a></figure>
-											<span class="date">16/07/2013</span>
-											<h5 class="title"><a href="#">Mauris in arcu aliq, elementum nibh nec</a></h5>
-										</li>
-										<li>
-											<figure class="thumbnail"><a href="#"><img src="http://placehold.it/112x82" alt=""></a></figure>
-											<span class="date">14/07/2013</span>
-											<h5 class="title"><a href="#">Vestibulum in ligula rutrum faucibus interdum</a></h5>
+											<figure class="thumbnail"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'><img src="./images/samples/logoAmggPost.jpg" alt="portfolio amgg developer"></a></figure>
+											<span class="date">14/02/2021</span>
+											<h5 class="title"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'>PortFolio amgg Developer</a></h5>
 										</li>
 									</ul>
 								</div>
 							</div>
-							<!-- /Widget :: Latest Posts -->
+							<!-- Termina Widget Lateral Post Populares-->
 
-							<!-- Widget :: Categories -->
+							<!-- Empieza Widget Lateral Categorias -->
 							<div class="widget_categories widget widget__sidebar">
-								<h3 class="widget-title">Categories</h3>
+								<h3 class="widget-title">Categorias</h3>
 								<div class="widget-content">
 									<ul>
-										<li><a href="#">Babbysitter</a> (4)</li>
-										<li><a href="#">Nanny</a> (4)</li>
-										<li><a href="#">Child Care Center</a> (12)</li>
-										<li><a href="#">Au Pair</a> (3)</li>
-										<li><a href="#">Tutor/Private Lesson</a> (1)</li>
-										<li><a href="#">Babysitting Rates</a> (8)</li>
-										<li><a href="#">Babysitting Jobs</a> (4)</li>
-										<li><a href="#">Babysitting Services</a> (2)</li>
-										<li><a href="#">Nannies</a> (10)</li>
-										<li><a href="#">Nanny Jobs</a> (7)</li>
-										<li><a href="#">Child Care Jobs</a> (2)</li>
-										<li><a href="#">Tutors</a> (1)</li>
-										<li><a href="#">Tutoring Jobs</a> (2)</li>
+										<li><a href="entrada.php">Pañales</a> (1)</li>
+										<li><a href="#">Video</a> (1)</li>
+										<li><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'>PortFolio</a> (1)</li>										
 									</ul>
 								</div>
 							</div>
-							<!-- /Widget :: Categories -->
+							<!-- Termina Widget Lateral Categorias -->
 
-							<!-- Widget :: Tags Cloud -->
+							<!-- Empieza Widget Lateral Páginas -->
 							<div class="widget_tag_cloud widget widget__sidebar">
-								<h3 class="widget-title">Tags</h3>
+								<h3 class="widget-title">Páginas</h3>
 								<div class="widget-content">
 									<div class="tagcloud">
-										<a href="#" class="btn btn-secondary btn-sm">Babysitting</a>
-										<a href="#" class="btn btn-secondary btn-sm">Babysitting Jobs</a>
-										<a href="#" class="btn btn-secondary btn-sm">Nannies</a>
-										<a href="#" class="btn btn-secondary btn-sm">Tutoring</a>
-										<a href="#" class="btn btn-secondary btn-sm">Tutors</a>
-										<a href="#" class="btn btn-secondary btn-sm">Child Care Jobs</a>
-										<a href="#" class="btn btn-secondary btn-sm">Nanny Jobs</a>
-										<a href="#" class="btn btn-secondary btn-sm">Child Care</a>
+										<a href="index.php" class="btn btn-secondary btn-sm">Inicio</a>
+										<a href="guias.php" class="btn btn-secondary btn-sm">Guías</a>
+										<a href="servicios.php" class="btn btn-secondary btn-sm">Nuestros Servicios</a>
+										<a href="blog.php" class="btn btn-secondary btn-sm">Blog</a>
+										<a href="nosotros.php" class="btn btn-secondary btn-sm">Sobre Nosotros</a>								
+										<a href="contacto.php" class="btn btn-secondary btn-sm">Contacto</a>
+										<a href="ayuda.php" class="btn btn-secondary btn-sm">Ayudas</a>	
 									</div>
 								</div>
 							</div>
-							<!-- /Widget :: Tags Cloud -->
+							<!-- Termina Widget Lateral Páginas -->
 
-							<!-- Widget :: Text Widget -->
+							<!-- Empieza Widget Lateral Texto -->
 							<div class="widget_text widget widget__sidebar">
-								<h3 class="widget-title">Text Widget</h3>
+								<h3 class="widget-title">Nota Informativa</h3>
 								<div class="widget-content">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu nisi ac mi malesuada vestibulum. Phasellus tempor nunc eleifend cursus molestie. Mauris lectus arcu, pellentesque at sodales sit amet ornare mattis suscipit. 
+									Si tienes alguna duda no dudes en ponerte en contacto con nuestro equipo, estarán encantados de poder solucionar cualquier incidencia que te haya podido surgir. No olvides de echar un vistazo a la sección de ayudas. 
 								</div>
 							</div>
-							<!-- /Widget :: Text Widget -->
+							<!-- Termina Widget Lateral Texto -->
 
-							<!-- Widget :: Flickr -->
+							<!-- Empieza Widget Lateral Fotos -->
 							<div class="widget_flickr widget widget__sidebar">
-								<h3 class="widget-title">Flickr</h3>
+								<h3 class="widget-title">Fotos Flickr</h3>
 								<div class="widget-content">
-									<!-- Flickr images will appear here -->
+									<!-- Aquí aparecen las fotos de flickr -->
 									<ul class="flickr-feed"></ul>
 								</div>
 							</div>
-							<!-- /Widget :: Flickr -->
+							<!-- Termina Widget Lateral Fotos -->
 
-							<!-- Widget :: Tabbed -->
+							<!-- Empieza Widget Lateral Tab -->
 							<div class="tabbed-widget widget widget__sidebar">
-								<h3 class="widget-title">Tabbed Content</h3>
+								<h3 class="widget-title">Contenidos</h3>
 								<div class="widget-content">
 									<div class="tabs">
-										<!-- Nav tabs -->
+										<!-- Navegación de las tab -->
 										<ul class="nav nav-tabs">
 											<li class="active"><a href="#tab-1" data-toggle="tab">Popular</a></li>
-											<li><a href="#tab-2" data-toggle="tab">Recent</a></li>
+											<li><a href="#tab-2" data-toggle="tab">Reciente</a></li>
 											<li><a href="#tab-3" data-toggle="tab"><i class="fa fa-comments fa-lg"></i></a></li>
 										</ul>
-										<!-- Tab panes -->
+										<!-- Paneles de las tab -->
 										<div class="tab-content">
 											<div class="tab-pane fade in active" id="tab-1">
 												<ul class="latest-posts-list">
 													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">24/07/2013</span>
-														<h5 class="title"><a href="#">Duis placerat rhoncus arcu sit amet aliquam</a></h5>
+														<figure class="thumbnail"><a href="entrada.php"><img src="./images/samples/pañalesPostmini.jpg" alt="imagen pañales tela mini"></a></figure>
+														<span class="date">03/05/2021</span>
+														<h5 class="title"><a href="entrada.php">¿Pañales de Tela?</a></h5>
 													</li>
 													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">16/07/2013</span>
-														<h5 class="title"><a href="#">Mauris in arcu aliq, elementum nibh nec</a></h5>
+														<figure class="thumbnail"><a href="#"><img src="./images/samples/iconoPostmini.jpg" alt="icono post mini"></a></figure>
+														<span class="date">28/02/2021</span>
+														<h5 class="title"><a href="#">Video Funcionamiento de ChuguisApp</a></h5>
 													</li>
 													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">14/07/2013</span>
-														<h5 class="title"><a href="#">Vestibulum in ligula rutrum faucibus</a></h5>
+														<figure class="thumbnail"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'><img src="./images/samples/logoAmggPostmini.jpg" alt="porfolio mini"></a></figure>
+														<span class="date">14/02/2021</span>
+														<h5 class="title"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'>PortFolio amgg Developer</a></h5>
 													</li>
 												</ul>
 											</div>
 											<div class="tab-pane fade" id="tab-2">
 												<ul class="latest-posts-list">
 													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">24/07/2013</span>
-														<h5 class="title"><a href="#">Duis placerat rhoncus arcu sit amet aliquam</a></h5>
+														<figure class="thumbnail"><a href="entrada.php"><img src="./images/samples/pañalesPostmini.jpg" alt="imagen pañales tela mini"></a></figure>
+														<span class="date">03/05/2021</span>
+														<h5 class="title"><a href="entrada.php">¿Pañales de Tela?</a></h5>
 													</li>
 													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">16/07/2013</span>
-														<h5 class="title"><a href="#">Mauris in arcu aliq, elementum nibh nec</a></h5>
+														<figure class="thumbnail"><a href="#"><img src="./images/samples/iconoPostmini.jpg" alt="icono post mini"></a></figure>
+														<span class="date">28/02/2021</span>
+														<h5 class="title"><a href="#">Video Funcionamiento de ChuguisApp</a></h5>
 													</li>
 													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">14/07/2013</span>
-														<h5 class="title"><a href="#">Vestibulum in ligula rutrum faucibus</a></h5>
+														<figure class="thumbnail"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'><img src="./images/samples/logoAmggPostmini.jpg" alt="portfolio mini"></a></figure>
+														<span class="date">14/02/2021</span>
+														<h5 class="title"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'>PortFolio amgg Developer</a></h5>
 													</li>
 												</ul>
 											</div>
 											<div class="tab-pane fade" id="tab-3">
 												<ul class="latest-posts-list">
-													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">admin says:</span>
-														<h5 class="title"><a href="#">Duis placerat rhoncus arcu sit amet aliquam</a></h5>
+												<li>
+														<figure class="thumbnail"><a href="entrada.php"><img src="./images/samples/pañalesPostmini.jpg" alt="imagen pañales tela mini"></a></figure>
+														<span class="date">te interesa saber:</span>
+														<h5 class="title"><a href="entrada.php">¿Pañales de Tela?</a></h5>
 													</li>
 													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">admin says:</span>
-														<h5 class="title"><a href="#">Mauris in arcu aliq, elementum nibh nec</a></h5>
+														<figure class="thumbnail"><a href="#"><img src="./images/samples/iconoPostmini.jpg" alt="icono post mini"></a></figure>
+														<span class="date">te interesa saber:</span>
+														<h5 class="title"><a href="#">Video Funcionamiento de ChuguisApp</a></h5>
 													</li>
 													<li>
-														<figure class="thumbnail"><a href="#"><img src="http://placehold.it/60x60" alt=""></a></figure>
-														<span class="date">admin says:</span>
-														<h5 class="title"><a href="#">Vestibulum in ligula rutrum faucibus</a></h5>
+														<figure class="thumbnail"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'><img src="./images/samples/logoAmggPostmini.jpg" alt="portfolio mini"></a></figure>
+														<span class="date">te interesa saber:</span>
+														<h5 class="title"><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank'>PortFolio amgg Developer</a></h5>
 													</li>
 												</ul>
 											</div>
