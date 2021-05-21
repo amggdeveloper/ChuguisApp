@@ -111,7 +111,7 @@
 							<!-- Empieza Entradas del Blog -->
 							<article class="entry entry__standard entry__with-icon">
 								<figure class="alignnone entry-thumb">
-									<a href="entrada.html"><img src="images/samples/pañales.jpg" alt=""></a>
+									<a href="entrada.php"><img src="images/samples/pañales.jpg" alt=""></a>
 								</figure>
 								<header class="entry-header">
 									<div class="entry-icon visible-md visible-lg">
@@ -119,7 +119,7 @@
 										<span class="date-sm">May, 2021</span>
 										<i class="entypo text-doc"></i>
 									</div>
-									<h2><a href="entrada.html">¿Pañales de Tela?</a></h2>
+									<h2><a href="entrada.php">¿Pañales de Tela?</a></h2>
 									<div class="entry-meta">
 										<span class="entry-category"><i class="fa fa-folder"></i> <a href="entrada.php">Pañales</a></span>
 										<span class="entry-author"><i class="fa fa-user"></i> <a href="nosotros.php">amgg Developer</a></span>										
@@ -355,13 +355,13 @@
 									</div>
 								</div>
 							</div>
-							<!-- /Widget :: Tabbed -->
+							<!-- Termina Paneles Tab -->
 						</aside>
 					</div>
 
 				</div>
 			</section>
-			<!-- Page Content / End -->
+			<!-- Termina Contenido Página-->
 
 			<!-- Empieza Footer -->
 			<?php include 'includes/footer.php';?>
