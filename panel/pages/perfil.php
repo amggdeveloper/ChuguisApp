@@ -135,19 +135,21 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="text-center"> 
-                                            <img src="../img/user.jpg" class="rounded-circle" width="150" />
-                                            <h4 class="card-title mt-10">Nombre Usuario</h4>
-                                            <p class="card-subtitle">Descripción usuario</p>
+                                            <figure>
+                                                <img src="../../images/users/<?php echo $picture?>" width="150" />
+                                            </figure>
+                                            <h4 class="card-title mt-10"><?php echo $nameUser?></h4>
+                                            <p class="card-subtitle"><?php echo $day?></p>
                                             <div class="row text-center justify-content-md-center">
-                                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-user"></i> <font class="font-medium">254</font></a></div>
-                                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-image"></i> <font class="font-medium">54</font></a></div>
+                                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-calendar"></i> <font class="font-medium"><?php echo $date?></font></a></div>
+                                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-clock"></i> <font class="font-medium"><?php echo $time?></font></a></div>
                                             </div>
                                         </div>
                                     </div>
                                     <hr class="mb-0"> 
                                     <div class="card-body"> 
                                         <small class="text-muted d-block">Email </small>
-                                        <h6>email usuario</h6> 
+                                        <h6><?php echo $email?></h6> 
                                         <small class="text-muted d-block pt-10">Móvil</small>
                                         <h6>movil usuario</h6> 
                                         <small class="text-muted d-block pt-10">Dirección</small>
@@ -155,11 +157,13 @@
                                         <div class="map-box">
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085452149588!3d12.953959988118836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1542005497600" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                                         </div> 
-                                        <small class="text-muted d-block pt-30">Redes Sociales</small>
+                                        <small class="text-muted d-block pt-30">Redes Sociales ChuguisApp</small>
                                         <br/>
-                                        <button class="btn btn-icon btn-facebook"><i class="fab fa-facebook-f"></i></button>
-                                        <button class="btn btn-icon btn-twitter"><i class="fab fa-twitter"></i></button>
-                                        <button class="btn btn-icon btn-instagram"><i class="fab fa-instagram"></i></button>
+                                        <a href="https://www.facebook.com/chuguis.app.7/" target='_blank' class="btn btn-icon btn-facebook"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://twitter.com/ChuguisA" target='_blank' class="btn btn-icon btn-twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.youtube.com/channel/UC4c10fwLYn5lGRB3hhgBOuQ" target='_blank' class="btn btn-icon btn-youtube"><i class="fab fa-youtube"></i></a>
+                                        <a href="https://github.com/ChuguisApp" target='_blank' class="btn btn-icon btn-github"><i class="fab fa-github"></i></a>
+
                                     </div>
                                 </div>
                             </div>
@@ -168,17 +172,19 @@
                                 <div class="card">
                                     <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="true">Tablón</a>
+                                            <a class="nav-link active" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="true">Configuración</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Perfil</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Configuración</a>
-                                        </li>
+                                            <a class="nav-link" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="false">Tablón</a>
+                                        </li>                                       
+                                        
                                     </ul>
+                                    <!--tab tablon-->
                                     <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="current-month" role="tabpanel" aria-labelledby="pills-timeline-tab">
+                                        <div class="tab-pane fade" id="current-month" role="tabpanel" aria-labelledby="pills-timeline-tab">
                                             <div class="card-body">
                                                 <div class="profiletimeline mt-0">
                                                     <div class="sl-item">
@@ -249,13 +255,13 @@
                                         <div class="tab-pane fade" id="last-month" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-md-3 col-6"> <strong>Nombre Completo</strong>
+                                                    <div class="col-md-3 col-6"> <strong>Nombre</strong>
                                                         <br>
                                                         <p class="text-muted">nombre usuario</p>
                                                     </div>
                                                     <div class="col-md-3 col-6"> <strong>Móvil</strong>
                                                         <br>
-                                                        <p class="text-muted">(123) 456 7890</p>
+                                                        <p class="text-muted">000 000 000</p>
                                                     </div>
                                                     <div class="col-md-3 col-6"> <strong>Email</strong>
                                                         <br>
@@ -291,12 +297,12 @@
                                             </div>
                                         </div>
                                         <!--tab Configuración-->
-                                        <div class="tab-pane fade" id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
+                                        <div class="tab-pane fade show active" id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
                                             <div class="card-body">
                                                 <form class="form-horizontal">
                                                     <div class="form-group">
-                                                        <label for="example-name">Nombre Completo</label>
-                                                        <input type="text" placeholder="nombre completo" class="form-control" name="example-name" id="example-name">
+                                                        <label for="example-name">Nombre</label>
+                                                        <input type="text" placeholder="nombre" class="form-control" name="example-name" id="example-name">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-email">Email</label>
@@ -304,14 +310,18 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-password">Contraseña</label>
-                                                        <input type="password" value="password" class="form-control" name="example-password" id="example-password">
+                                                        <input type="password" value="" placeholder="contraseña"  class="form-control" name="example-password" id="example-password">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-phone">Móvil</label>
-                                                        <input type="text" placeholder="123 456 7890" id="example-phone" name="example-phone" class="form-control">
+                                                        <input type="text" placeholder="000 000 000" id="example-phone" name="example-phone" class="form-control">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="example-message">Mensaje</label>
+                                                        <label for="example-file" class="form-label">Seleccionar Imagen</label>
+                                                        <input type="file" id="changeAvatar" name="changeAvatar" accept=".jpg,.png" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="example-message">Descripción</label>
                                                         <textarea name="example-message" name="example-message" rows="5" class="form-control"></textarea>
                                                     </div>
                                                     <div class="form-group">
@@ -324,6 +334,14 @@
                                                             <option>Tailandia</option>
                                                             <option>España</option>
                                                         </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="example-local">Localización</label>
+                                                        <input type="text" placeholder="Murcia" id="example-local" name="example-local" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleColorInput" class="form-label">Elige un Color</label>
+                                                        <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Cambia tu Color">
                                                     </div>
                                                     <button class="btn btn-success" type="submit">Actualizar Perfil</button>
                                                 </form>

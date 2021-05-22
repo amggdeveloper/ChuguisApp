@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="plugins/c3/c3.min.css">
         <link rel="stylesheet" href="plugins/owl.carousel/dist/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="plugins/owl.carousel/dist/assets/owl.theme.default.min.css">
-        <link rel="stylesheet" href="dist/css/theme.min.css">
+        <link rel="stylesheet" href="dist/css/theme.min.css">        
         <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <!--Termina HEAD-->

@@ -4524,6 +4524,14 @@ a:active {
     background: #1da1f2
 }
 
+.btn-youtube {
+    background: #cc0e2e;
+}
+
+.btn-github {
+    background: #5c0783;
+}
+
 .btn-dribbble {
     background: #ea4c89
 }
