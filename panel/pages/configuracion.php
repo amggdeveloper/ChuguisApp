@@ -1,3 +1,4 @@
+<?php include_once 'sesionOtros.php'; ?>
 <!doctype html>
 <html class="no-js" lang="es">
     <!--Empieza HEAD-->

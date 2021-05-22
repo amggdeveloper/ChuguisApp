@@ -9,13 +9,13 @@ if(!empty($_SESSION['active'])){
 	if(!empty($_POST)){
 		if(empty($_POST['email']) || empty($_POST['pass'])){
 			echo  '<div class="alert alert-danger">
-							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>¡Error!</strong> , Debe ingresar un email y contraseña
- 		   	  			</div>';
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>¡Error!</strong> , Debe ingresar un email y contraseña
+ 		   	  		</div>';
 
 		}else{//Si no están vacios requerimos la conexión
 			//incluimos una sola vez el fichero de conexión
-			require 'includes/conexion.php';
+			include 'includes/conexion.php';
 			//Inicializamos las variables
 			$mail = mysqli_real_escape_string($con,$_POST['email']);//evitamos la inyeccion de codigo SQL
 			$pass = mysqli_real_escape_string($con,$_POST['pass']);//evitamos la inyeccion de codigo SQL
@@ -32,10 +32,9 @@ if(!empty($_SESSION['active'])){
 				$row=mysqli_fetch_assoc($consulta);	
 				if(password_verify($pass,$row['pass'])){
 					$_SESSION['active']=true;	
-					$_SESSION['idUser']=$data['id'];
-					$_SESSION['name']=$data['name'];
-					$_SESSION['email']=$data['mail'];
-					$_SESSION['role']=$data['role'];
+					$_SESSION['idUser']=$row['id'];
+					$_SESSION['name']=$row['name'];
+					$_SESSION['email']=$row['mail'];					
 					$_SESSION['start']=time();
 					$_SESSION['expire']=$_SESSION['start']+(5*60);//Tiempo para mantener la sesión 
 

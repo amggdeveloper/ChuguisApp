@@ -9,5 +9,5 @@
   session_destroy();
   
   //Volvemos a la pagina de login
-  header('Location:../../ChuguisApp/index.php');
+  header('Location:../../ChuguisApp/login.php');
 ?>

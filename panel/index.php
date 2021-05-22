@@ -1,20 +1,4 @@
-<?php
-//Iniciamos la sesión
-session_start();
-
-//Conectamos a la base de datos
-require '../includes/conexion.php';
-
-//Comprobamos si la sesión está vacia
-if(empty($_SESSION['active'])){
-    header('Location:../login.php');
-}
-$id=$_SESSION['id'];
-$result=mysqli_query($con,"SELECT * FROM users WHERE id='$id'") or die("Error de Sesión");
-$row=mysqli_fetch_array($result);
-
-?>
-
+<?php include_once 'pages/sesion.php'; ?>
 <!doctype html>
 <html class="no-js" lang="es">
     <!--Empieza HEAD-->
@@ -74,8 +58,9 @@ $row=mysqli_fetch_array($result);
                             </div>                           
                         <!--Menu modal-->
                         <div class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.jpg" alt=""></a>
+                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="../images/users/<?php echo $picture;?>" alt="avatar usuario"></a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <span class="navbar navbar-dark bg-primary" name="nombreUsuario" style="color: white;"><h6 style="margin:auto 30%;"><?php echo $nameUser;?></h6></span>
                                 <a class="dropdown-item" href="pages/perfil.php"><i class="ik ik-user dropdown-icon"></i> Perfil</a>
                                 <a class="dropdown-item" href="pages/configuracion.php"><i class="ik ik-settings dropdown-icon"></i> Configuración</a>
                                 <a class="dropdown-item" href="pages/ayuda.php"><i class="ik ik-navigation dropdown-icon"></i> Ayuda</a>

@@ -19,7 +19,8 @@ if (isset($_POST['registro'])) {
     $mail = mysqli_real_escape_string($con,$_POST['email']);
     $pass = mysqli_real_escape_string($con,$_POST['pass']);
 	$pass2= mysqli_real_escape_string($con,$_POST['pass2']);
-	$passCifrada=password_hash($pass,PASSWORD_DEFAULT);//Encriptamos la contraseña
+	$passCifrada=password_hash($pass,PASSWORD_DEFAULT);//Encriptamos la contraseña	
+	$picture="default.png";	
 
 	//Comprobamos que el nombre no esté vacio
 	if (empty($nombre)){
@@ -54,7 +55,7 @@ if (isset($_POST['registro'])) {
 	
 	//Si las otras condiciones no dan error, añadimos el nuevo usuario	
 	}if (!$error) {
-		if(mysqli_query($con, "INSERT INTO users(name,mail,pass,pass2) VALUES('" . $nombre . "', '" . $mail . "', '" . $passCifrada . "','" . $passCifrada . "')")) {
+		if(mysqli_query($con, "INSERT INTO users(name,mail,pass,pass2, picture) VALUES('" . $nombre . "', '" . $mail . "', '" . $passCifrada . "','" . $passCifrada . "','" . $picture . "')")) {
 			echo '<div class="alert alert-success alert-dismissable fade in">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<strong>!Enhorabuena!</strong> ¡Usuario Registrado Correctamente!
