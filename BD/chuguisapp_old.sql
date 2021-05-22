@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2021 a las 12:22:40
+-- Tiempo de generación: 11-05-2021 a las 16:52:42
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -42,26 +42,6 @@ CREATE TABLE `babies` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `newsletter`
---
-
-CREATE TABLE `newsletter` (
-  `id` int(11) NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `newsletter`
---
-
-INSERT INTO `newsletter` (`id`, `email`, `date`) VALUES
-(1, 'hola@gmail.com', '2021-05-22 10:19:19'),
-(2, 'hola@gmail.com', '2021-05-22 10:19:48');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `users`
 --
 
@@ -81,8 +61,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `mail`, `pass`, `pass2`, `picture`, `created`, `role`) VALUES
-(21, 'admin', 'admin@gmail.com', '$2y$10$.aTGscuewhbmRh9.tzQKduFH1ZawVe4Vpjah/HOwC2hKODEu/ONf.', '$2y$10$.aTGscuewhbmRh9.tzQKduFH1ZawVe4Vpjah/HOwC2hKODEu/ONf.', '', '2021-05-07 14:20:44', 0),
-(22, 'prueba', 'prueba@gmail.com', '$2y$10$rzQ/weHa00iDofwb4nsvj.h8q.0QrGKO2ZRrI.eKQcZ3dSp8pjPEK', '$2y$10$rzQ/weHa00iDofwb4nsvj.h8q.0QrGKO2ZRrI.eKQcZ3dSp8pjPEK', '', '2021-05-22 12:18:52', 0);
+(21, 'admin', 'admin@gmail.com', '$2y$10$.aTGscuewhbmRh9.tzQKduFH1ZawVe4Vpjah/HOwC2hKODEu/ONf.', '$2y$10$.aTGscuewhbmRh9.tzQKduFH1ZawVe4Vpjah/HOwC2hKODEu/ONf.', '', '2021-05-07 14:20:44', 0);
 
 --
 -- Índices para tablas volcadas
@@ -94,12 +73,6 @@ INSERT INTO `users` (`id`, `name`, `mail`, `pass`, `pass2`, `picture`, `created`
 ALTER TABLE `babies`
   ADD PRIMARY KEY (`id`),
   ADD KEY `usuario` (`usuario`);
-
---
--- Indices de la tabla `newsletter`
---
-ALTER TABLE `newsletter`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `users`
@@ -118,16 +91,10 @@ ALTER TABLE `babies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `newsletter`
---
-ALTER TABLE `newsletter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Restricciones para tablas volcadas
