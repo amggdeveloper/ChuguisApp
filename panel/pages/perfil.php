@@ -136,9 +136,9 @@
                                     <div class="card-body">
                                         <div class="text-center"> 
                                             <figure>
-                                                <img src="../../images/users/<?php echo $picture?>" width="150" />
+                                                <img src="../../images/users/<?php echo $pictureSelect?>" width="150" />
                                             </figure>
-                                            <h4 class="card-title mt-10"><?php echo $nameUser?></h4>
+                                            <h4 class="card-title mt-10"><?php echo $nameSelect?></h4>
                                             <p class="card-subtitle"><?php echo $day?></p>
                                             <div class="row text-center justify-content-md-center">
                                                 <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-calendar"></i> <font class="font-medium"><?php echo $date?></font></a></div>
@@ -149,13 +149,13 @@
                                     <hr class="mb-0"> 
                                     <div class="card-body"> 
                                         <small class="text-muted d-block">Email </small>
-                                        <h6><?php echo $email?></h6> 
+                                        <h6><?php echo $mailSelect?></h6> 
                                         <small class="text-muted d-block pt-10">Móvil</small>
-                                        <h6>movil usuario</h6> 
-                                        <small class="text-muted d-block pt-10">Dirección</small>
-                                        <h6>dirección usuario</h6>
+                                        <h6><?php echo $movilSelect?></h6> 
+                                        <small class="text-muted d-block pt-10">Localidad</small>
+                                        <h6><?php echo $localSelect?></h6>
                                         <div class="map-box">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085452149588!3d12.953959988118836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1542005497600" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.8455936683768!2d-0.992385148354834!3d37.60579282953591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd634224e0bc8c2b%3A0xf62d78a986855460!2sCIFP%20Carlos%20III!5e0!3m2!1ses!2ses!4v1621713303029!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                         </div> 
                                         <small class="text-muted d-block pt-30">Redes Sociales ChuguisApp</small>
                                         <br/>
@@ -178,7 +178,7 @@
                                             <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Perfil</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="false">Tablón</a>
+                                            <a class="nav-link" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="false">Tablón Twitter</a>
                                         </li>                                       
                                         
                                     </ul>
@@ -186,68 +186,8 @@
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade" id="current-month" role="tabpanel" aria-labelledby="pills-timeline-tab">
                                             <div class="card-body">
-                                                <div class="profiletimeline mt-0">
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/1.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <p>assign a new task <a href="javascript:void(0)"> Design weblayout</a></p>
-                                                                <div class="row">
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img2.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img3.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img4.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img5.jpg" class="img-fluid rounded" /></div>
-                                                                </div>
-                                                                <div class="like-comm"> 
-                                                                    <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                    <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/2.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div> <a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <div class="mt-20 row">
-                                                                    <div class="col-md-3 col-xs-12"><img src="../img/big/img6.jpg" alt="user" class="img-fluid rounded" /></div>
-                                                                    <div class="col-md-9 col-xs-12">
-                                                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p> <a href="javascript:void(0)" class="btn btn-success"> Design weblayout</a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="like-comm mt-20"> 
-                                                                    <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                    <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/3.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <p class="mt-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper </p>
-                                                            </div>
-                                                            <div class="like-comm mt-20"> 
-                                                                <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/4.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <blockquote class="mt-10">
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div class="profiletimeline mt-0">                                                   
+                                                <a class="twitter-timeline" href="https://twitter.com/ChuguisA?ref_src=twsrc%5Etfw">Tweets de ChuguisApp</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                                                   
                                                 </div>
                                             </div>
                                         </div>
@@ -257,25 +197,23 @@
                                                 <div class="row">
                                                     <div class="col-md-3 col-6"> <strong>Nombre</strong>
                                                         <br>
-                                                        <p class="text-muted">nombre usuario</p>
+                                                        <p class="text-muted"><?php echo $nameSelect?></p>
                                                     </div>
                                                     <div class="col-md-3 col-6"> <strong>Móvil</strong>
                                                         <br>
-                                                        <p class="text-muted">000 000 000</p>
+                                                        <p class="text-muted"><?php echo $movilSelect?></p>
                                                     </div>
                                                     <div class="col-md-3 col-6"> <strong>Email</strong>
                                                         <br>
-                                                        <p class="text-muted">johnathan@admin.com</p>
+                                                        <p class="text-muted"><?php echo $mailSelect?></p>
                                                     </div>
                                                     <div class="col-md-3 col-6"> <strong>Localización</strong>
                                                         <br>
-                                                        <p class="text-muted">Murcia</p>
+                                                        <p class="text-muted"><?php echo $localSelect?></p>
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <p class="mt-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
-                                                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                                <p class="mt-30"><?php echo $descripSelect?></p>
                                                 <h4 class="mt-30">Habilidades</h4>
                                                 <hr>
                                                 <h6 class="mt-30">Cambio de Pañal <span class="pull-right">80%</span></h6>
@@ -299,51 +237,57 @@
                                         <!--tab Configuración-->
                                         <div class="tab-pane fade show active" id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
                                             <div class="card-body">
-                                                <form class="form-horizontal">
+                                                <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
                                                     <div class="form-group">
                                                         <label for="example-name">Nombre</label>
-                                                        <input type="text" placeholder="nombre" class="form-control" name="example-name" id="example-name">
+                                                        <input type="text" placeholder="nombre" class="form-control" name="example-name" id="example-name" value="<?php echo $nameSelect?>">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-email">Email</label>
-                                                        <input type="email" placeholder="email@gmail.com" class="form-control" name="example-email" id="example-email">
+                                                        <input type="email" placeholder="email@gmail.com" class="form-control" name="example-email" id="example-email"  value="<?php echo $mailSelect?>">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-password">Contraseña</label>
-                                                        <input type="password" value="" placeholder="contraseña"  class="form-control" name="example-password" id="example-password">
+                                                        <input type="password" placeholder="contraseña"  class="form-control" name="example-password" id="example-password" value="<?php echo $passSelect?>">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-phone">Móvil</label>
-                                                        <input type="text" placeholder="000 000 000" id="example-phone" name="example-phone" class="form-control">
+                                                        <input type="text" placeholder="000 000 000" id="example-phone" name="example-phone" class="form-control" value="<?php echo $movilSelect?>">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="example-file" class="form-label">Seleccionar Imagen</label>
-                                                        <input type="file" id="changeAvatar" name="changeAvatar" accept=".jpg,.png" class="form-control">
+                                                        <label>Seleccionar Imagen</label>
+                                                        <input type="file" name="pictureAvatar" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input type="text" class="form-control file-upload-info" disabled placeholder="Seleccionar Imagen" name="example-picture"  value="<?php echo $pictureSelect?>">
+                                                            <span class="input-group-append">
+                                                            <button class="file-upload-browse btn btn-primary" type="button">Seleccionar</button>
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-message">Descripción</label>
-                                                        <textarea name="example-message" name="example-message" rows="5" class="form-control"></textarea>
+                                                        <textarea name="example-message" rows="5" class="form-control"><?php echo $descripSelect?></textarea>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-country">Seleciona País </label>
-                                                        <select name="example-message" id="example-message" class="form-control">
+                                                        <select name="example-select" id="example-select" class="form-control">
                                                             <option>Londres</option>
                                                             <option>India</option>
                                                             <option>Usa</option>
                                                             <option>Canada</option>
                                                             <option>Tailandia</option>
-                                                            <option>España</option>
+                                                            <option selected>España</option>
                                                         </select>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-local">Localización</label>
-                                                        <input type="text" placeholder="Murcia" id="example-local" name="example-local" class="form-control">
+                                                        <input type="text" placeholder="localidad (por ejemplo: Murcia)" id="example-local" name="example-local" class="form-control" value="<?php echo $localSelect?>">
+                                                    </div>                                                   
+                                                    <button name="profile"class="btn btn-primary" type="submit" onclick="location.reload()">Actualizar Perfil</button>
+                                                    <hr>
+                                                    <div class="form-group">                                                                                                            
+                                                          <?php echo $alert?>                                                   
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleColorInput" class="form-label">Elige un Color</label>
-                                                        <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Cambia tu Color">
-                                                    </div>
-                                                    <button class="btn btn-success" type="submit">Actualizar Perfil</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -365,6 +309,7 @@
         <script src="../plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
         <script src="../plugins/screenfull/dist/screenfull.js"></script>
         <script src="../dist/js/theme.min.js"></script>
+        <script src="../js/form-components.js"></script>
 
         <!--Script para realizar la busqueda en la página-->
         <script src="../js/buscar.js"></script>
