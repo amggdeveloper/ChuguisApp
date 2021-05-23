@@ -63,7 +63,7 @@
                                 <span class="navbar navbar-dark bg-primary" name="nombreUsuario" style="color: white;"><h6 style="margin:auto 30%;"><?php echo $nameUser;?></h6></span>
                                 <a class="dropdown-item" href="pages/perfil.php"><i class="ik ik-user dropdown-icon"></i> Perfil</a>
                                 <a class="dropdown-item" href="pages/configuracion.php"><i class="ik ik-settings dropdown-icon"></i> Configuración</a>
-                                <a class="dropdown-item" href="pages/ayuda.php"><i class="ik ik-navigation dropdown-icon"></i> Ayuda</a>
+                                <a class="dropdown-item" href="pages/ayudaMenu.php"><i class="ik ik-navigation dropdown-icon"></i> Ayuda</a>
                                 <a class="dropdown-item" href="../includes/salirSesion.php"><i class="ik ik-power dropdown-icon"></i> Cerrar Sesión</a>
                             </div>
                         </div>

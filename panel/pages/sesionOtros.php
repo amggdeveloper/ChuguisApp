@@ -89,8 +89,8 @@ if (isset($_POST['profile'])) {
     $typeSuccess=array('jpg','jpeg','png');//tipos permitidos de imagen
     $sizePicture=$_FILES['pictureAvatar']['size'];
 
-    //comprobación de la extensión de la imagen
-    $array_nombre = explode('.',$nombrebre_orig);
+    //comprobación de la extensión de la imagen    
+    $array_nombre = explode('.',$namePicture);
     $cuenta_arr_nombre = count($array_nombre);
     $extension = strtolower($array_nombre[--$cuenta_arr_nombre]);    
 
