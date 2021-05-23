@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2021 a las 12:22:40
+-- Tiempo de generación: 23-05-2021 a las 17:26:00
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -62,6 +62,30 @@ INSERT INTO `newsletter` (`id`, `email`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `profile`
+--
+
+CREATE TABLE `profile` (
+  `id` int(11) NOT NULL,
+  `movil` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT 'vacio',
+  `descrip` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT 'vacio',
+  `country` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT 'vacio',
+  `local` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT 'vacio',
+  `color` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT 'blue',
+  `iduser` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `profile`
+--
+
+INSERT INTO `profile` (`id`, `movil`, `descrip`, `country`, `local`, `color`, `iduser`) VALUES
+(1, 'vacio', 'vacio', 'vacio', 'vacio', 'purple', 1),
+(24, 'vacio', 'vacio', 'vacio', 'vacio', 'vacio', 3);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `users`
 --
 
@@ -71,7 +95,7 @@ CREATE TABLE `users` (
   `mail` varchar(255) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `pass` varchar(255) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `pass2` varchar(255) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `picture` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `picture` varchar(255) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp(),
   `role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
@@ -81,8 +105,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `mail`, `pass`, `pass2`, `picture`, `created`, `role`) VALUES
-(21, 'admin', 'admin@gmail.com', '$2y$10$.aTGscuewhbmRh9.tzQKduFH1ZawVe4Vpjah/HOwC2hKODEu/ONf.', '$2y$10$.aTGscuewhbmRh9.tzQKduFH1ZawVe4Vpjah/HOwC2hKODEu/ONf.', '', '2021-05-07 14:20:44', 0),
-(22, 'prueba', 'prueba@gmail.com', '$2y$10$rzQ/weHa00iDofwb4nsvj.h8q.0QrGKO2ZRrI.eKQcZ3dSp8pjPEK', '$2y$10$rzQ/weHa00iDofwb4nsvj.h8q.0QrGKO2ZRrI.eKQcZ3dSp8pjPEK', '', '2021-05-22 12:18:52', 0);
+(1, 'admin', 'admin@gmail.com', '$2y$10$vU6xNAAw2DKMI8emoE/iuOcONG0vfJ4n5a58nhTZVJBoleJaYqWXm', '$2y$10$vU6xNAAw2DKMI8emoE/iuOcONG0vfJ4n5a58nhTZVJBoleJaYqWXm', 'default.png', '2021-05-23 04:22:04', 0),
+(3, 'prueba', 'prueba@gmail.com', '$2y$10$sfnyrDQe9Vu.6GVWLl3xseg.d4i3EH1OFX2fpH54x..8h88vd3Q7u', '$2y$10$sfnyrDQe9Vu.6GVWLl3xseg.d4i3EH1OFX2fpH54x..8h88vd3Q7u', 'default.png', '2021-05-23 16:34:36', 0);
 
 --
 -- Índices para tablas volcadas
@@ -100,6 +124,13 @@ ALTER TABLE `babies`
 --
 ALTER TABLE `newsletter`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `profile`
+--
+ALTER TABLE `profile`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `iduser` (`iduser`);
 
 --
 -- Indices de la tabla `users`
@@ -124,10 +155,16 @@ ALTER TABLE `newsletter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT de la tabla `profile`
+--
+ALTER TABLE `profile`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restricciones para tablas volcadas
@@ -138,6 +175,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `babies`
   ADD CONSTRAINT `babies_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `profile`
+--
+ALTER TABLE `profile`
+  ADD CONSTRAINT `profile_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

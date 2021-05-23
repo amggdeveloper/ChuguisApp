@@ -96,7 +96,7 @@
                                 <div class="nav-item">
                                     <a href="alimentosInt.php"><i class="ik ik-clipboard"></i><span>Alimentos Introducidos</span></a>
                                 </div>                              
-                                <div class="nav-item active">
+                                <div class="nav-item">
                                     <a href="ayuda.php"><i class="ik ik-help-circle"></i><span>Ayuda</span></a>
                                 </div>
                             </nav>
