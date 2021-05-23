@@ -1,4 +1,4 @@
-<?php include_once 'sesionOtros.php'; ?>
+<?php include_once 'funciones.php'; ?>
 <!doctype html>
 <html class="no-js" lang="es">
     <!--Comienza HEAD-->
@@ -31,7 +31,7 @@
     
          <!--Barra de la Cabecera-->
          <div class="wrapper">
-            <header class="header-top" header-theme="blue">
+            <header class="header-top" header-theme="<?php echo $colorSelect?>">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">

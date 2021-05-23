@@ -35,7 +35,7 @@
     <body>
         <!--Barra de la Cabecera-->
         <div class="wrapper">
-            <header class="header-top" header-theme="blue">
+            <header class="header-top" header-theme="<?php echo $color;?>">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">

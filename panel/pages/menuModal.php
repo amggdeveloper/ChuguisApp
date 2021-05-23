@@ -1,5 +1,5 @@
 <div class="dropdown">
-    <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="../../images/users/<?php echo $pictureSelect;?>" alt="avatar usuario"></a>
+    <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="../../images/users/<?php echo $pictureSelect;?>" alt=""></a>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
         <span class="navbar navbar-dark bg-primary" name="nombreUsuario" style="color: white;"><h6 style="margin:auto 30%;"><?php echo $nameSelect;?></h6></span>
         <a class="dropdown-item" href="perfil.php"><i class="ik ik-user dropdown-icon"></i> Perfil</a>

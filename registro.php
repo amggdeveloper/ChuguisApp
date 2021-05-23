@@ -22,6 +22,12 @@ if (isset($_POST['registro'])) {
 	$passCifrada=password_hash($pass,PASSWORD_DEFAULT);//Encriptamos la contraseña	
 	$picture="default.png";	
 
+	//Creamos una consulta a la base de datos
+	$querySelec="SELECT * FROM users WHERE mail='$mail'";
+	$resultSelec=mysqli_query($con,$querySelec) ;
+	$rowSelec=mysqli_fetch_assoc($resultSelec);	
+	$email=$rowSelec['mail'];
+
 	//Comprobamos que el nombre no esté vacio
 	if (empty($nombre)){
 		$error = true;		
@@ -45,6 +51,14 @@ if (isset($_POST['registro'])) {
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<strong>¡Error en la contraseña!</strong> La contraseña no puede estar en blanco.
 				</div>';
+	
+	//Comprobamos que la contraseña no esté vacia				
+	}if($email==$mail) {
+	$error = true;		
+	echo '<div class="alert alert-danger alert-dismissable fade in">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>¡Error en el email!</strong> El email ya está registrado utilice otro email.
+			</div>';			
 	//Comprobamos que las contraseñas coinciden			
 	}if($pass!=$pass2){
 		$error = true;		
@@ -60,6 +74,7 @@ if (isset($_POST['registro'])) {
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<strong>!Enhorabuena!</strong> ¡Usuario Registrado Correctamente!
 		  		</div>';
+			
 		} else {
 			echo '<div class="alert alert-danger alert-dismissable fade in">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

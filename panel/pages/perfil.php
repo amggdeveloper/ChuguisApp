@@ -30,7 +30,7 @@
     <body>    
          <!--Barra de la Cabecera-->
          <div class="wrapper">
-            <header class="header-top" header-theme="blue">
+            <header class="header-top" header-theme=<?php echo $colorSelect?>>
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
@@ -135,9 +135,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="text-center"> 
-                                            <figure>
-                                                <img src="../../images/users/<?php echo $pictureSelect?>" width="150" />
-                                            </figure>
+                                            <img src="../../images/users/<?php echo $pictureSelect?>" class="rounded-circle" width="150" />                                           
                                             <h4 class="card-title mt-10"><?php echo $nameSelect?></h4>
                                             <p class="card-subtitle"><?php echo $day?></p>
                                             <div class="row text-center justify-content-md-center">
@@ -283,7 +281,7 @@
                                                         <label for="example-local">Localización</label>
                                                         <input type="text" placeholder="localidad (por ejemplo: Murcia)" id="example-local" name="example-local" class="form-control" value="<?php echo $localSelect?>">
                                                     </div>                                                   
-                                                    <button name="profile"class="btn btn-primary" type="submit" onclick="location.reload()">Actualizar Perfil</button>
+                                                    <button name="profile"class="btn btn-primary" type="submit">Actualizar Perfil</button>
                                                     <hr>
                                                     <div class="form-group">                                                                                                            
                                                           <?php echo $alert?>                                                   

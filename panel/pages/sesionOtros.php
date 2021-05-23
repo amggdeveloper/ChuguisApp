@@ -31,6 +31,7 @@ $day=strftime("Hoy es %A"); //recogemos el dia actual
 $date=strftime("%d-%B-%G");//recogemos la fecha actual
 $time=strftime("%H:%M:%S h.");//recogemos la hora actual
 $alert="";
+$alertColor=""; 
 
 //Inicializamos las variables para no dejarlas a null
 $nameSelect='';//Nombre
@@ -41,6 +42,7 @@ $movilSelect='';//Movil
 $descripSelect='';//Descripción
 $countrySelect='';//País
 $localSelect='';//Localidad
+$colorSelect='blue';
 
 //Hacemos la consulta a la base de datos para seleccionar los datos que hay en ella
 $querySelect="SELECT * FROM profile WHERE iduser='$id'";
@@ -54,14 +56,19 @@ $rowSelect=mysqli_fetch_assoc($resultSelect);
 $rowSelec=mysqli_fetch_assoc($resultSelec);
 
 //Recogemos los datos en sus variables correspondientes
-$nameSelect=$rowSelec['name'];//Nombre
-$mailSelect=$rowSelec['mail'];//Email
-$passSelect=$rowSelec['pass'];//Contraseña
-$pictureSelect=$rowSelec['picture'];//Imagen Avatar
-$movilSelect=$rowSelect['movil'];//Movil
-$descripSelect=$rowSelect['descrip'];//Descripción
-$countrySelect=$rowSelect['country'];//País
-$localSelect=$rowSelect['local'];//Localidad
+if(isset($_POST['profile'])){
+    $movilSelect=$rowSelect['movil'];//Movil
+    $descripSelect=$rowSelect['descrip'];//Descripción
+    $countrySelect=$rowSelect['country'];//País
+    $localSelect=$rowSelect['local'];//Localidad
+}
+if(isset($_POST['profile'])){
+    $nameSelect=$rowSelec['name'];//Nombre
+    $mailSelect=$rowSelec['mail'];//Email
+    $passSelect=$rowSelec['pass'];//Contraseña
+    $pictureSelect=$rowSelec['picture'];//Imagen Avatar
+    $colorSelect=$rowSelec['color'];
+}
 
 //Comprobamos si el formulario ha sido empezado
 if (isset($_POST['profile'])) {
@@ -79,54 +86,51 @@ if (isset($_POST['profile'])) {
     //Introducir imagen en base de datos
     $namePicture=$_FILES['pictureAvatar']['name'];
     $typePicture=$_FILES['pictureAvatar']['type'];
+    $typeSuccess=array('jpg','jpeg','png');//tipos permitidos de imagen
     $sizePicture=$_FILES['pictureAvatar']['size'];
 
-    //Si no existe imagen y tiene un tamaño correcto
-    if($namePicture!="" && ($_FILES['pictureAvatar']['size']<= 200000)){
-        //indicamos los formatos que permitimos subir a nuestro servidor
-        if (($_FILES["pictureAvatar"]["type"] == "image/gif")
-        || ($_FILES["pictureAvatar"]["type"] == "image/jpeg")
-        || ($_FILES["pictureAvatar"]["type"] == "image/jpg")
-        || ($_FILES["pictureAvatar"]["type"] == "image/png")){
-        
-        //ruta donde se guardarán las imágenes que subamos
-        $path=$_SERVER['DOCUMENT_ROOT'].'/ChuguisApp/images/users/';   
-        //Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
-        move_uploaded_file($_FILES['pictureAvatar']['tmp_name'],$path.$namePicture);
+    //comprobación de la extensión de la imagen
+    $array_nombre = explode('.',$nombrebre_orig);
+    $cuenta_arr_nombre = count($array_nombre);
+    $extension = strtolower($array_nombre[--$cuenta_arr_nombre]);    
+
+    //Si la imagen tiene un tamaño correcto y los tipos
+    if($sizePicture>100000 && $typeSuccess)
+        //validamos la extension
+        if(!in_array($extension, $typeSuccess)){
         }else{
             $alert='<div class="alert alert-danger">
                         <button type="button" class="close" data-dismiss="alert">x</button>
                         <strong>¡Error!</strong> No se puede subir una imagen con ese formato.
                     </div>';
         }
-    }else{
-        //si existe la variable pero se pasa del tamaño permitido
-        if($namePicture!="") {
-            $alert='<div class="alert alert-danger">
-                        <button type="button" class="close" data-dismiss="alert">x</button>
-                        <strong>¡Error!</strong> La imagen es demasiado grande.
-                    </div>';
-        }
-    }       
+
+        if(empty($alert)){
+            //ruta donde se guardarán las imágenes que subamos
+            $path=$_SERVER['DOCUMENT_ROOT'].'/ChuguisApp/images/users/';   
+            //Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
+            move_uploaded_file($_FILES['pictureAvatar']['tmp_name'],$path.$namePicture);
+
+            //Variables con las consultas a la base de datos
+            $queryUpdateUsers="UPDATE users SET name='$nombre',mail='$mail',pass='$pass', picture='$namePicture' WHERE id='$id'";
+            $queryUpdateProfile="UPDATE profile SET movil='$phone',descrip='$descrip',country='$country', local='$local' WHERE iduser='$id'";
    
-    //Variables con las consultas a la base de datos
-    $queryUpdateUsers="UPDATE users SET name='$nombre',mail='$mail',pass='$pass', picture='$namePicture' WHERE id='$id'";
-    $queryUpdateProfile="UPDATE profile SET movil='$phone',descrip='$descrip',country='$country', local='$local' WHERE iduser='$id'";
-   
-    //Introducimos los datos obtenidos del formulario en la base de datos profile	
-    if(mysqli_query($con,$queryUpdateProfile) && (mysqli_query($con,$queryUpdateUsers))){
-		$alert= '<div class="alert alert-success">
+            //Introducimos los datos obtenidos del formulario en la base de datos profile	
+            if(mysqli_query($con,$queryUpdateProfile)){
+		        $alert= '<div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert">x</button>
                     <strong>¡Enhorabuena!</strong> Tu perfil se ha actualizado correctamente.
                 </div>';
-	} else {
-		$alert= '<div class="alert alert-danger">
+	        } else {
+		        $alert= '<div class="alert alert-danger">
                     <button type="button" class="close" data-dismiss="alert">x</button>
                     <strong>¡Error!</strong> Tu perfil no se ha actualizado correctamente.
                 </div>';
-	}	
-    //Cerramos la conexión a la base de datos
-    mysqli_close($con); 
+	        }	
+
+        } 
+
 }
+
 
 ?>

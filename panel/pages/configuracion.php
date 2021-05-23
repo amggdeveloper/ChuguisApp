@@ -1,4 +1,4 @@
-<?php include_once 'sesionOtros.php'; ?>
+<?php include_once 'funciones.php';?>
 <!doctype html>
 <html class="no-js" lang="es">
     <!--Empieza HEAD-->
@@ -30,7 +30,7 @@
     <body>     
            <!--Barra de la Cabecera-->
            <div class="wrapper">
-            <header class="header-top" header-theme="blue">
+            <header class="header-top" header-theme=<?php echo $colorSelect?>>
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
@@ -137,8 +137,9 @@
                                     <div class="card-header">
                                         <h3>Color Barra Cabecera</h3>
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body">                                    
                                         <h4 class="sub-title">Blanco</h4>
+                                        
                                         <img src="../img/navbar/light.jpg" class="img-fluid border p-1 rounded" alt="imagen cabecera blanco">
 
                                         <h4 class="sub-title mt-30">Negro</h4>
@@ -158,6 +159,27 @@
 
                                         <h4 class="sub-title mt-30">Morado</h4>
                                         <img src="../img/navbar/purple.jpg" class="img-fluid border p-1 rounded" alt="imagen cabecera morado">
+                                        <hr>
+                                        <div class="form-group">
+                                        <form class="form-horizontal" action="" method="POST">
+                                            <label for="example-color">Selecciona un color </label>
+                                                <select name="example-color" id="example-color" class="form-control">
+                                                    <option>Blanco</option>
+                                                    <option>Negro</option>
+                                                    <option selected>Azul</option>
+                                                    <option>Rojo</option>
+                                                    <option>Naranja</option>
+                                                    <option>Verde</option>
+                                                    <option>Morado</option>
+                                                </select>
+                                                <hr>
+                                                <button name="changeColor"class="btn btn-dark" type="submit">Cambiar Color</button>
+                                                <hr>
+                                                <div class="form-group">                                                                                                            
+                                                    <?php echo $alertColor?>                                                   
+                                                </div>
+                                        </form>        
+                                        </div>                                       
                                     </div>
                                 </div>
                             </div>
