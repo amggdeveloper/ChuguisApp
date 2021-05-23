@@ -113,7 +113,7 @@
                                         <i class="ik ik-help-circle bg-blue"></i>
                                         <div class="d-inline">
                                             <h5>Ayuda</h5>
-                                            <span>aquí podrás encontrar los casos de uso de la aplicación</span>
+                                            <span>aquí podrás encontrar los casos de uso del menú lateral</span>
                                         </div>
                                     </div>
                                 </div>
@@ -135,96 +135,63 @@
                                 <div class="card">
                                     <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="true">Inicio</a>
+                                            <a class="nav-link active" id="pills-timeline-tab" data-toggle="pill" href="#inicio" role="tab" aria-controls="pills-timeline" aria-selected="true">Inicio</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Bebés</a>
+                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#bebes" role="tab" aria-controls="pills-profile" aria-selected="false">Bebés</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Altura</a>
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#altura" role="tab" aria-controls="pills-setting" aria-selected="false">Altura</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Peso</a>
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#peso" role="tab" aria-controls="pills-setting" aria-selected="false">Peso</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Percentil</a>
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#percentil" role="tab" aria-controls="pills-setting" aria-selected="false">Percentil</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Tomas</a>
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#tomas" role="tab" aria-controls="pills-setting" aria-selected="false">Tomas</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos</a>
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Vacunación</a>
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#vacunacion" role="tab" aria-controls="pills-setting" aria-selected="false">Vacunación</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos Introducidos</a>
+                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#alimentosInt" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos Introducidos</a>
                                         </li>
                                     </ul>
                                    
-                                    <!--Pestañas individuales-->
+                                    <!--Pestaña Inicio-->
                                     <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="current-month" role="tabpanel" aria-labelledby="pills-timeline-tab">
+                                        <div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="pills-timeline-tab">
                                             <div class="card-body">
                                                 <div class="profiletimeline mt-0">
+                                                 
                                                     <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
                                                         <div class="sl-right">
-                                                            <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <p>assign a new task <a href="javascript:void(0)"> Design weblayout</a></p>
-                                                                <div class="row">
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img2.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img3.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img4.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img5.jpg" class="img-fluid rounded" /></div>
-                                                                </div>
-                                                                <div class="like-comm"> 
-                                                                    <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                    <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/2.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div> <a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <div class="mt-20 row">
-                                                                    <div class="col-md-3 col-xs-12"><img src="../img/big/img6.jpg" alt="user" class="img-fluid rounded" /></div>
-                                                                    <div class="col-md-9 col-xs-12">
-                                                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p> <a href="javascript:void(0)" class="btn btn-success"> Design weblayout</a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="like-comm mt-20"> 
-                                                                    <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                    <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/3.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <p class="mt-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper </p>
-                                                            </div>
-                                                            <div class="like-comm mt-20"> 
-                                                                <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/4.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
+                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                                                   <p> En esta página de <strong>'perfil' </strong>el usuario encontrará la página dividida en dos partes, en la parte izquierda 
+                                                                    encontrará la imagen de perfil que tiene asociada, el día que es hoy, la fecha y la hora actualizada. Debajo de esta información
+                                                                    tendrá su email, su móvil y la localidad que haya introducido. 
+                                                                    Más abajo encontrará un mapa con su ubicación y los botones de las redes sociales de la aplicación ChuguisApp, para poder 
+                                                                    estar siempre actualizado con las últimas noticias de la aplicación.
+                                                                    </p>
+                                                                    <p>      
+                                                                    En el lado derecho encontrará un formulario con pestañas, las cuales se dividen en tres, Configuración, Perfil, Tablón Twitter.
+
+                                                                    En la pestaña <em>'Configuración'</em> el usuario encontrará un formulario en el que podrá cambiar todos los datos que 
+                                                                    quiera en relación a su cuenta. Para ello lo único que debe hacer el usuario es introducir en cada cuadro de texto la información que 
+                                                                    quiera cambiar y presionar el botón de <em>'Actualizar Perfil'</em>. Podrá cambiar su imagen de avatar, su nombre de usuario, contraseña,
+                                                                    telefono, etc. En la pestaña <em>'Perfil'</em> encontrará estos datos de forma más visual, con las habilidades optenidas con el 
+                                                                    uso de la aplicación. Y en la tercera y última pestaña <em>'Tablón Twitter'</em>, encontrará las últimas noticias del tablón de 
+                                                                    twitter de la aplicación.   
+                                                                    </p>                                                             
+
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/profile.jpg"><img class="img-fluid" src="../img/capturas/profile.jpg" alt="imagen ayuda perfil"></a>
                                                                 </blockquote>
                                                             </div>
                                                         </div>
@@ -232,98 +199,203 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--tab Perfil-->
-                                        <div class="tab-pane fade" id="last-month" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                        <!--tab Bebés-->
+                                        <div class="tab-pane fade" id="bebes" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-md-3 col-6"> <strong>Nombre Completo</strong>
-                                                        <br>
-                                                        <p class="text-muted">nombre usuario</p>
+                                            <div class="profiletimeline mt-0">
+                                            <div class="sl-item">
+                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-right">
+                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
+                                                                <blockquote class="mt-10">
+                                                                   <p> En esta página de <strong>'Configuración' </strong>el usuario encontrará varios ejemplos de 
+                                                                   estilos de la barra superior y los distintos colores que puede utilizar el usuario para personalizar 
+                                                                   su panel de control.  
+
+                                                                   Debajo de las muestras de colores el usuario puede encontrar un desplegable para poder seleccionar el 
+                                                                   color que más le guste. Una vez seleccionado solo deberá pulsar el botón <strong>'cambiar de color'</strong>
+                                                                  </p>                                                             
+
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/config.jpg"><img class="img-fluid" src="../img/capturas/config.jpg" alt="imagen ayuda configuración"></a>
+                                                                </blockquote>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-md-3 col-6"> <strong>Móvil</strong>
-                                                        <br>
-                                                        <p class="text-muted">(123) 456 7890</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-6"> <strong>Email</strong>
-                                                        <br>
-                                                        <p class="text-muted">johnathan@admin.com</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-6"> <strong>Localización</strong>
-                                                        <br>
-                                                        <p class="text-muted">Murcia</p>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <p class="mt-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
-                                                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                                <h4 class="mt-30">Habilidades</h4>
-                                                <hr>
-                                                <h6 class="mt-30">Cambio de Pañal <span class="pull-right">80%</span></h6>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">Juego <span class="pull-right">90%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">Mediciones <span class="pull-right">50%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">Comida <span class="pull-right">70%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;"> <span class="sr-only">50% Complete</span> </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--tab Configuración-->
-                                        <div class="tab-pane fade" id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
+                                           <!--tab Altura-->
+                                           <div class="tab-pane fade" id="altura" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <div class="card-body">
-                                                <form class="form-horizontal">
-                                                    <div class="form-group">
-                                                        <label for="example-name">Nombre Completo</label>
-                                                        <input type="text" placeholder="nombre completo" class="form-control" name="example-name" id="example-name">
+                                            <div class="profiletimeline mt-0">
+                                            <div class="sl-item">
+                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-right">
+                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
+                                                                <blockquote class="mt-10">
+                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
+                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
+                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
+                                                                   correspondiente.
+                                                                  </p>                                                                
+
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                </blockquote>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="example-email">Email</label>
-                                                        <input type="email" placeholder="email@gmail.com" class="form-control" name="example-email" id="example-email">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                          <!--tab Peso-->
+                                          <div class="tab-pane fade" id="peso" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="card-body">
+                                            <div class="profiletimeline mt-0">
+                                            <div class="sl-item">
+                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-right">
+                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
+                                                                <blockquote class="mt-10">
+                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
+                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
+                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
+                                                                   correspondiente.
+                                                                  </p>                                                                
+
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                </blockquote>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="example-password">Contraseña</label>
-                                                        <input type="password" value="password" class="form-control" name="example-password" id="example-password">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                          <!--tab Percentil-->
+                                          <div class="tab-pane fade" id="percentil" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="card-body">
+                                            <div class="profiletimeline mt-0">
+                                            <div class="sl-item">
+                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-right">
+                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
+                                                                <blockquote class="mt-10">
+                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
+                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
+                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
+                                                                   correspondiente.
+                                                                  </p>                                                                
+
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                </blockquote>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="example-phone">Móvil</label>
-                                                        <input type="text" placeholder="123 456 7890" id="example-phone" name="example-phone" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                          <!--tab Tomas-->
+                                          <div class="tab-pane fade" id="tomas" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="card-body">
+                                            <div class="profiletimeline mt-0">
+                                            <div class="sl-item">
+                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-right">
+                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
+                                                                <blockquote class="mt-10">
+                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
+                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
+                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
+                                                                   correspondiente.
+                                                                  </p>                                                                
+
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                </blockquote>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="example-message">Mensaje</label>
-                                                        <textarea name="example-message" name="example-message" rows="5" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                          <!--tab Alimentos-->
+                                          <div class="tab-pane fade" id="alimentos" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="card-body">
+                                            <div class="profiletimeline mt-0">
+                                            <div class="sl-item">
+                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-right">
+                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
+                                                                <blockquote class="mt-10">
+                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
+                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
+                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
+                                                                   correspondiente.
+                                                                  </p>                                                                
+
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                </blockquote>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="example-country">Seleciona País </label>
-                                                        <select name="example-message" id="example-message" class="form-control">
-                                                            <option>Londres</option>
-                                                            <option>India</option>
-                                                            <option>Usa</option>
-                                                            <option>Canada</option>
-                                                            <option>Tailandia</option>
-                                                            <option>España</option>
-                                                        </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                          <!--tab Vacunación-->
+                                          <div class="tab-pane fade" id="vacunación" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="card-body">
+                                            <div class="profiletimeline mt-0">
+                                            <div class="sl-item">
+                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-right">
+                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
+                                                                <blockquote class="mt-10">
+                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
+                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
+                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
+                                                                   correspondiente.
+                                                                  </p>                                                                
+
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                </blockquote>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <button class="btn btn-success" type="submit">Actualizar Perfil</button>
-                                                </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--tab Alimentos Introducidos-->
+                                        <div class="tab-pane fade" id="alimentosInt" role="tabpanel" aria-labelledby="pills-setting-tab">
+                                            <div class="card-body">
+                                            <div class="profiletimeline mt-0">
+                                            <div class="sl-item">
+                                                <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                <div class="sl-right">
+                                                    <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
+                                                                <blockquote class="mt-10">
+                                                                   <p> Si presionas el botón de <strong>'Cerrar Sesión' </strong>saldrás de tu sesión abiertas y volverás a la página de login. </p>                                                           
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/close.jpg"><img class="img-fluid" src="../img/capturas/close.jpg" alt="imagen ayuda configuración"></a>
+                                                                </blockquote>
+                                                            </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                               
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>  
-                    </div>   
-                    <!--Footer-->
-                    <?php include 'footer.php';?>
-                </div>                                        
+                        </div> 
+                        <!--Footer-->
+                        <?php include 'footer.php';?>   
+                    </div>  
+                </div>                                             
             </div>
         </div>
         <!--Scripts-->   
