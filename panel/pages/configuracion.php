@@ -173,7 +173,7 @@
                                                     <option>Morado</option>
                                                 </select>
                                                 <hr>
-                                                <button name="changeColor"class="btn btn-dark" type="submit">Cambiar Color</button>
+                                                <button name="changeColor"class="btn btn-dark" type="submit"><i class="ik ik-share"></i>Cambiar Color</button>
                                                 <hr>
                                                 <div class="form-group">                                                                                                            
                                                     <?php echo $alertColor?>                                                   

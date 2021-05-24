@@ -222,7 +222,7 @@
                                             <label for="example-notes">Anotaciones</label>
                                             <textarea name="example-notes" rows="5" class="form-control"></textarea>
                                         </div>                                                   
-                                        <button name="addDates" class="btn btn-primary" type="submit">Añadir Datos</button>
+                                        <button name="addDates" class="btn btn-primary" type="submit"><i class="ik ik-share"></i>Añadir</button>
                                     </form>
                                  </div>
                             </div>

@@ -281,7 +281,7 @@
                                                         <label for="example-local">Localización</label>
                                                         <input type="text" placeholder="localidad (por ejemplo: Murcia)" id="example-local" name="example-local" class="form-control" value="<?php echo $localSelect?>">
                                                     </div>                                                   
-                                                    <button name="profile"class="btn btn-primary" type="submit">Actualizar Perfil</button>
+                                                    <button name="profile"class="btn btn-primary" type="submit"><i class="ik ik-share"></i>Actualizar Perfil</button>
                                                     <hr>
                                                     <div class="form-group">                                                                                                            
                                                           <?php echo $alert?>                                                   

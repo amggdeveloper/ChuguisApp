@@ -13,12 +13,18 @@ $(document).ready(function() {
     /*categories chart*/
     function categoryChart() {
         var data = [
-            ["January", 20],
-            ["February", 8],
-            ["March", 4],
-            ["April", 13],
-            ["May", 5],
-            ["June", 9]
+            ["Enero", 40],
+            ["Febrero", 45],
+            ["Marzo", 46],
+            ["Abril", 48],
+            ["Mayo", 58],
+            ["Junio", 61],
+            ["Julio", 65],
+            ["Agosto", 70],
+            ["Septiembre", 71],
+            ["Octubre", 80],
+            ["Noviembre", 81],
+            ["Diciembre", 89],
         ];
         $.plot("#placeholder", [data], {
             series: {

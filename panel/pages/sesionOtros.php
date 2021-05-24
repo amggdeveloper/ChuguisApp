@@ -121,6 +121,7 @@ if (isset($_POST['profile'])) {
                     <button type="button" class="close" data-dismiss="alert">x</button>
                     <strong>¡Enhorabuena!</strong> Tu perfil se ha actualizado correctamente.
                 </div>';
+                
 	        } else {
 		        $alert= '<div class="alert alert-danger">
                     <button type="button" class="close" data-dismiss="alert">x</button>
@@ -129,6 +130,7 @@ if (isset($_POST['profile'])) {
 	        }	
 
         } 
+        
 
 }
 
