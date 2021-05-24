@@ -14,8 +14,6 @@ if(empty($_SESSION['active'])){
 //Instanciamos e inicializamo las variables del usuario
 global $id;
 $id=$_SESSION['idUser'];
-
-echo '<script>alert($id)</script>';
 $colorSelect=null;
 $alertColor="";
 
