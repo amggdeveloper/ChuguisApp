@@ -25,8 +25,11 @@ $resultSelec=mysqli_query($con,$querySelec) ;
 $rowColor=mysqli_fetch_assoc($resultColorSelect);
 $rowSelec=mysqli_fetch_assoc($resultSelec);
 //Seleccionamos el color de la base de datos y lo introducimos en la variable correspondiente
+$colorSelect='';
+if(isset($rowColor['color'])){
+    $colorSelect=$rowColor['color'];
+}
 $idSelec=$rowSelec['iduser'];
-$colorSelect=$rowColor['color'];
 $nameSelect=$rowSelec['name'];
 $pictureSelect=$rowSelec['picture'];
 

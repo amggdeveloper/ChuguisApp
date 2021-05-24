@@ -26,7 +26,11 @@ if (isset($_POST['registro'])) {
 	$querySelec="SELECT * FROM users WHERE mail='$mail'";
 	$resultSelec=mysqli_query($con,$querySelec) ;
 	$rowSelec=mysqli_fetch_assoc($resultSelec);	
-	$email=$rowSelec['mail'];
+	$email='';
+	if(isset($rowSelec['mail'])){
+		$email=$rowSelec['mail'];
+	}
+	
 
 	//Comprobamos que el nombre no esté vacio
 	if (empty($nombre)){
