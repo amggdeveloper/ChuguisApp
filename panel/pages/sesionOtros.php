@@ -14,16 +14,24 @@ if(empty($_SESSION['active'])){
 global $id;
 $id=$_SESSION['idUser'];//recogemos el id de usuario de sesión
 
-//creamos la consulta a la base de datos  
-$result=mysqli_query($con,"SELECT * FROM users WHERE id='$id'");  
- 
+//Hacemos la consulta a la base de datos para seleccionar los datos que hay en ella
+$queryColorSelect="SELECT * FROM profile WHERE iduser='$id'";
+$querySelec="SELECT * FROM users WHERE id='$id'";
+//realizamos la consulta de selección a la base de datos
+$resultColorSelect=mysqli_query($con,$queryColorSelect) ;
+$resultSelec=mysqli_query($con,$querySelec) ;
 //Introducimos el resultado en un array
-$row=mysqli_fetch_assoc($result);
-
-//Recogemos los datos en sus variables correspondientes
-$nameUser=$row['name'];//recogemos el nombre de usuario
-$picture=$row['picture'];//recogemos la imagen del usuario
-$email=$row['mail'];//recogemos el email
+$rowColor=mysqli_fetch_assoc($resultColorSelect);
+$rowSelec=mysqli_fetch_assoc($resultSelec);
+//Seleccionamos el color de la base de datos y lo introducimos en la variable correspondiente
+$colorSelect='';
+if(isset($rowColor['color'])){
+    $colorSelect=$rowColor['color'];
+}
+$idSelec=$rowSelec['iduser'];
+$nameSelect=$rowSelec['name'];
+$pictureSelect=$rowSelec['picture'];
+$mailSelect=$rowSelec['mail'];
 
 //establecemos la zona horaria predeterminada
 setlocale(LC_ALL,'es_Es.UTF-8');
@@ -34,40 +42,41 @@ $alert="";
 $alertColor=""; 
 
 //Inicializamos las variables para no dejarlas a null
-$nameSelect='';//Nombre
-$mailSelect='';//Email
 $passSelect='';//Contraseña
-$pictureSelect='';//Imagen Avatar
 $movilSelect='';//Movil
 $descripSelect='';//Descripción
 $countrySelect='';//País
 $localSelect='';//Localidad
-$colorSelect='blue';
-
-//Hacemos la consulta a la base de datos para seleccionar los datos que hay en ella
-$querySelect="SELECT * FROM profile WHERE iduser='$id'";
-$querySelec="SELECT * FROM users WHERE id='$id'";
-//realizamos la consulta de selección a la base de datos
-$resultSelect=mysqli_query($con,$querySelect) ;
-$resultSelec=mysqli_query($con,$querySelec) ;
-
-//Introducimos el resultado en un array
-$rowSelect=mysqli_fetch_assoc($resultSelect);
-$rowSelec=mysqli_fetch_assoc($resultSelec);
 
 //Recogemos los datos en sus variables correspondientes
-if(isset($_POST['profile'])){
-    $movilSelect=$rowSelect['movil'];//Movil
-    $descripSelect=$rowSelect['descrip'];//Descripción
-    $countrySelect=$rowSelect['country'];//País
-    $localSelect=$rowSelect['local'];//Localidad
+if(isset($rowSelec['movil'])){
+    $movilSelect=$rowSelec['movil'];//Movil
+}  
+if(isset($rowSelec['descrip'])){
+    $descripSelect=$rowSelec['descrip'];//Descripción
+} 
+if(isset($rowSelec['country'])){
+    $countrySelect=$rowSelec['country'];//País
+} 
+
+if(isset($rowSelec['local'])){
+    $localSelect=$rowSelec['local'];//Localidad    
 }
-if(isset($_POST['profile'])){
-    $nameSelect=$rowSelec['name'];//Nombre
-    $mailSelect=$rowSelec['mail'];//Email
-    $passSelect=$rowSelec['pass'];//Contraseña
-    $pictureSelect=$rowSelec['picture'];//Imagen Avatar
-    $colorSelect=$rowSelec['color'];
+
+if(isset($rowColor['name'])){
+    $nameSelect=$rowColor['name'];//Nombre
+}
+
+if(isset($rowColor['mail'])){
+    $mailSelect=$rowColor['mail'];//Email 
+}
+
+if(isset($rowColor['pass'])){
+    $passSelect=$rowColor['pass'];//Contraseña
+}
+
+if(isset($rowColor['picture'])){
+    $pictureSelect=$rowColor['picture'];//Imagen Avatar 
 }
 
 //Comprobamos si el formulario ha sido empezado
@@ -99,9 +108,11 @@ if (isset($_POST['profile'])) {
         //validamos la extension
         if(!in_array($extension, $typeSuccess)){
         }else{
-            $alert='<div class="alert alert-danger">
-                        <button type="button" class="close" data-dismiss="alert">x</button>
-                        <strong>¡Error!</strong> No se puede subir una imagen con ese formato.
+            $alert='<div class="alert alert-warning alert-dismissable fade show" role="alert">
+                        <strong>¡Error!</strong> No se puede subir una imagen con ese formato
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <i class="ik ik-x"></i>
+                        </button>                    
                     </div>';
         }
 
@@ -112,15 +123,15 @@ if (isset($_POST['profile'])) {
             move_uploaded_file($_FILES['pictureAvatar']['tmp_name'],$path.$namePicture);
 
             //Variables con las consultas a la base de datos
-            $queryUpdateUsers="UPDATE users SET name='$nombre',mail='$mail',pass='$pass', picture='$namePicture' WHERE id='$id'";
+            $queryUpdateUsers="UPDATE users SET name='$nombre',mail='$mail',pass='$passCifrada', picture='$namePicture' WHERE id='$id'";
             $queryUpdateProfile="UPDATE profile SET movil='$phone',descrip='$descrip',country='$country', local='$local' WHERE iduser='$id'";
    
             //Introducimos los datos obtenidos del formulario en la base de datos profile	
             if(mysqli_query($con,$queryUpdateProfile)){
-		        $alert= '<div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert">x</button>
-                    <strong>¡Enhorabuena!</strong> Tu perfil se ha actualizado correctamente.
-                </div>';
+		        $alert= '<div class="alert alert-success alert-dismissable fade show" role="alert">
+                            <strong>¡Perfecto!</strong> Tus datos han sido actualizados
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="ik ik-x"></i></button>                         
+                        </div>';
                 
 	        } else {
 		        $alert= '<div class="alert alert-danger">
@@ -128,10 +139,7 @@ if (isset($_POST['profile'])) {
                     <strong>¡Error!</strong> Tu perfil no se ha actualizado correctamente.
                 </div>';
 	        }	
-
         } 
-        
-
 }
 
 

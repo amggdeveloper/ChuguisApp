@@ -138,11 +138,11 @@
                                         <h3>Introducir Datos</h3>
                                     </div>
                                     <div class="card-body">
-                                        <div class="mb-20">   
-                                        <form class="form-horizontal" action="" method="POST">                                        
+                                    <form class="form-horizontal" action="" method="POST"> 
+                                        <div class="mb-20">  
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <div class="input-group input-group-primary">
+                                                <div class="input-group input-group-info">
                                                     <span class="input-group-prepend"><label class="input-group-text"><i class="ik ik-star"></i></label></span>
                                                     <input type="text" class="form-control" placeholder="altura en cm" name="height" id="height">
                                                 </div>
@@ -150,7 +150,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <div class="input-group input-group-primary">
+                                                <div class="input-group input-group-success">
                                                     <span class="input-group-prepend"><label class="input-group-text"><i class="ik ik-calendar"></i></label></span>
                                                     <input type="date" class="form-control" name="date" id="date">
                                                 </div>
@@ -158,13 +158,13 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <div class="input-group input-group-primary">
+                                                <div class="input-group input-group-warning">
                                                     <span class="input-group-prepend"><label class="input-group-text"><i class="ik ik-edit"></i></label></span>
                                                     <input type="text" class="form-control" placeholder="anotaciones" name="notes" id="notes">
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" name="addHeight" class="btn btn-primary"><i class="ik ik-share"></i>Añadir</button>
+                                        <button type="submit" name="addHeight" class="btn btn-dark"><i class="ik ik-share"></i>Añadir</button>
                                         </form> 
                                                                            
                                 </div>
@@ -173,15 +173,43 @@
                             </div>
                         </div>  
                         <?php echo $msg?> 
+                        <!--Tabla-->            
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header"><h3>Tabla Bebés Introducidos</h3></div>
+                                        <div class="card-body">
+                                            <table id="data_table" class="table">
+                                                 <thead>
+                                                        <tr>
+                                                          <th>Id</th>
+                                                          <th class="nosort">Imagen</th>
+                                                          <th>Nombre</th>
+                                                          <th>Fecha Nac.</th>
+                                                          <th>Altura (cm)</th>
+                                                          <th>Peso (gramos)</th>
+                                                          <th class="nosort">&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                <tbody>                                            
+                                                  <?php echo $table?>                                                                                                                                            
+                                                </tbody>
+                                             </table> 
+                                             <?php echo $msg?>                                            
+                                             </div>
+                                            </div>
+                                        </div>
+                                    </div>
                         <!--Gráfica altura-->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3>Altura por Meses</h3>
+                                        <h3>Gráfica Altura por Fecha</h3>
                                     </div>
                                 <div class="card-block">
-                            <div id="placeholder" class="demo-placeholder" style="height:300px;"></div>
+                            <div id="placeholder" class="demo-placeholder" width="200" height="300"></div>
+                            <canvas id="grafica"></canvas>
                         </div>  
                       </div>                                                    
                     </div>                                                           
@@ -203,6 +231,7 @@
         <script src="../plugins/flot-charts/curvedLines.js"></script>
         <script src="../plugins/flot-charts/jquery.flot.tooltip.min.js"></script>
         <script src="../dist/js/theme.min.js"></script>       
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
        
 
         <!--Script para realizar la busqueda en la página-->
@@ -217,5 +246,46 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+        
+        <!--Script para el Grafico-->
+        <script type="text/javascript">
+        // Obtener una referencia al elemento canvas del DOM
+        var ctx = document.getElementById('grafica').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+                data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+                datasets: [{
+                    label: '# Altura por Fecha',
+                    data: [50, 19, 3, 5, 2, 3,5,6,7,8,9,10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                 }]
+                },
+                options: {
+                    scales: {
+                      y: {
+                            beginAtZero: true
+                     }
+                   }
+                }
+            });
+    </script>
     </body>
 </html>

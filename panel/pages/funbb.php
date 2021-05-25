@@ -37,7 +37,7 @@ $pictureSelect=$rowSelec['picture'];
 $error=false;
 $msg='';
 
-//Comprobamos si el formulario ha sido empezado
+//Comprobamos si el formulario no tiene valores nulos
 if (isset($_POST['addDates'])) {
 
 //Introducimos los datos en variables, teniendo en cuenta la inyección de SQL

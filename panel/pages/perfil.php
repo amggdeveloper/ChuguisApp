@@ -235,7 +235,7 @@
                                         <!--tab Configuración-->
                                         <div class="tab-pane fade show active" id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
                                             <div class="card-body">
-                                                <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
+                                                <form class="form-horizontal" action="perfil.php" method="POST" enctype="multipart/form-data">
                                                     <div class="form-group">
                                                         <label for="example-name">Nombre</label>
                                                         <input type="text" placeholder="nombre" class="form-control" name="example-name" id="example-name" value="<?php echo $nameSelect?>">
@@ -283,11 +283,13 @@
                                                     </div>                                                   
                                                     <button name="profile"class="btn btn-primary" type="submit"><i class="ik ik-share"></i>Actualizar Perfil</button>
                                                     <hr>
-                                                    <div class="form-group">                                                                                                            
-                                                          <?php echo $alert?>                                                   
-                                                    </div>
+                                                    <div class="form-group">                                                                                                           
+                                                                                                         
+                                                    </div>                                                      
                                                 </form>
+                                                <?php echo $alert?> 
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
