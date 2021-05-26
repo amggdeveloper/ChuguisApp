@@ -49,41 +49,22 @@ $countrySelect='';//País
 $localSelect='';//Localidad
 
 //Recogemos los datos en sus variables correspondientes
-if(isset($rowSelec['movil'])){
-    $movilSelect=$rowSelec['movil'];//Movil
-}  
-if(isset($rowSelec['descrip'])){
-    $descripSelect=$rowSelec['descrip'];//Descripción
-} 
-if(isset($rowSelec['country'])){
-    $countrySelect=$rowSelec['country'];//País
-} 
-
-if(isset($rowSelec['local'])){
-    $localSelect=$rowSelec['local'];//Localidad    
-}
-
-if(isset($rowColor['name'])){
-    $nameSelect=$rowColor['name'];//Nombre
-}
-
-if(isset($rowColor['mail'])){
-    $mailSelect=$rowColor['mail'];//Email 
-}
-
-if(isset($rowColor['pass'])){
-    $passSelect=$rowColor['pass'];//Contraseña
-}
-
-if(isset($rowColor['picture'])){
-    $pictureSelect=$rowColor['picture'];//Imagen Avatar 
+if(isset($rowColor['movil'],$rowColor['descrip'],$rowColor['country'],$rowColor['local'],$rowSelec['name'],$rowSelec['mail'],$rowSelec['pass'],$rowSelec['picture'])){
+    $movilSelect=$rowColor['movil'];//Movil
+    $descripSelect=$rowColor['descrip'];//Descripción
+    $countrySelect=$rowColor['country'];//País
+    $localSelect=$rowColor['local'];//Localidad 
+    $nameSelect=$rowSelec['name'];//Nombre
+    $mailSelect=$rowSelec['mail'];//Email 
+    $passSelect=$rowSelec['pass'];//Contraseña
+    $pictureSelect=$rowSelec['picture'];//Imagen Avatar 
 }
 
 //Comprobamos si el formulario ha sido empezado
 if (isset($_POST['profile'])) {
      
 	//Introducimos los datos en variables, teniendo en cuenta la inyección de SQL
-    $nombre = mysqli_real_escape_string($con,$_POST['example-name']);
+    $name = mysqli_real_escape_string($con,$_POST['example-name']);
     $mail = mysqli_real_escape_string($con,$_POST['example-email']);
     $pass = mysqli_real_escape_string($con,$_POST['example-password']);	
 	$passCifrada=password_hash($pass,PASSWORD_DEFAULT);//Encriptamos la contraseña	
@@ -114,16 +95,14 @@ if (isset($_POST['profile'])) {
                         <i class="ik ik-x"></i>
                         </button>                    
                     </div>';
-        }
-
-        if(empty($alert)){
+        }if(empty($alert)){
             //ruta donde se guardarán las imágenes que subamos
             $path=$_SERVER['DOCUMENT_ROOT'].'/ChuguisApp/images/users/';   
             //Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
             move_uploaded_file($_FILES['pictureAvatar']['tmp_name'],$path.$namePicture);
 
             //Variables con las consultas a la base de datos
-            $queryUpdateUsers="UPDATE users SET name='$nombre',mail='$mail',pass='$passCifrada', picture='$namePicture' WHERE id='$id'";
+            $queryUpdateUsers="UPDATE users SET name='$name',mail='$mail',pass='$passCifrada', picture='$namePicture' WHERE id='$id'";
             $queryUpdateProfile="UPDATE profile SET movil='$phone',descrip='$descrip',country='$country', local='$local' WHERE iduser='$id'";
    
             //Introducimos los datos obtenidos del formulario en la base de datos profile	

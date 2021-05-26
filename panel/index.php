@@ -27,8 +27,11 @@
         <link rel="stylesheet" href="plugins/c3/c3.min.css">
         <link rel="stylesheet" href="plugins/owl.carousel/dist/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="plugins/owl.carousel/dist/assets/owl.theme.default.min.css">
-        <link rel="stylesheet" href="dist/css/theme.min.css">        
-        <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="dist/css/theme.min.css">     
+        <link rel="stylesheet" href="../plugins/chartist/dist/chartist.min.css">  
+        <link rel="stylesheet" href="dist/css/style.css"> 
+        <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>       
+        
     </head>
     <!--Termina HEAD-->
     <!--Empieza BODY-->
@@ -128,10 +131,10 @@
                         </div>
                     </div>
                 </div>
-                <!--Contenidos de la página Inicio-->
-                <!--Cuadro con los bebés introducidos y las características físicas-->
+                <!--Contenidos de la página Inicio-->               
+                <!--Tarjeta Datos Bebés-->
                 <div class="main-content">
-                    <div class="container-fluid">
+                    <dic class="container-fluid">
                         <div class="row clearfix">
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="widget">
@@ -139,7 +142,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="state">
                                                 <h6>Bebés</h6>
-                                                <h2>2</h2>
+                                                <h2><?php echo $countBabies?></h2>
                                             </div>
                                             <div class="icon">
                                                 <i class="ik ik-users"></i>
@@ -152,13 +155,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--Tarjeta Datos Altura-->
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="widget">
                                     <div class="widget-body">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="state">
                                                 <h6>Altura</h6>
-                                                <h2>41,410</h2>
+                                                <h2><?php echo $lastHeight?></h2>
                                             </div>
                                             <div class="icon">
                                                 <i class="ik ik-star"></i>
@@ -171,13 +175,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--Tarjeta Datos Peso-->
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="widget">
                                     <div class="widget-body">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="state">
                                                 <h6>Peso</h6>
-                                                <h2>2800</h2>
+                                                <h2><?php echo $lastWeight?></h2>
                                             </div>
                                             <div class="icon">
                                                 <i class="ik ik-target"></i>
@@ -190,13 +195,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--Tarjeta Datos Percentil-->
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="widget">
                                     <div class="widget-body">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="state">
                                                 <h6>Percentil</h6>
-                                                <h2>41,410</h2>
+                                                <h2><?php echo $percentil?></h2>
                                             </div>
                                             <div class="icon">
                                                 <i class="ik ik-trending-up"></i>
@@ -212,165 +218,166 @@
                         </div>
                         <!--Última toma introducida-->
                         <div class="row">
-                            <div class="col-md-8">
-                                <div class="card">
+                            <div class="col-xl-4 col-md-8">                           
+                            <div class="card comp-card">
                                     <div class="card-body">
                                         <div class="row align-items-center">
-                                            <div class="col-lg-8 col-md-12">
-                                                <h3 class="card-title">Última toma introducida</h3>
-                                                <div id="visitfromworld" style="width:100%; height:350px"></div>
+                                            <div class="col">
+                                                <h5 class="mb-25">Última Toma Introducida</h5>
+                                                <h6>Pecho: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(último tomado)</span></h6>
+                                                <h2 class="fw-700 text-blue">1,563</h2>
+                                                <hr>
+                                                <h6>Tiempo: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(en minutos)</span></h6>
+                                                <h2 class="fw-700 text-blue">1,563</h2>
+                                                <hr>
+                                                <h6>Duerme: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(después de la toma)</span></h6>
+                                                <h2 class="fw-700 text-blue">1,563</h2>
+                                                <hr>
+                                                <h6>Duerme: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(actualizada)</span></h6>
+                                                <p class="mb-0">May 23 - June 01 (2017)</p>
+                                                <hr>
                                             </div>
-                                            <div class="col-lg-4 col-md-12">
-                                                <div class="row mb-15">
-                                                    <div class="col-9">India</div>
-                                                    <div class="col-3 text-right">28%</div>
-                                                    <div class="col-12">
-                                                        <div class="progress progress-sm mt-5">
-                                                            <div class="progress-bar bg-green" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-15">
-                                                    <div class="col-9"> UK</div>
-                                                    <div class="col-3 text-right">21%</div>
-                                                    <div class="col-12">
-                                                        <div class="progress progress-sm mt-5">
-                                                            <div class="progress-bar bg-aqua" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-15">
-                                                    <div class="col-9"> USA</div>
-                                                    <div class="col-3 text-right">18%</div>
-                                                    <div class="col-12">
-                                                        <div class="progress progress-sm mt-5">
-                                                            <div class="progress-bar bg-purple" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-9">China</div>
-                                                    <div class="col-3 text-right">12%</div>
-                                                    <div class="col-12">
-                                                        <div class="progress progress-sm mt-5">
-                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-clock bg-blue"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--Características físicas del bebé-->
-                            <div class="col-md-4">
-                                <div class="card" style="min-height: 422px;">
-                                    <div class="card-header"><h3>Físico</h3></div>
+                            <div class="col-xl-4 col-md-8">                           
+                            <div class="card proj-t-card">
                                     <div class="card-body">
-                                        <div id="c3-donut-chart"></div>
+                                        <div class="row align-items-center mb-30">
+                                            <div class="col-auto">
+                                                <i class="fas fa-chart-pie text-yellow f-30"></i>
+                                            </div>
+                                            <div class="col pl-0">
+                                                <h6 class="mb-5">Alimentos</h6>
+                                                <h6 class="mb-0 text-yellow">Semanal</h6>
+                                            </div>
+                                        </div>
+                                        <!--Lunes-->
+                                        <div class="row align-items-center text-center">
+                                            <div class="col">
+                                                <h6 class="mb-0">Lunes</h6>                                               
+                                            </div>
+                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Verdura</h6></div>
+                                        </div>
+                                        <hr>
+                                        <!--Martes-->
+                                        <div class="row align-items-center text-center">
+                                            <div class="col">
+                                                <h6 class="mb-0">Martes</h6>                                               
+                                            </div>
+                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Pasta</h6></div>
+                                        </div>
+                                        <hr>
+                                        <!--Miercoles-->
+                                        <div class="row align-items-center text-center">
+                                            <div class="col">
+                                                <h6 class="mb-0">Miercoles</h6>                                               
+                                            </div>
+                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Cereales</h6></div>
+                                        </div>
+                                        <hr>
+                                         <!--Jueves-->
+                                         <div class="row align-items-center text-center">
+                                            <div class="col">
+                                                <h6 class="mb-0">Jueves</h6>                                               
+                                            </div>
+                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Carne</h6></div>
+                                        </div>
+                                        <hr>
+                                        <!--Viernes-->
+                                        <div class="row align-items-center text-center">
+                                            <div class="col">
+                                                <h6 class="mb-0">Viernes</h6>                                               
+                                            </div>
+                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Pescado</h6></div>
+                                        </div>
+                                        <hr>
+                                         <!--Sabado-->
+                                         <div class="row align-items-center text-center">
+                                            <div class="col">
+                                                <h6 class="mb-0">Sabado</h6>                                               
+                                            </div>
+                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Huevo</h6></div>
+                                        </div>
+                                        <hr>
+                                        <!--Domingo-->
+                                        <div class="row align-items-center text-center">
+                                            <div class="col">
+                                                <h6 class="mb-0">Domingo</h6>                                               
+                                            </div>
+                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Fruta</h6></div>
+                                        </div>
+                                        <hr>
+                                        <h6 class="pt-badge bg-yellow">Semanal</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--Características físicas del bebé-->
+                        <div class="col-md-4">
+                            <div class="card" style="min-height: 470px;">
+                                <div class="card-header"><h3>Datos del Bebé</h3></div>                                
+                                   <div class="card-body">                                      
+                                    <h6>Nombre Bebé: <span class="badge badge-pill badge-warning" style='font-size:0.60em'>(último bebé introducido)</span></h6>
+                                    <h2 class="fw-700 f-50 text-warning">Diana</h2>   
+                                    <hr>     
+                                    <h6>Género: <span class="badge badge-pill badge-warning" style='font-size:0.60em'>(último bebé introducido)</span></h6> 
+                                    <br>                                                                          
+                                    <div class="progres blue">
+                                        <span class="progres-left">
+                                            <span class="progres-bar"></span>
+                                        </span>
+                                        <span class="progres-right">
+                                            <span class="progres-bar"></span>
+                                         </span>
+                                         
+                                        <div class="progres-value"><i class="fas fa-venus text-grey f-60"></i></div>                                    
+                                </div>
+                                <br>
+                                <hr>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!--Observaciones Introducidas-->
-                        <div class="row">
-                            <div class="col-md-4">
+                        <!--Tablón twitter-->
+                        <di class="row">
+                            <div class="col-md-8">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3>Observaciones</h3>
+                                        <h3>Tablón Twitter</h3>
                                         <div class="card-header-right">
                                             <ul class="list-unstyled card-option">
                                                 <li><i class="ik ik-chevron-left action-toggle"></i></li>
                                                 <li><i class="ik ik-minus minimize-card"></i></li>
                                                 <li><i class="ik ik-x close-card"></i></li>
                                             </ul>
-                                        </div>
+                                        </div>                                        
                                     </div>
-                                    <div class="card-body chat-box scrollable" style="height:300px;">
-                                        <ul class="chat-list">
-                                            <li class="chat-item">
-                                                <div class="chat-img"><img src="img/users/1.jpg" alt="user"></div>
-                                                <div class="chat-content">
-                                                    <h6 class="font-medium">James Anderson</h6>
-                                                    <div class="box bg-light-info">Lorem Ipsum is simply dummy text of the printing &amp; type setting industry.</div>
-                                                </div>
-                                                <div class="chat-time">10:56 am</div>
-                                            </li>
-                                            <li class="chat-item">
-                                                <div class="chat-img"><img src="img/users/2.jpg" alt="user"></div>
-                                                <div class="chat-content">
-                                                    <h6 class="font-medium">Bianca Doe</h6>
-                                                    <div class="box bg-light-info">It’s Great opportunity to work.</div>
-                                                </div>
-                                                <div class="chat-time">10:57 am</div>
-                                            </li>
-                                            <li class="odd chat-item">
-                                                <div class="chat-content">
-                                                    <div class="box bg-light-inverse">I would love to join the team.</div>
-                                                    <br>
-                                                </div>
-                                            </li>
-                                            <li class="odd chat-item">
-                                                <div class="chat-content">
-                                                    <div class="box bg-light-inverse">Whats budget of the new project.</div>
-                                                    <br>
-                                                </div>
-                                                <div class="chat-time">10:59 am</div>
-                                            </li>                                            
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer chat-footer">
-                                        <div class="input-wrap">
-                                            <input type="text" placeholder="Type and enter" class="form-control">
-                                        </div>
-                                        <button type="button" class="btn btn-icon btn-theme"><i class="fa fa-paper-plane"></i></button>
-                                    </div>
+                                    <div class="card-body chat-box scrollable">                                  
+                                        <a class="twitter-timeline" href="https://twitter.com/ChuguisA?ref_src=twsrc%5Etfw">Tweets de ChuguisApp</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                                                   
+                                    </div> 
                                 </div>
-                            </div>
-                            <!--Tiempo-->
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <h4 class="card-title">Reporte Meteorilógico</h4>
-                                            <select class="form-control w-25 ml-auto">
-                                                <option selected="">Today</option>
-                                                <option value="1">Weekly</option>
-                                            </select>
-                                        </div>
-                                        <div class="d-flex align-items-center flex-row mt-30">
-                                            <div class="p-2 f-50 text-info"><i class="wi wi-day-showers"></i> <span>23<sup>°</sup></span></div>
-                                            <div class="p-2">
-                                            <h3 class="mb-0">Saturday</h3><small>Banglore, India</small></div>
-                                        </div>
-                                        <table class="table table-borderless">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Wind</td>
-                                                    <td class="font-medium">ESE 17 mph</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Humidity</td>
-                                                    <td class="font-medium">83%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Pressure</td>
-                                                    <td class="font-medium">28.56 in</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <hr>
-                                        <ul class="list-unstyled row text-center city-weather-days mb-0 mt-20">
-                                            <li class="col"><i class="wi wi-day-sunny mr-5"></i><span>09:30</span><h3>20<sup>°</sup></h3></li>
-                                            <li class="col"><i class="wi wi-day-cloudy mr-5"></i><span>11:30</span><h3>22<sup>°</sup></h3></li>
-                                            <li class="col"><i class="wi wi-day-hail mr-5"></i><span>13:30</span><h3>25<sup>°</sup></h3></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Calendario Vacunación-->
-                            <div class="col-md-4">
-                                <div class="card" style="min-height: 422px;">
+                            </div>                                                                    
+                        <!--Calendario Vacunación-->
+                         <div class="col-md-4">
+                            <div class="card" style="min-height: 422px;">
                                     <div class="card-header">
                                         <h3>Vacunación</h3>
                                         <div class="card-header-right">
@@ -384,48 +391,46 @@
                                     <div class="card-body timeline">
                                         <div class="header bg-theme" style="background-image: url('img/placeholder/placeimg_400_200_nature.jpg')">
                                             <div class="color-overlay d-flex align-items-center">
-                                                <div class="day-number">8</div>
+                                                <div class="day-number">26</div>
                                                 <div class="date-right">
-                                                    <div class="day-name">Monday</div>
-                                                    <div class="month">February 2018</div>
+                                                    <div class="day-name">Miercoles</div>
+                                                    <div class="month">Mayo 2021</div>
                                                 </div>
                                             </div>                                
                                         </div>
                                         <ul>
                                             <li>
                                                 <div class="bullet bg-pink"></div>
-                                                <div class="time">11am</div>
+                                                <div class="time">10:00</div>
                                                 <div class="desc">
-                                                    <h3>Attendance</h3>
-                                                    <h4>Computer Class</h4>
+                                                    <h3>Vesero</h3>
+                                                    <h4>Dosis Inicial</h4>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="bullet bg-green"></div>
-                                                <div class="time">12pm</div>
+                                                <div class="time">14:00</div>
                                                 <div class="desc">
-                                                    <h3>Design Team</h3>
-                                                    <h4>Hangouts</h4>
+                                                    <h3>Vesero</h3>
+                                                    <h4>Recordatorio</h4>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="bullet bg-orange"></div>
-                                                <div class="time">2pm</div>
+                                                <div class="time">17:00</div>
                                                 <div class="desc">
-                                                    <h3>Finish</h3>
-                                                    <h4>Go to Home</h4>
+                                                    <h3>Vesero</h3>
+                                                    <h4>Recordatorio</h4>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                         </div>              
-                    </div>
-               </div>
+                        </div>
         <!--Footer-->
         <?php include 'pages/footer.php';?>
-    </div>
+        </div>
 
         <!--Ficheros Javascript-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -448,6 +453,9 @@
         <script src="js/widgets.js"></script>
         <script src="js/charts.js"></script>
         <script src="dist/js/theme.min.js"></script>
+        <script src="../js/widget-statistic.js"></script>
+        <script src="../plugins/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="../plugins/chartist/dist/chartist.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

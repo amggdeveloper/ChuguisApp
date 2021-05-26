@@ -174,10 +174,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Perfil</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="false">Tablón Twitter</a>
-                                        </li>                                       
+                                        </li>                                                                            
                                         
                                     </ul>
                                     <!--tab tablon-->

@@ -31,7 +31,7 @@ if (isset($_POST['changeColor'])) {
     if(isset($rowColor['color'])){
     $colorSelect=$rowColor['color'];
     }
-    echo "<script>alert($colorSelect)</script>";
+       
 	//Introducimos la selección de color por el usuario, teniendo en cuenta la inyección de SQL   
     $color=mysqli_real_escape_string($con,$_POST['example-color']);	      
 
