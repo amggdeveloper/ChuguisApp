@@ -216,7 +216,7 @@
 									</div>
 								</div>
 								<div class="text-right">
-									<input type="submit" value="Enviar Mensaje" class="btn btn-primary" data-loading-text="Cargando...">
+									<input type="submit" value="Enviar" class="btn btn-primary" data-loading-text="Cargando..."></input>
 								</div>
 							</form>
 						</div>

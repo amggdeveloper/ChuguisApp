@@ -19,7 +19,7 @@ if($to) {
 			'val' => $_POST['name']
 		),
 		1 => array(
-			'text' => 'Email address',
+			'text' => 'Email',
 			'val' => $_POST['email']
 		),
 		2 => array(
@@ -35,13 +35,13 @@ if($to) {
 	}
 
 	$headers = '';
-	$headers .= 'De: ' . $name . ' <' . $email . '>' . "\r\n";
-	$headers .= "Responder a: " .  $email . "\r\n";
+	$headers .= 'From: ' . $name . ' <' . $email . '>' . "\r\n";
+	$headers .= "Reply-To: " .  $email . "\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 	if (mail($to, $subject, $message, $headers)){
-		$arrResult = array ('response'=>'correcto');
+		$arrResult = array ('response'=>'success');
 	} else{
 		$arrResult = array ('response'=>'error');
 	}
