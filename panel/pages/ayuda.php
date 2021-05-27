@@ -77,10 +77,7 @@
                                 </div>
                                 <div class="nav-item">
                                     <a href="peso.php"><i class="ik ik-target"></i><span>Peso</span></a>                                  
-                                </div>
-                                <div class="nav-item">
-                                    <a href="percentil.php"><i class="ik ik-trending-up"></i><span>Percentil</span></a>                                   
-                                </div>                                
+                                </div>                                               
                                 <div class="nav-lavel">Alimentación</div>
                                 <div class="nav-item">
                                     <a href="tomas.php"><i class="ik ik-watch"></i><span>Tomas</span></a>                                    
@@ -92,10 +89,7 @@
                                 <div class="nav-lavel">Calendario</div>
                                 <div class="nav-item">
                                     <a href="vacunacion.php"><i class="ik ik-shield"></i><span>Vacunación</span></a>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="alimentosInt.php"><i class="ik ik-clipboard"></i><span>Alimentos Introducidos</span></a>
-                                </div>                              
+                                </div>                                                            
                                 <div class="nav-item active">
                                     <a href="ayuda.php"><i class="ik ik-help-circle"></i><span>Ayuda</span></a>
                                 </div>
@@ -145,10 +139,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#peso" role="tab" aria-controls="pills-setting" aria-selected="false">Peso</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#percentil" role="tab" aria-controls="pills-setting" aria-selected="false">Percentil</a>
-                                        </li>
+                                        </li>                                       
                                         <li class="nav-item">
                                             <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#tomas" role="tab" aria-controls="pills-setting" aria-selected="false">Tomas</a>
                                         </li>
@@ -157,10 +148,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#vacunacion" role="tab" aria-controls="pills-setting" aria-selected="false">Vacunación</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#alimentosInt" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos Introducidos</a>
-                                        </li>
+                                        </li>                                        
                                     </ul>
                                    
                                     <!--Pestaña Inicio-->
@@ -272,30 +260,6 @@
                                             </div>
                                         </div>
 
-                                          <!--tab Percentil-->
-                                          <div class="tab-pane fade" id="percentil" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                            <div class="card-body">
-                                            <div class="profiletimeline mt-0">
-                                            <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
-                                                                <blockquote class="mt-10">
-                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
-                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
-                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
-                                                                   correspondiente.
-                                                                  </p>                                                                
-
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                           <!--tab Tomas-->
                                           <div class="tab-pane fade" id="tomas" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <div class="card-body">
@@ -366,35 +330,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <!--tab Alimentos Introducidos-->
-                                        <div class="tab-pane fade" id="alimentosInt" role="tabpanel" aria-labelledby="pills-setting-tab">
-                                            <div class="card-body">
-                                            <div class="profiletimeline mt-0">
-                                            <div class="sl-item">
-                                                <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
-                                                                <blockquote class="mt-10">
-                                                                   <p> Si presionas el botón de <strong>'Cerrar Sesión' </strong>saldrás de tu sesión abiertas y volverás a la página de login. </p>                                                           
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/close.jpg"><img class="img-fluid" src="../img/capturas/close.jpg" alt="imagen ayuda configuración"></a>
-                                                                </blockquote>
-                                                            </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                               
-                                            </div>
-                                        </div>
+                                        </div>                                      
                                     </div>
                                 </div>
                             </div>
-                        </div> 
-                        <!--Footer-->
-                        <?php include 'footer.php';?>   
+                        </div>                       
                     </div>  
+                      <!--Footer-->
+                      <?php include 'footer.php';?>   
                 </div>                                             
             </div>
         </div>

@@ -34,7 +34,8 @@ if(!empty($_SESSION['active'])){
 					$_SESSION['active']=true;	
 					$_SESSION['idUser']=$row['id'];
 					$_SESSION['name']=$row['name'];
-					$_SESSION['email']=$row['mail'];					
+					$_SESSION['email']=$row['mail'];
+					$_SESSION['role']=$row['role'];					
 					$_SESSION['start']=time();
 					$_SESSION['expire']=$_SESSION['start']+(5*60);//Tiempo para mantener la sesión 
 
@@ -42,7 +43,11 @@ if(!empty($_SESSION['active'])){
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 							<strong>¡Enhorabuena!</strong> , ¡Bienvenido!
  		   	  				</div>';	
-					header('location:panel/index.php');
+					if($row['role']==1){
+						header('location:panel/indexAD.php');
+					}else{
+						header('location:panel/index.php');
+					}					
 					
 			}else{
 					echo  '<div class="alert alert-danger">

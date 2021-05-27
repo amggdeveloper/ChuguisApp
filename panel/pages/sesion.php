@@ -54,6 +54,22 @@ if(isset($rowColor['color'],$rowDataBabies['height'],$rowDataBabies['weight'])){
 
 }
 
+//Contabilizamos los registros en las tablas de la base de datos para el panel de control del administrador
+$cUsers=mysqli_query($con,"SELECT COUNT(*) total FROM users") or die("Error de Sesión");//total usuarios en BD
+$cBabies=mysqli_query($con,"SELECT COUNT(*) total FROM babies") or die("Error de Sesión");//total bebés en BD 
+$cNews=mysqli_query($con,"SELECT COUNT(*) total FROM newsletter") or die("Error de Sesión");//total newsletter en BD
+$cProfile=mysqli_query($con,"SELECT COUNT(*) total FROM profile") or die("Error de Sesión");//total perfiles en BD
 
+//Recogemos el resultado de las consultas
+$rUsers=mysqli_fetch_assoc($cUsers);
+$rBabies=mysqli_fetch_assoc($cBabies);
+$rNews=mysqli_fetch_assoc($cNews);
+$rProfile=mysqli_fetch_assoc($cProfile);
+
+//Introducimos los datos obtenidos en variables
+$totalUsers=$rUsers['total'];
+$totalBabies=$rBabies['total'];
+$totalNews=$rNews['total'];
+$totalProfile=$rProfile['total'];
 
 ?>

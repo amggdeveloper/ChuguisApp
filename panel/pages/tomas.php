@@ -76,10 +76,7 @@
                                 </div>
                                 <div class="nav-item">
                                     <a href="peso.php"><i class="ik ik-target"></i><span>Peso</span></a>                                  
-                                </div>
-                                <div class="nav-item">
-                                    <a href="percentil.php"><i class="ik ik-trending-up"></i><span>Percentil</span></a>                                   
-                                </div>                                
+                                </div>                                                             
                                 <div class="nav-lavel">Alimentación</div>
                                 <div class="nav-item active">
                                     <a href="tomas.php"><i class="ik ik-watch"></i><span>Tomas</span></a>                                    
@@ -91,10 +88,7 @@
                                 <div class="nav-lavel">Calendario</div>
                                 <div class="nav-item">
                                     <a href="vacunacion.php"><i class="ik ik-shield"></i><span>Vacunación</span></a>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="alimentosInt.php"><i class="ik ik-clipboard"></i><span>Alimentos Introducidos</span></a>
-                                </div>                              
+                                </div>                                                           
                                 <div class="nav-item">
                                     <a href="ayuda.php"><i class="ik ik-help-circle"></i><span>Ayuda</span></a>
                                 </div>

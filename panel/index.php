@@ -105,10 +105,7 @@
                                 </div>
                                 <div class="nav-item">
                                     <a href="pages/peso.php"><i class="ik ik-target"></i><span>Peso</span></a>                                   
-                                </div>
-                                <div class="nav-item">
-                                    <a href="pages/percentil.php"><i class="ik ik-trending-up"></i><span>Percentil</span></a>                                   
-                                </div>                               
+                                </div>                                                            
                                 <div class="nav-lavel">Alimentación</div>
                                 <div class="nav-item">
                                     <a href="pages/tomas.php"><i class="ik ik-watch"></i><span>Tomas</span></a>                                   
@@ -120,10 +117,7 @@
                                 <div class="nav-lavel">Calendario</div>
                                 <div class="nav-item">
                                     <a href="pages/vacunacion.php"><i class="ik ik-shield"></i><span>Vacunación</span></a>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="pages/alimentosInt.php"><i class="ik ik-clipboard"></i><span>Alimentos Introducidos</span></a>
-                                </div>
+                                </div>                               
                                 <div class="nav-item">
                                     <a href="pages/ayuda.php"><i class="ik ik-help-circle"></i><span>Ayuda</span></a>
                                 </div>
@@ -456,6 +450,9 @@
         <script src="../js/widget-statistic.js"></script>
         <script src="../plugins/owl.carousel/dist/owl.carousel.min.js"></script>
         <script src="../plugins/chartist/dist/chartist.min.js"></script>
+
+        <!--Script para realizar la busqueda en la página-->
+        <script src="js/buscar.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

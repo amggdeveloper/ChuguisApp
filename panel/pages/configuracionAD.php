@@ -52,47 +52,26 @@
                                 </div>
                             </div>                           
                         <!--Menu modal-->
-                        <?php include 'menuModal.php';?>
+                        <?php include 'menuModalAD.php';?>
                     </div>
                 </div>
             </div>
             </header>
 
             <!--Cabecera barra lateral-->
-            <?php include 'menuLateral.php';?>
+            <?php include 'menuLateralAD.php';?>
             <!--Contenidos barra lateral-->
             <div class="sidebar-content">
                         <div class="nav-container">
                             <nav id="main-menu-navigation" class="navigation-main">
                                 <div class="nav-lavel">Panel de Control</div>
                                 <div class="nav-item">
-                                    <a href="../index.php"><i class="ik ik-home"></i><span>Inicio</span></a>
+                                    <a href="../indexAD.php"><i class="ik ik-home"></i><span>Inicio</span></a>
                                 </div>
                                 <div class="nav-item">
-                                    <a href="bebes.php"><i class="ik ik-users"></i><span>Bebés</span></a>
-                                </div>                                
-                                <div class="nav-lavel">Fisico</div>
-                                <div class="nav-item">
-                                    <a href="altura.php"><i class="ik ik-star"></i><span>Altura</span></a>                                    
-                                </div>
-                                <div class="nav-item">
-                                    <a href="peso.php"><i class="ik ik-target"></i><span>Peso</span></a>                                  
-                                </div>                                                              
-                                <div class="nav-lavel">Alimentación</div>
-                                <div class="nav-item">
-                                    <a href="tomas.php"><i class="ik ik-watch"></i><span>Tomas</span></a>                                    
-                                </div>
-                                <div class="nav-item">
-                                    <a href="alimentos.php"><i class="ik ik-pie-chart"></i><span>Alimentos</span></a>
-                                </div>
-
-                                <div class="nav-lavel">Calendario</div>
-                                <div class="nav-item">
-                                    <a href="vacunacion.php"><i class="ik ik-shield"></i><span>Vacunación</span></a>
-                                </div>                                                            
-                                <div class="nav-item">
-                                    <a href="ayuda.php"><i class="ik ik-help-circle"></i><span>Ayuda</span></a>
-                                </div>
+                                    <a href="tablas.php"><i class="ik ik-grid"></i><span>Tablas</span></a>
+                                </div>                               
+                                
                             </nav>
                         </div>
                     </div>
