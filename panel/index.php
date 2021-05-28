@@ -227,7 +227,7 @@
                                                 <h6>Duerme: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(después de la toma)</span></h6>
                                                 <h2 class="fw-700 text-blue">1,563</h2>
                                                 <hr>
-                                                <h6>Duerme: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(actualizada)</span></h6>
+                                                <h6>Fecha: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(actualizada)</span></h6>
                                                 <p class="mb-0">May 23 - June 01 (2017)</p>
                                                 <hr>
                                             </div>
