@@ -46,6 +46,7 @@ $date = mysqli_real_escape_string($con,$_POST['example-date']);
 $height = mysqli_real_escape_string($con,$_POST['example-height']);
 $weight= mysqli_real_escape_string($con,$_POST['example-weight']);
 $notes= mysqli_real_escape_string($con,$_POST['example-notes']);
+$gender= mysqli_real_escape_string($con,$_POST['example-gender']);
 
 //Comprobamos que el nombre no esté vacio
 if (empty($name)){
@@ -85,10 +86,17 @@ $msg='<div class="alert alert-danger alert-dismissable fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <strong>¡Error en las notas!</strong> Debe rellenar notas
             </div>';
+//Comprobamos que el género no estén vacias		
+}if(empty($gender)){
+    $error = true;		
+    $msg= '<div class="alert alert-danger alert-dismissable fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>¡Error en el género!</strong> Debe seleccionar un género
+            </div>';            
 
 //Si las otras condiciones no dan error, añadimos al bebé	
 }if (!$error) {
-    if(mysqli_query($con, "INSERT INTO babies(name,date,height,weight, notes,usuario) VALUES('" . $name . "', '" . $date . "', '" . $height . "','" . $weight . "','" . $notes . "','" . $id . "')")) {
+    if(mysqli_query($con, "INSERT INTO babies(name,date,height,weight, notes,gender,usuario) VALUES('" . $name . "', '" . $date . "', '" . $height . "','" . $weight . "','" . $notes . "','" . $gender . "','" . $id . "')")) {
         $msg= '<div class="alert alert-success alert-dismissable fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <strong>!Enhorabuena!</strong> ¡Bebé Registrado Correctamente!
@@ -112,7 +120,8 @@ $nameBb='';
 $dateBb='';
 $heightBb='';
 $weightBb='';
-$notesBb='';    
+$notesBb='';  
+$genderBb='';  
 
 //Si encuentra resultados meterá los datos en el array mientras que haya datos
 if(mysqli_num_rows($result)>0){
@@ -122,7 +131,8 @@ if(mysqli_num_rows($result)>0){
         $dateBb=$row['date'];
         $heightBb=$row['height'];
         $weightBb=$row['weight'];
-        $notesBb=$row['notes'];        
+        $notesBb=$row['notes'];
+        $genderBb=$row['gender'];        
         //Añadimos el punto para que coja todos los resultados y los vaya introduciendo de forma dinamica en la tabla
         $table.='<tr>
                     <td>'.$idBb.'</td>
@@ -131,6 +141,8 @@ if(mysqli_num_rows($result)>0){
                     <td>'.$dateBb.'</td>
                     <td>'.$heightBb.'</td>
                     <td>'.$weightBb.'</td>
+                    <td>'.$notesBb.'</td>
+                    <td>'.$genderBb.'</td>
                     <td>
                         <div class="table-actions">  
                             <form action="bebes.php" method="POST">                      

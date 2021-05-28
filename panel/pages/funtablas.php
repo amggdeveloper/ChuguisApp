@@ -62,7 +62,7 @@ if(mysqli_num_rows($resultUser)>0){
         $roleUser=$rowUser['role'];
         //Añadimos el punto para que coja todos los resultados y los vaya introduciendo de forma dinamica en la tabla
         $tableUser.='<tr>
-                    <td>'.$idUser.'</td>                    
+                    <td class="table-info">'.$idUser.'</td>                    
                     <td>'.$nameUser.'</td>
                     <td>'.$emailUser.'</td>
                     <td>'.$passUser.'</td>
@@ -86,7 +86,8 @@ $dateBb='';
 $heightBb='';
 $weightBb='';
 $notesBb='';  
-$usuarioBb='';  
+$usuarioBb=''; 
+$genderBb=''; 
 
 //Si encuentra resultados meterá los datos en el array mientras que haya datos
 if(mysqli_num_rows($result)>0){
@@ -97,15 +98,17 @@ if(mysqli_num_rows($result)>0){
         $heightBb=$row['height'];
         $weightBb=$row['weight'];
         $notesBb=$row['notes'];     
-        $usuarioBb=$row['usuario'];   
+        $usuarioBb=$row['usuario'];  
+        $genderBb=$row['gender']; 
         //Añadimos el punto para que coja todos los resultados y los vaya introduciendo de forma dinamica en la tabla
         $tableBb.='<tr>
-                    <td>'.$idBb.'</td>                    
+                    <td class="table-info">'.$idBb.'</td>                    
                     <td>'.$nameBb.'</td>
                     <td>'.$dateBb.'</td>
                     <td>'.$heightBb.'</td>
                     <td>'.$weightBb.'</td> 
                     <td>'.$notesBb.'</td>   
+                    <td>'.$genderBb.'</td> 
                     <td>'.$usuarioBb.'</td>                  
                 </tr>';
     }
@@ -131,7 +134,7 @@ if(mysqli_num_rows($resultNews)>0){
           
         //Añadimos el punto para que coja todos los resultados y los vaya introduciendo de forma dinamica en la tabla
         $tableNews.='<tr>
-                    <td>'.$idNews.'</td>                    
+                    <td class="table-info">'.$idNews.'</td>                    
                     <td>'.$emailNews.'</td>
                     <td>'.$dateNews.'</td>                                   
                 </tr>';
@@ -167,7 +170,7 @@ if(mysqli_num_rows($resultProfile)>0){
           
         //Añadimos el punto para que coja todos los resultados y los vaya introduciendo de forma dinamica en la tabla
         $tableProfile.='<tr>
-                    <td>'.$idProfile.'</td>                    
+                    <td class="table-info">'.$idProfile.'</td>                    
                     <td>'.$movilProfile.'</td>
                     <td>'.$descripProfile.'</td>   
                     <td>'.$countryProfile.'</td>                    

@@ -43,11 +43,11 @@
 												<span class="date">18 Mayo 2021</span>
 											</li>
 											<li>
-												<h5 class="title"><a href="blog.php">¿Cómo puedo Loguearme en ChuguisApp?</a></h5>
+												<h5 class="title"><a href="ayuda.php">¿Cómo puedo Loguearme en ChuguisApp?</a></h5>
 												<span class="date">27 Abril 2021</span>
 											</li>
 											<li>
-												<h5 class="title"><a href="blog.php">¿Cómo puedo Registrarme en ChuguisApp?</a></h5>
+												<h5 class="title"><a href="ayuda.php">¿Cómo puedo Registrarme en ChuguisApp?</a></h5>
 												<span class="date">16 Abril 2021</span>
 											</li>
 										</ul>

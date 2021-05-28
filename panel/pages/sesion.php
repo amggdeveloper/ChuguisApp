@@ -40,10 +40,13 @@ $lastWeight='';
 $countBabies=$rowBabies['total'];
 $date='';
 $percentil='';
+$lastGender='';
+$lastBabyName='';
+$msg='';
 
 
 //Comprobamos que no esten sin definir
-if(isset($rowColor['color'],$rowDataBabies['height'],$rowDataBabies['weight'])){//color usuario
+if(isset($rowColor['color'],$rowDataBabies['height'],$rowDataBabies['weight'],$rowDataBabies['gender'],$rowDataBabies['name'])){//color usuario
     $color=$rowColor['color'];
     $lastHeight=$rowDataBabies['height'];
     $lastWeight=$rowDataBabies['weight']; 
@@ -51,6 +54,8 @@ if(isset($rowColor['color'],$rowDataBabies['height'],$rowDataBabies['weight'])){
     $grKg=$lastWeight/1000;//Convertimos los gramos en kilo para calcular el IMC del bebé
     $imc=($cmM*$cmM)/$grKg;//IMC para sacar el percentil
     $percentil=round($imc*100,2);//Redondeamos a dos decimales  
+    $lastGender=$rowDataBabies['gender'];
+    $lastBabyName=$rowDataBabies['name'];
 
 }
 
@@ -71,5 +76,13 @@ $totalUsers=$rUsers['total'];
 $totalBabies=$rBabies['total'];
 $totalNews=$rNews['total'];
 $totalProfile=$rProfile['total'];
+
+//Seleccionar imagen para el Género en la pestaña de inicio del panel de control
+if($lastGender==='Masculino'){
+    $msg= '<div class="progres-value"><i class="fas fa-mars text-grey f-6"></i></div>';   
+
+}else{
+    $msg= '<div class="progres-value"><i class="fas fa-venus text-grey f-6"></i></div>';     
+}
 
 ?>

@@ -87,6 +87,6 @@
     <h1>404</h1>
     <h4>Lo sentimos, pero la página que busca no existe.</h4>
     <p>Puede volver a la página de inicio pulse el siguiente botón.</p>
-    <a href="index.php">Volver a Inicio</a>
+    <a href="../index.php">Volver a Inicio</a>
 </body>
 </html>

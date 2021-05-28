@@ -230,12 +230,12 @@
 								</figure>
 								<div class="job-listing-body">
 									<div class="name"><a href="nosotros.php">amgg Developer</a></div>
-									<p>Como utilizar el Calendario para añadir las comidas de tu bebé.</p>
+									<p>Como utilizar la aplicación para añadir las comidas de tu bebé.</p>
 								</div>
 								<footer class="job-listing-footer">
 									<ul class="meta">
 										<li class="category">Calendario</li>
-										<li class="location"><a href="guias.php">Comidas</a></li>
+										<li class="location"><a href="ayuda.php">Comidas</a></li>
 										<li class="date">Subido hace dos días</li>
 									</ul>
 								</footer>
@@ -248,12 +248,12 @@
 								</figure>
 								<div class="job-listing-body">
 									<div class="name"><a href="nosotros.php">amgg Developer</a></div>
-									<p>Como utilizar el Calendario para añadir las medidas de tu bebé.</p>
+									<p>Como utilizar la aplicación para añadir las medidas de tu bebé.</p>
 								</div>
 								<footer class="job-listing-footer">
 									<ul class="meta">
 										<li class="category">Calendario</li>
-										<li class="location"><a href="guias.php">Altura</a></li>
+										<li class="location"><a href="ayuda.php">Altura</a></li>
 										<li class="date">Subido hace dos días</li>
 									</ul>
 								</footer>
@@ -292,17 +292,17 @@
 								<li>
 									<figure class="thumbnail"><a href="#"><img src="images/samples/cacahuete.jpg" alt=""></a></figure>
 									<span class="date">20/04/2021</span>
-									<h5 class="title"><a href="#">Receta de Crema de Cacahuete</a></h5>
+									<h5 class="title"><a href="blog.php">Receta de Crema de Cacahuete</a></h5>
 								</li>
 								<li>
 									<figure class="thumbnail"><a href="#"><img src="images/samples/yogurt.jpg" alt=""></a></figure>
 									<span class="date">21/04/2021</span>
-									<h5 class="title"><a href="#">Yogures Naturales con Yogurtera</a></h5>
+									<h5 class="title"><a href="blog.php">Yogures Naturales con Yogurtera</a></h5>
 								</li>
 								<li>
 									<figure class="thumbnail"><a href="#"><img src="images/samples/librobebe.jpg" alt=""></a></figure>
 									<span class="date">22/04/2021</span>
-									<h5 class="title"><a href="#">Libros Sensitivos</a></h5>
+									<h5 class="title"><a href="blog.php">Libros Sensitivos</a></h5>
 								</li>
 							</ul>
 						</div>

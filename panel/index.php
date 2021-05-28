@@ -330,7 +330,7 @@
                                 <div class="card-header"><h3>Datos del Bebé</h3></div>                                
                                    <div class="card-body">                                      
                                     <h6>Nombre Bebé: <span class="badge badge-pill badge-warning" style='font-size:0.60em'>(último bebé introducido)</span></h6>
-                                    <h2 class="fw-700 f-50 text-warning">Diana</h2>   
+                                    <h2 class="fw-700 f-50 text-warning"><?php echo $lastBabyName?></h2>   
                                     <hr>     
                                     <h6>Género: <span class="badge badge-pill badge-warning" style='font-size:0.60em'>(último bebé introducido)</span></h6> 
                                     <br>                                                                          
@@ -341,8 +341,9 @@
                                         <span class="progres-right">
                                             <span class="progres-bar"></span>
                                          </span>
-                                         
-                                        <div class="progres-value"><i class="fas fa-venus text-grey f-60"></i></div>                                    
+
+                                        <?php echo $msg?>    
+                                        <!--<div class="progres-value"><i class="fas fa-venus text-grey f-6"></i></div>-->                                    
                                 </div>
                                 <br>
                                 <hr>

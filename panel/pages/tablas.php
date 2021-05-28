@@ -131,8 +131,9 @@
                                                  <div class="card">
                                                   <div class="card-header"><h3>Tabla Datos Usuarios</h3></div>
                                                   <div class="card-body">
+                                                  <div class="table-responsive">
                                                     <table id="data_table" class="table">
-                                                      <thead>
+                                                      <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                          
                                                           <th>Nombre</th>
@@ -155,6 +156,7 @@
                                     <hr>                                                
                                 </div>
                             </div>
+                            </div>
                             <!--tab Bebés-->
                             <div class="tab-pane fade" id="bebes" role="tabpanel" aria-labelledby="pills-bebes-tab">
                              <div class="card-body">
@@ -163,15 +165,17 @@
                                     <div class="card">
                                          <div class="card-header"><h3>Tabla Datos Bebés</h3></div>
                                             <div class="card-body">
+                                            <div class="table-responsive">
                                                     <table id="data_table" class="table">
-                                                      <thead>
+                                                      <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                          
                                                           <th>Nombre</th>                                                          
                                                           <th>Fecha Nacimiento</th>                                                        
                                                           <th>Altura (cm)</th> 
-                                                          <th>Peso (gr)</th>  
-                                                          <th>Descripción</th>  
+                                                          <th>Peso (gr)</th>                                                             
+                                                          <th>Anotaciones</th>
+                                                          <th>Género</th>
                                                           <th>Usuario</th>                                                      
                                                         </tr>
                                                     </thead>
@@ -187,7 +191,7 @@
                                     <hr>                                                
                                 </div>
                             </div>               
-                              
+                            </div>  
                             <!--tab newsletter-->
                              <div class="tab-pane fade" id="newsletter" role="tabpanel" aria-labelledby="pills-news-tab">
                                 <div class="card-body">
@@ -196,8 +200,9 @@
                                                  <div class="card">
                                                   <div class="card-header"><h3>Tabla Datos Usuarios</h3></div>
                                                   <div class="card-body">
+                                                  <div class="table-responsive">
                                                     <table id="data_table" class="table">
-                                                      <thead>
+                                                      <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                       
                                                           <th>Email</th>
@@ -216,17 +221,18 @@
                                     <hr> 
                                 </div>   
                             </div>   
-
+                        </div>
                               <!--tab Perfiles-->
                               <div class="tab-pane fade" id="perfiles" role="tabpanel" aria-labelledby="pills-profile-tab">
                                 <div class="card-body">
                                 <div class="row">
                                 <div class="col-md-12">
                                                  <div class="card">
-                                                  <div class="card-header"><h3>Tabla Datos Usuarios</h3></div>
+                                                  <div class="card-header"><h3>Tabla Datos Perfiles</h3></div>
                                                   <div class="card-body">
+                                                  <div class="table-responsive">
                                                     <table id="data_table" class="table">
-                                                      <thead>
+                                                      <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                          
                                                           <th>Móvil</th>
@@ -254,7 +260,7 @@
                 </div>
             </div>
         </div>    
-
+    </div>
         <!--Footer-->
         <?php include 'footer.php';?>
 

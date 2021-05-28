@@ -142,21 +142,25 @@
                                         <div class="tab-pane fade show active" id="datos" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-md-3 col-6"> <strong>Nombre</strong>
+                                                    <div class="col order-1"> <strong>Nombre</strong>
                                                         <br>
                                                         <p class="text-muted"><?php echo $nameBb?></p>
                                                     </div>
-                                                    <div class="col-md-3 col-6"> <strong>Fecha Nacimiento</strong>
+                                                    <div class="col order-2"> <strong>Fecha Nacimiento</strong>
                                                         <br>
                                                         <p class="text-muted"><?php echo $dateBb?></p>
                                                     </div>
-                                                    <div class="col-md-3 col-6"> <strong>altura (cm)</strong>
+                                                    <div class="col order-3"> <strong>altura (cm)</strong>
                                                         <br>
                                                         <p class="text-muted"><?php echo $heightBb?></p>
                                                     </div>
-                                                    <div class="col-md-3 col-6"> <strong>Peso (gr)</strong>
+                                                    <div class="col order-4"> <strong>Peso (gr)</strong>
                                                         <br>
                                                         <p class="text-muted"><?php echo $weightBb?></p>
+                                                    </div>
+                                                    <div class="col order-5"> <strong>Género</strong>
+                                                        <br>
+                                                        <p class="text-muted"><?php echo $genderBb?></p>
                                                     </div>
                                                 </div>
                                                 <hr>
@@ -168,6 +172,7 @@
                                                  <div class="card">
                                                   <div class="card-header"><h3>Tabla Datos Bebés</h3></div>
                                                   <div class="card-body">
+                                                  <div class="table-responsive">
                                                     <table id="data_table" class="table">
                                                       <thead>
                                                         <tr>
@@ -177,6 +182,8 @@
                                                           <th>Fecha Nac.</th>
                                                           <th>Altura (cm)</th>
                                                           <th>Peso (gramos)</th>
+                                                          <th>Anotaciones</th>
+                                                          <th>Género</th>
                                                           <th class="nosort">&nbsp;</th>
                                                         </tr>
                                                     </thead>
@@ -188,8 +195,9 @@
                                              </div>
                                             </div>
                                         </div>
-                                        </div>
-                                    <hr>                                                
+                                        </div>                                        
+                                    <hr>  
+                                    </div>                                              
                                 </div>
                             </div>
                             <!--tab Añadir-->
@@ -215,7 +223,15 @@
                                         <div class="form-group">
                                             <label for="example-notes">Anotaciones</label>
                                             <textarea name="example-notes" rows="5" class="form-control"></textarea>
-                                        </div>                                                   
+                                        </div> 
+                                        <div class="form-group">
+                                        <label for="example-gender">Género</label>
+                                        <select name="example-gender" id="example-gender" class="form-control">
+                                                
+                                                    <option>Masculino</option>
+                                                    <option selected>Femenino</option>                                                   
+                                                </select>    
+                                        </div>                                                       
                                         <button name="addDates" class="btn btn-primary" type="submit"><i class="ik ik-share"></i>Añadir</button>
                                     </form>
                                  </div>
@@ -240,7 +256,7 @@
         <script src="../dist/js/theme.min.js"></script>
 
         <!--Script para realizar la busqueda en la página-->
-        <script src="../js/buscar.js"></script>
+        <script src="js/buscar.js"></script>
 
         <!-- Google Analytics -->
         <script>
