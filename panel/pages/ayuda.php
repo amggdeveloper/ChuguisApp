@@ -170,12 +170,16 @@
                                                                     </p>
                                                                     <p>      
                                                                     A continuación se enumeran los distintos contenedores:
-
                                                                     El contenedor marcado con el número <strong>'1'</strong>: en este contenedor encontramos cuatro recuadros, cada uno se encarga de mostrar los 
                                                                     datos según su enunciado. En el recuadro <em>'Bebés'</em>, se muestra el número total de bebés introducidos en la aplicación. En <em>'Altura'</em>, 
                                                                     se encuentra la última altura medida del último bebe introducido. En <em>'Peso'</em>, se muestra el último peso del último bebé introducido. Por último, en 
                                                                     <em>'Percentil'</em>, se calcula el percentil a raiz del género del bebé, su peso y su altura.
-                                                                    
+                                                                    El contenedor marcado con el número <strong>'2'</strong>: En este contenedor encontramos la última toma realizada, en ella encontramos el pecho que se 
+                                                                    ha dado al bebé, el tiempo que ha tardado, si después de la toma se duerme y la fecha en la que hacemos la toma.
+                                                                    El contenedor número <strong>'3'</strong>: podemos visualizar los alimentos introducidos durante la semana al bebé.Con el número <strong>'4'</strong>: aquí 
+                                                                    encontramos el nombre del último bebé introducido y su género. En el contenedor <strong>'5'</strong>: tablón de noticias de twitter de la aplicación para que 
+                                                                    el usuario pueda enterarse de las últimas noticias respecto a las novedades de la aplicación al momento. Por último, el contenedor número <strong>'6'</strong> 
+                                                                    nos muestra la última vacuna puesta al bebé, diferenciando la fecha, el nombre y las anotaciones pertinentes sobre la vacuna y el estado del bebé.                                                                    
                                                                     </p>                                                             
 
                                                                     <a class="m-0 row justify-content-center" href="../img/capturas/home.jpg"><img class="img-fluid" src="../img/capturas/home.jpg" alt="imagen ayuda inicio"></a>
@@ -191,19 +195,19 @@
                                             <div class="card-body">
                                             <div class="profiletimeline mt-0">
                                             <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-left"> <img src="../img/portfolio-4.jpg" alt="user" class="rounded-circle" /> </div>
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                   <p> En esta página de <strong>'Configuración' </strong>el usuario encontrará varios ejemplos de 
-                                                                   estilos de la barra superior y los distintos colores que puede utilizar el usuario para personalizar 
-                                                                   su panel de control.  
-
-                                                                   Debajo de las muestras de colores el usuario puede encontrar un desplegable para poder seleccionar el 
-                                                                   color que más le guste. Una vez seleccionado solo deberá pulsar el botón <strong>'cambiar de color'</strong>
+                                                                   <p> En esta sección de <strong>'Bebés' </strong>el usuario encontrará un panel con dos pestañas. La primera pestaña es <em>'Datos'</em> y la 
+                                                                   segunda pestaña es <em>'Añadir'</em>. En la pestaña <strong>'Datos'</strong>: 
+                                                                   Esta pestaña está dividida en dos secciones, la primera donde tenemos los datos relacionados con 
+                                                                   el último bebé introducido y la segunda una tabla con la relación de los bebés introducidos.  
+                                                                   En la pestaña <strong>'Añadir'</strong>: encontramos un formulario para introducir los datos de nuestros bebés.                                                                 
                                                                   </p>                                                             
 
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/config.jpg"><img class="img-fluid" src="../img/capturas/config.jpg" alt="imagen ayuda configuración"></a>
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/babies.jpg"><img class="img-fluid" src="../img/capturas/babies.jpg" alt="imagen ayuda configuración"></a>
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/babiesb.jpg"><img class="img-fluid" src="../img/capturas/babiesb.jpg" alt="imagen ayuda configuración"></a>
                                                                 </blockquote>
                                                             </div>
                                                         </div>
@@ -216,17 +220,16 @@
                                             <div class="card-body">
                                             <div class="profiletimeline mt-0">
                                             <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-left"> <img src="../img/portfolio-4.jpg" alt="user" class="rounded-circle" /> </div>
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
-                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
-                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
-                                                                   correspondiente.
+                                                                  <p> En esta sección de <strong>'Altura' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
+                                                                  de la altura medida de nuestro bebé. En el segundo contenedor vemos una tabla con la relación de las alturas añadidas de los distintos bebés. El último 
+                                                                  contenedor podemos visualizar la evolución de las alturas dependiendo de los meses en una gráfica de barras.
                                                                   </p>                                                                
 
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/height.jpg"><img class="img-fluid" src="../img/capturas/height.jpg" alt="imagen ayuda configuración"></a>
                                                                 </blockquote>
                                                             </div>
                                                         </div>
@@ -240,17 +243,16 @@
                                             <div class="card-body">
                                             <div class="profiletimeline mt-0">
                                             <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-left"> <img src="../img/portfolio-4.jpg" alt="user" class="rounded-circle" /> </div>
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
-                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
-                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
-                                                                   correspondiente.
+                                                                <p> En esta sección de <strong>'Peso' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
+                                                                  del peso medido de nuestro bebé. En el segundo contenedor vemos una tabla con la relación de los pesos añadidos de los distintos bebés. El último 
+                                                                  contenedor podemos visualizar la evolución de los pesos dependiendo de los meses en una gráfica de barras.
                                                                   </p>                                                                
 
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/weight.jpg"><img class="img-fluid" src="../img/capturas/weight.jpg" alt="imagen ayuda configuración"></a>
                                                                 </blockquote>
                                                             </div>
                                                         </div>
@@ -308,21 +310,21 @@
                                         </div>
 
                                           <!--tab Vacunación-->
-                                          <div class="tab-pane fade" id="vacunación" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                          <div class="tab-pane fade" id="vacunacion" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <div class="card-body">
                                             <div class="profiletimeline mt-0">
                                             <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-left"> <img src="../img/portfolio-4.jpg" alt="user" class="rounded-circle" /> </div>
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
-                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
-                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
-                                                                   correspondiente.
+                                                                  <p> En esta sección de <strong>'Vacunas' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
+                                                                  de la vacuna puesta a nuestro bebé. En el segundo contenedor vemos una tabla con la relación de las vacunas añadidas a los distintos bebés. El último 
+                                                                  contenedor podemos visualizar una relación de la edad de nuestro bebé con las vacunas que hay que ponerle.
                                                                   </p>                                                                
+                                                            
 
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/vaccines.jpg"><img class="img-fluid" src="../img/capturas/vaccines.jpg" alt="imagen ayuda configuración"></a>
                                                                 </blockquote>
                                                             </div>
                                                         </div>
