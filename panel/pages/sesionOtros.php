@@ -30,7 +30,6 @@ if(isset($rowColor['color'])){
 }
 $idSelec=$rowSelec['iduser'];
 $nameSelect=$rowSelec['name'];
-$pictureSelect=$rowSelec['picture'];
 $mailSelect=$rowSelec['mail'];
 
 //establecemos la zona horaria predeterminada
@@ -89,11 +88,12 @@ if (isset($_POST['profile'])) {
         //validamos la extension
         if(!in_array($extension, $typeSuccess)){
         }else{
-            $alert='<div class="alert alert-warning alert-dismissable fade show" role="alert">
-                        <strong>¡Error!</strong> No se puede subir una imagen con ese formato
+            $alert='<div class="alert alert-warning alert-dismissable fade show" role="alert"> 
+                        <strong>¡Error!</strong> No se puede subir una imagen con ese formato                         
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <i class="ik ik-x"></i>
-                        </button>                    
+                            <span aria-hidden="true">&times;</span>
+                        </button>   
+                                                                  
                     </div>';
         }if(empty($alert)){
             //ruta donde se guardarán las imágenes que subamos
@@ -102,24 +102,37 @@ if (isset($_POST['profile'])) {
             move_uploaded_file($_FILES['pictureAvatar']['tmp_name'],$path.$namePicture);
 
             //Variables con las consultas a la base de datos
-            $queryUpdateUsers="UPDATE users SET name='$name',mail='$mail',pass='$passCifrada', picture='$namePicture' WHERE id='$id'";
+            $queryUpdateUsers="UPDATE users SET name='$name',mail='$mail',pass='$passCifrada',pass2='$passCifrada',picture='$namePicture' WHERE id='$id'";
             $queryUpdateProfile="UPDATE profile SET movil='$phone',descrip='$descrip',country='$country', local='$local' WHERE iduser='$id'";
-   
-            //Introducimos los datos obtenidos del formulario en la base de datos profile	
-            if(mysqli_query($con,$queryUpdateProfile)){
-		        $alert= '<div class="alert alert-success alert-dismissable fade show" role="alert">
-                            <strong>¡Perfecto!</strong> Tus datos han sido actualizados
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="ik ik-x"></i></button>                         
+            
+            if($_POST['example-password']=="" or $_FILES['pictureAvatar']['name']==null or $_POST['example-email']=="" or $_POST['example-name']==""){
+                $alert= '<div class="alert alert-danger alert-dismissable fade show" role="alert">
+                            <strong>¡Error!</strong> No puede haber campos en blanco
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>                            
                         </div>';
-                
+               
+            }elseif(mysqli_query($con,$queryUpdateProfile) && mysqli_query($con,$queryUpdateUsers)){   
+                header("Location:perfil.php");                  
+		             $alert= '<div class="alert alert-success alert-dismissable fade show" role="alert">
+                                <strong>¡Perfecto!</strong> Tus datos han sido actualizados   
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>                                                       
+                             </div>';
+                    
+                            
 	        } else {
-		        $alert= '<div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert">x</button>
-                    <strong>¡Error!</strong> Tu perfil no se ha actualizado correctamente.
-                </div>';
+		            $alert= '<div class="alert alert-danger alert-dismissable fade show" role="alert">
+                                <strong>¡Error!</strong> Tu perfil no se ha actualizado correctamente.
+                                <button type="button" class="close" data-dismiss="alert" aria-laber="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>                                
+                            </div>';
 	        }	
         } 
-}
-
+}   
+ 
 
 ?>

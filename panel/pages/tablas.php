@@ -20,9 +20,13 @@
         <link rel="stylesheet" href="../plugins/ionicons/dist/css/ionicons.min.css">
         <link rel="stylesheet" href="../plugins/icon-kit/dist/css/iconkit.min.css">
         <link rel="stylesheet" href="../plugins/perfect-scrollbar/css/perfect-scrollbar.css">
-        <link rel="stylesheet" href="../dist/css/theme.min.css">
+        <link rel="stylesheet" href="../dist/css/theme.min.css">     
+
         <!--Script-->
-        <script src="../src/js/vendor/modernizr-2.8.3.min.js"></script>    
+        <script src="../src/js/vendor/modernizr-2.8.3.min.js"></script>  
+
+        
+        
 
     </head>
     <!--Termina HEAD-->
@@ -129,10 +133,13 @@
                                              <div class="row">
                                                 <div class="col-md-12">
                                                  <div class="card">
-                                                  <div class="card-header"><h3>Tabla Datos Usuarios</h3></div>
+                                                  <div class="card-header">
+                                                  <h3 class="col-md-11">Tabla Datos Usuarios</h3>
+                                                  <button id="impPdf" class="btn btn-info .col-6 .col-md-4" type="button" onclick="impPdf()"><i id="imp" class="ik ik-printer"></i></button>
+                                                  </div>
                                                   <div class="card-body">
                                                   <div class="table-responsive">
-                                                    <table id="data_table" class="table">
+                                                    <table id="data_table_user" class="table">
                                                       <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                          
@@ -163,10 +170,13 @@
                              <div class="row">
                                 <div class="col-md-12">
                                     <div class="card">
-                                         <div class="card-header"><h3>Tabla Datos Bebés</h3></div>
+                                         <div class="card-header">
+                                         <h3 class="col-md-11">Tabla Datos Bebés</h3>
+                                         <button id="impPdfBabies" class="btn btn-info .col-6 .col-md-4" type="button" onclick="impPdfBabies()"><i id="imp" class="ik ik-printer"></i></button>
+                                         </div>
                                             <div class="card-body">
                                             <div class="table-responsive">
-                                                    <table id="data_table" class="table">
+                                                    <table id="data_table_babies" class="table">
                                                       <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                          
@@ -197,11 +207,14 @@
                                 <div class="card-body">
                                 <div class="row">
                                 <div class="col-md-12">
-                                                 <div class="card">
-                                                  <div class="card-header"><h3>Tabla Datos Usuarios</h3></div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                            <h3 class="col-md-11">Tabla Datos Newletter</h3>
+                                                  <button id="impPdfNews" class="btn btn-info .col-6 .col-md-4" type="button" onclick="impPdfNews()"><i id="imp" class="ik ik-printer"></i></button>
+                                                  </div>
                                                   <div class="card-body">
                                                   <div class="table-responsive">
-                                                    <table id="data_table" class="table">
+                                                    <table id="data_table_news" class="table">
                                                       <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                       
@@ -222,16 +235,19 @@
                                 </div>   
                             </div>   
                         </div>
-                              <!--tab Perfiles-->
-                              <div class="tab-pane fade" id="perfiles" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                <div class="card-body">
-                                <div class="row">
+                        <!--tab Perfiles-->
+                         <div class="tab-pane fade" id="perfiles" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div class="card-body">
+                              <div class="row">
                                 <div class="col-md-12">
-                                                 <div class="card">
-                                                  <div class="card-header"><h3>Tabla Datos Perfiles</h3></div>
-                                                  <div class="card-body">
+                                    <div class="card">
+                                        <div class="card-header">
+                                        <h3 class="col-md-11">Tabla Datos Perfiles</h3>
+                                          <button id="impPdfProfile" class="btn btn-info .col-6 .col-md-4" type="button" onclick="impPdfProfile()"><i id="imp" class="ik ik-printer"></i></button>
+                                            </div>
+                                                <div class="card-body">
                                                   <div class="table-responsive">
-                                                    <table id="data_table" class="table">
+                                                    <table id="data_table_profile" class="table">
                                                       <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                          
@@ -285,6 +301,84 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+
+         <!--Script para imprimir las tablas pulsando el botón de imprimir-->        
+        <script>
+          function impPdf(){        
+            //creamos variable con el elemento tabla usuarios   
+            var tab = document.getElementById('data_table_user');
+            //Introducimos un estilo para el pdf
+            var style = "<style>";
+                style = style + "#avatarTable {width: 60px; height: 60px}";
+                style = style + "table {width: 100%; font: 17px Calibri;}";
+                style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+                style = style + "padding: 2px 3px; text-align: center;}";
+                style = style + "</style>";
+            //definimos la ventana de impresión    
+            var win = window.open('', '', 'height=700,width=700');
+            //Creamos el imprimible
+            win.document.write(style);
+            win.document.write(data_table_user.outerHTML);
+            win.document.close();
+            win.print();
+        }
+
+        function impPdfBabies(){         
+            //creamos variable con el elemento tabla bebés  
+            var tab = document.getElementById('data_table_babies');
+            //Introducimos un estilo para el pdf
+            var style = "<style>";              
+                style = style + "table {width: 100%; font: 17px Calibri;}";
+                style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+                style = style + "padding: 2px 3px; text-align: center;}";
+                style = style + "</style>";
+            //definimos la ventana de impresión  
+            var win = window.open('', '', 'height=700,width=700'); 
+            //Creamos el imprimible
+            win.document.write(style);
+            win.document.write(data_table_babies.outerHTML);
+            win.document.close();
+            win.print();
+        }
+
+        function impPdfNews(){       
+            //creamos variable con el elemento tabla newsletter    
+            var tab = document.getElementById('data_table_news');
+            //Introducimos un estilo para el pdf
+            var style = "<style>";                
+                style = style + "table {width: 100%; font: 17px Calibri;}";
+                style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+                style = style + "padding: 2px 3px; text-align: center;}";
+                style = style + "</style>";
+            //definimos la ventana de impresión  
+            var win = window.open('', '', 'height=700,width=700');
+            //Creamos el imprimible
+            win.document.write(style);
+            win.document.write(data_table_news.outerHTML);
+            win.document.close();
+            win.print();
+        }
+
+        function impPdfProfile(){     
+            //creamos variable con el elemento tabla perfil      
+            var tab = document.getElementById('data_table_profile');
+            //Introducimos un estilo para el pdf
+            var style = "<style>";              
+                style = style + "table {width: 100%; font: 17px Calibri;}";
+                style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+                style = style + "padding: 2px 3px; text-align: center;}";
+                style = style + "</style>";
+            //definimos la ventana de impresión 
+            var win = window.open('', '', 'height=700,width=700');
+            //Creamos el imprimible
+            win.document.write(style);
+            win.document.write(data_table_profile.outerHTML);
+            win.document.close();
+            win.print();
+        }
+        
+        </script>
+        
     </body>
 </html>
 

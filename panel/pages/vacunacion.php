@@ -1,3 +1,4 @@
+<?php include_once 'funVac.php'; ?>
 <!doctype html>
 <html class="no-js" lang="es">
     <!--Comienza HEAD-->
@@ -20,6 +21,7 @@
         <link rel="stylesheet" href="../plugins/icon-kit/dist/css/iconkit.min.css">
         <link rel="stylesheet" href="../plugins/perfect-scrollbar/css/perfect-scrollbar.css">
         <link rel="stylesheet" href="../dist/css/theme.min.css">
+        <link rel="stylesheet" href="../dist/css/timeline.css">
         <!--Script-->
         <script src="../src/js/vendor/modernizr-2.8.3.min.js"></script>    
 
@@ -30,7 +32,7 @@
     
          <!--Barra de la Cabecera-->
          <div class="wrapper">
-            <header class="header-top" header-theme="blue">
+            <header class="header-top" header-theme="<?php echo $colorSelect?>">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
@@ -123,201 +125,210 @@
                                 </div>
                             </div>
                         </div>                      
-                            <!--Pestañas de la Ayuda-->
-                            <div class="col-lg-12 col-md-9">
+                        
+                        <!--Formulario para introducir las vacunas puestas-->
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div class="card">
-                                    <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="pills-timeline-tab" data-toggle="pill" href="#current-month" role="tab" aria-controls="pills-timeline" aria-selected="true">Inicio</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Bebés</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Altura</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Peso</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Percentil</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Tomas</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Vacunación</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Alimentos Introducidos</a>
-                                        </li>
-                                    </ul>
-                                   
-                                    <!--Pestañas individuales-->
-                                    <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="current-month" role="tabpanel" aria-labelledby="pills-timeline-tab">
-                                            <div class="card-body">
-                                                <div class="profiletimeline mt-0">
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/1.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <p>assign a new task <a href="javascript:void(0)"> Design weblayout</a></p>
-                                                                <div class="row">
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img2.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img3.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img4.jpg" class="img-fluid rounded" /></div>
-                                                                    <div class="col-lg-3 col-md-6 mb-20"><img src="../img/big/img5.jpg" class="img-fluid rounded" /></div>
-                                                                </div>
-                                                                <div class="like-comm"> 
-                                                                    <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                    <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/2.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div> <a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <div class="mt-20 row">
-                                                                    <div class="col-md-3 col-xs-12"><img src="../img/big/img6.jpg" alt="user" class="img-fluid rounded" /></div>
-                                                                    <div class="col-md-9 col-xs-12">
-                                                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p> <a href="javascript:void(0)" class="btn btn-success"> Design weblayout</a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="like-comm mt-20"> 
-                                                                    <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                    <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/3.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <p class="mt-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper </p>
-                                                            </div>
-                                                            <div class="like-comm mt-20"> 
-                                                                <a href="javascript:void(0)" class="link mr-10">2 comment</a> 
-                                                                <a href="javascript:void(0)" class="link mr-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/users/4.jpg" alt="user" class="rounded-circle" /> </div>
-                                                        <div class="sl-right">
-                                                            <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                                <blockquote class="mt-10">
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                    <div class="card-header">
+                                        <h3>Introducir Datos</h3>
+                                    </div>
+                                    <div class="card-body">
+                                    <form class="form-horizontal" action="vacunacion.php" method="POST"> 
+                                        <div class="mb-20">  
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-group input-group-info">
+                                                    <span class="input-group-prepend"><label for="nameVac" class="input-group-text"><i class="ik ik-shield"></i></label></span>
+                                                    <input type="text" class="form-control" placeholder="nombre vacuna" name="nameVac" id="nameVac">
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--tab Perfil-->
-                                        <div class="tab-pane fade" id="last-month" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-md-3 col-6"> <strong>Nombre Completo</strong>
-                                                        <br>
-                                                        <p class="text-muted">nombre usuario</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-6"> <strong>Móvil</strong>
-                                                        <br>
-                                                        <p class="text-muted">(123) 456 7890</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-6"> <strong>Email</strong>
-                                                        <br>
-                                                        <p class="text-muted">johnathan@admin.com</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-6"> <strong>Localización</strong>
-                                                        <br>
-                                                        <p class="text-muted">Murcia</p>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <p class="mt-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
-                                                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                                <h4 class="mt-30">Habilidades</h4>
-                                                <hr>
-                                                <h6 class="mt-30">Cambio de Pañal <span class="pull-right">80%</span></h6>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">Juego <span class="pull-right">90%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">Mediciones <span class="pull-right">50%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">Comida <span class="pull-right">70%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;"> <span class="sr-only">50% Complete</span> </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-group input-group-success">
+                                                    <span class="input-group-prepend"><label for="dateVac" class="input-group-text"><i class="ik ik-calendar"></i></label></span>
+                                                    <input type="date" placeholder="" class="form-control" name="dateVac" id="dateVac">
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--tab Configuración-->
-                                        <div class="tab-pane fade" id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
-                                            <div class="card-body">
-                                                <form class="form-horizontal">
-                                                    <div class="form-group">
-                                                        <label for="example-name">Nombre Completo</label>
-                                                        <input type="text" placeholder="nombre completo" class="form-control" name="example-name" id="example-name">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-email">Email</label>
-                                                        <input type="email" placeholder="email@gmail.com" class="form-control" name="example-email" id="example-email">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-password">Contraseña</label>
-                                                        <input type="password" value="password" class="form-control" name="example-password" id="example-password">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-phone">Móvil</label>
-                                                        <input type="text" placeholder="123 456 7890" id="example-phone" name="example-phone" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-message">Mensaje</label>
-                                                        <textarea name="example-message" name="example-message" rows="5" class="form-control"></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-country">Seleciona País </label>
-                                                        <select name="example-message" id="example-message" class="form-control">
-                                                            <option>Londres</option>
-                                                            <option>India</option>
-                                                            <option>Usa</option>
-                                                            <option>Canada</option>
-                                                            <option>Tailandia</option>
-                                                            <option>España</option>
-                                                        </select>
-                                                    </div>
-                                                    <button class="btn btn-success" type="submit">Actualizar Perfil</button>
-                                                </form>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-group input-group-warning">
+                                                    <span class="input-group-prepend"><label for="notesVac" class="input-group-text"><i class="ik ik-edit"></i></label></span>
+                                                    <input type="text" class="form-control" placeholder="anotaciones" name="notesVac" id="notesVac">
+                                                </div>
                                             </div>
+                                        </div>
+                                            <button type="submit" name="addVac" class="btn btn-dark"><i class="ik ik-share"></i>Añadir</button>
+                                        </form> 
+                                    </div>
+                                  </div>                                        
+                                </div>                                  
+                            </div>
+                        </div>  
+
+                        <!--Tabla-->            
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header"><h3>Tabla Vacunas Puestas</h3></div>
+                                        <div class="card-body">
+                                            <table id="data_table" class="table">
+                                                 <thead>
+                                                        <tr>
+                                                          <th>Id</th>                                                         
+                                                          <th>Nombre</th>
+                                                          <th>Fecha</th> 
+                                                          <th>Anotaciones</th>  
+                                                          <th class="nosort">&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                <tbody>                                            
+                                                  <?php echo $tableVac?>                                                                                                                                            
+                                                </tbody>
+                                            </table> 
+                                        <?php echo $msg?>                                            
+                                    </div>
+                               </div>
+                         </div>
+                </div>
+            <!--Calendario de Vacunación-->                   
+            <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Relación Vacunas-Meses</h6>
+                                        <div id="content">
+                                            <ul class="timeline">
+                                                <li class="event" data-date="2 meses">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>HB</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>DTPa</span>                                                        
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>VPI</span> 
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>Hib</span>   
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>VNC</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>RV</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>MenB</span>
+                                                        
+                                                    </h3>
+                                                    <p><strong>HB</strong>=Hepatitis B</p>
+                                                    <p><strong>DTPa</strong>=Difteria, tétanos y tosferina</p>
+                                                    <p><strong>VPI</strong>=Poliomelitis</p>
+                                                    <p><strong>Hib</strong>=Haemophilus influenzae tipo b</p>
+                                                    <p><strong>VNC</strong>=Neumococo</p>
+                                                    <p><strong>RV</strong>=Rotavirus</p>
+                                                    <p><strong>MenB</strong>=Meningococo B</p>                                                    
+                                                 </li>
+                                                <li class="event" data-date="4 meses">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.6em'>HB</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.6em'>DTPa</span>                                                        
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.6em'>VPI</span> 
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.6em'>Hib</span>   
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.6em'>VNC</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.6em'>RV</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.6em'>MenB</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.6em'>MenC</span>
+                                                    </h3>
+                                                    <p><strong>HB</strong>=Hepatitis B</p>
+                                                    <p><strong>DTPa</strong>=Difteria, tétanos y tosferina</p>
+                                                    <p><strong>VPI</strong>=Poliomelitis</p>
+                                                    <p><strong>Hib</strong>=Haemophilus influenzae tipo b</p>
+                                                    <p><strong>VNC</strong>=Neumococo</p>
+                                                    <p><strong>RV</strong>=Rotavirus</p>
+                                                    <p><strong>MenB</strong>=Meningococo B</p> 
+                                                    <p><strong>MenC</strong>=Meningococo C y ACWY</p>
+                                                </li>
+                                                <li class="event" data-date="6 meses">
+                                                    <h3>                                                        
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>RV</span>                                                        
+                                                    </h3>                                                  
+                                                    <p><strong>RV</strong>=Rotavirus</p>                                                    
+                                                </li>
+                                                <li class="event" data-date="11 meses">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>HB</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>DTPa</span>                                                        
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>VPI</span> 
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>Hib</span>   
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>VNC</span>                                                        
+                                                    </h3>
+                                                    <p><strong>HB</strong>=Hepatitis B</p>
+                                                    <p><strong>DTPa</strong>=Difteria, tétanos y tosferina</p>
+                                                    <p><strong>VPI</strong>=Poliomelitis</p>
+                                                    <p><strong>Hib</strong>=Haemophilus influenzae tipo b</p>
+                                                    <p><strong>VNC</strong>=Neumococo</p>                                                   
+                                                </li>
+                                                <li class="event" data-date="12 meses">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>MenB</span>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>MenC ACWY</span>                                                        
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>SRP</span>                                                                                                               
+                                                    </h3>
+                                                    <p><strong>MenB</strong>=Meningococo B</p>
+                                                    <p><strong>MenC ACWY</strong>=Meningococos C y ACWY</p>
+                                                    <p><strong>SRP</strong>=Sarampión, rubeola y parotiditis</p>                                                                                                 
+                                                </li>
+                                                <li class="event" data-date="15 meses">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>MenB</span>                                                                                                               
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>Var</span>                                                                                                               
+                                                    </h3>
+                                                    <p><strong>MenB</strong>=Meningococo B</p>
+                                                    <p><strong>VarY</strong>=Varicela</p>                                                                                                                                                  
+                                                </li>
+                                                <li class="event" data-date="3-4 Años">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>SRP</span>                                                                                                               
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>Var</span>                                                                                                               
+                                                    </h3>
+                                                    <p><strong>SRP</strong>=Sarampión, rubeola y parotiditis</p>
+                                                    <p><strong>VarY</strong>=Varicela</p>                                                                                                                                                  
+                                                </li>
+                                                <li class="event" data-date="6 Años">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>DTPa</span>                                                                                                              
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>VPI</span>                                                                                                               
+                                                    </h3>
+                                                    <p><strong>DTPa</strong>=Difteria, tétanos y tosferina</p>
+                                                    <p><strong>VPI</strong>=Poliomelitis</p>                                                                                                                                                 
+                                                </li>
+                                                <li class="event" data-date="12 Años">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>DTPa</span>                                                                                                              
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>MenC ACWY</span>  
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>VPH</span>                                                                                                              
+                                                    </h3>
+                                                    <p><strong>DTPa</strong>=Difteria, tétanos y tosferina</p>
+                                                    <p><strong>MenC ACWY</strong>=Meningococos C y ACWY</p>  
+                                                    <p><strong>VPH</strong>=Virus del papiloma humano (2 dosis)</p>                                                                                                                                                
+                                                </li>
+                                                <li class="event" data-date="14 Años">
+                                                    <h3>
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>DTPa</span>                                                                                                              
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>MenC ACWY</span>
+                                                    </h3>
+                                                    <p><strong>DTPa</strong>=Difteria, tétanos y tosferina</p>
+                                                    <p><strong>MenC ACWY</strong>=Meningococos C y ACWY</p> 
+                                                                                                                                                                                                  
+                                                </li>
+                                                <li class="event" data-date="15-18 Años">
+                                                    <h3>                                                                                                                                                                   
+                                                        <span class="badge badge-pill badge-info" style='font-size:0.8em'>MenC ACWY</span>                                                                                                                                                                   
+                                                    </h3>                                                    
+                                                    <p><strong>MenC ACWY</strong>=Meningococos C y ACWY</p> 
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>  
-                    </div>   
-                    <!--Footer-->
-                    <?php include 'footer.php';?>
-                </div>                                        
-            </div>
+                        </div> 
+                    </div>  
+                </div>   
+            <!--Footer-->
+            <?php include 'footer.php';?>
         </div>
         <!--Scripts-->   
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

@@ -237,7 +237,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-password">Contraseña</label>
-                                                        <input type="password" placeholder="contraseña"  class="form-control" name="example-password" id="example-password" value="<?php echo $passSelect?>">
+                                                        <input type="password" placeholder="contraseña"  class="form-control" name="example-password" id="example-password" value="">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-phone">Móvil</label>
@@ -247,7 +247,7 @@
                                                         <label>Seleccionar Imagen</label>
                                                         <input type="file" name="pictureAvatar" class="file-upload-default">
                                                         <div class="input-group col-xs-12">
-                                                            <input type="text" class="form-control file-upload-info" disabled placeholder="Seleccionar Imagen" name="example-picture"  value="<?php echo $pictureSelect?>">
+                                                            <input type="text" class="form-control file-upload-info" disabled placeholder="Seleccionar Imagen" name="example-picture"  value="">
                                                             <span class="input-group-append">
                                                             <button class="file-upload-browse btn btn-primary" type="button">Seleccionar</button>
                                                             </span>
@@ -275,18 +275,17 @@
                                                     <button name="profile"class="btn btn-primary" type="submit"><i class="ik ik-share"></i>Actualizar Perfil</button>
                                                     <hr>
                                                     <div class="form-group">                                                                                                           
-                                                                                                         
+                                                    <?php echo $alert?>                                                
                                                     </div>                                                      
-                                                </form>
-                                                <?php echo $alert?> 
-                                            </div>
-                                            
-                                        </div>
+                                                </form>                                                
+                                            </div>                                              
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>               
                 <!--Footer-->
                 <?php include 'footer.php';?>

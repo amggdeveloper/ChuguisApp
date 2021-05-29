@@ -241,8 +241,8 @@
                 </div>
             </div>  
         </div>   
-                    <!--Footer-->
-                    <?php include 'footer.php';?>
+        <!--Footer-->
+        <?php include 'footer.php';?>
      </div>                                        
     </div>
 </div>

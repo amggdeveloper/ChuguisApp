@@ -66,7 +66,7 @@ if(mysqli_num_rows($resultUser)>0){
                     <td>'.$nameUser.'</td>
                     <td>'.$emailUser.'</td>
                     <td>'.$passUser.'</td>
-                    <td><img src="../../images/users/'.$pictureUser.'" class="table-user-thumb" alt=""></td>                    
+                    <td><img src="../../images/users/'.$pictureUser.'" class="table-user-thumb" alt="" id="avatarTable"></td>                    
                     <td>'.$createUser.'</td>   
                     <td>'.$roleUser.'</td>                  
                 </tr>';

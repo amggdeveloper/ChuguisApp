@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                         </div>                      
-                            <!--Formulario para introducir la peso-->
+                        <!--Formulario para introducir la peso-->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">

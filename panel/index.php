@@ -374,7 +374,7 @@
                          <div class="col-md-4">
                             <div class="card" style="min-height: 422px;">
                                     <div class="card-header">
-                                        <h3>Vacunación</h3>
+                                        <h3>Última Vacuna</h3>
                                         <div class="card-header-right">
                                             <ul class="list-unstyled card-option">
                                                 <li><i class="ik ik-chevron-left action-toggle"></i></li>
@@ -386,38 +386,22 @@
                                     <div class="card-body timeline">
                                         <div class="header bg-theme" style="background-image: url('img/placeholder/placeimg_400_200_nature.jpg')">
                                             <div class="color-overlay d-flex align-items-center">
-                                                <div class="day-number">26</div>
+                                                <div class="day-number"><?php echo $dayVac?></div>
                                                 <div class="date-right">
-                                                    <div class="day-name">Miercoles</div>
-                                                    <div class="month">Mayo 2021</div>
+                                                    <div class="day-name"><?php echo $monthVac?></div>
+                                                    <div class="month"><?php echo $yearVac?></div>
                                                 </div>
                                             </div>                                
                                         </div>
-                                        <ul>
-                                            <li>
-                                                <div class="bullet bg-pink"></div>
-                                                <div class="time">10:00</div>
-                                                <div class="desc">
-                                                    <h3>Vesero</h3>
-                                                    <h4>Dosis Inicial</h4>
-                                                </div>
-                                            </li>
+                                        <ul>                                           
                                             <li>
                                                 <div class="bullet bg-green"></div>
-                                                <div class="time">14:00</div>
+                                                <div class="time">vacuna</div>
                                                 <div class="desc">
-                                                    <h3>Vesero</h3>
-                                                    <h4>Recordatorio</h4>
+                                                    <h3><?php echo $lastNameVac?></h3>
+                                                    <h4><?php echo $lastNotesVac?></h4>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="bullet bg-orange"></div>
-                                                <div class="time">17:00</div>
-                                                <div class="desc">
-                                                    <h3>Vesero</h3>
-                                                    <h4>Recordatorio</h4>
-                                                </div>
-                                            </li>
+                                            </li>                                           
                                         </ul>
                                     </div>
                                 </div>
