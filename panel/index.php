@@ -219,16 +219,16 @@
                                             <div class="col">
                                                 <h5 class="mb-25">Última Toma Introducida</h5>
                                                 <h6>Pecho: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(último tomado)</span></h6>
-                                                <h2 class="fw-700 text-blue">1,563</h2>
+                                                <h2 class="fw-700 text-blue">Derecho</h2>
                                                 <hr>
                                                 <h6>Tiempo: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(en minutos)</span></h6>
-                                                <h2 class="fw-700 text-blue">1,563</h2>
+                                                <h2 class="fw-700 text-blue">15</h2>
                                                 <hr>
                                                 <h6>Duerme: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(después de la toma)</span></h6>
-                                                <h2 class="fw-700 text-blue">1,563</h2>
+                                                <h2 class="fw-700 text-blue">Si</h2>
                                                 <hr>
                                                 <h6>Fecha: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(actualizada)</span></h6>
-                                                <p class="mb-0">May 23 - June 01 (2017)</p>
+                                                <p class="mb-0">29 Mayo 2021</p>
                                                 <hr>
                                             </div>
                                             <div class="col-auto">

@@ -158,28 +158,27 @@
                                                 <div class="profiletimeline mt-0">
                                                  
                                                     <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-left"> <img src="../img/portfolio-4.jpg" alt="user" class="rounded-circle" /> </div>
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                   <p> En esta página de <strong>'perfil' </strong>el usuario encontrará la página dividida en dos partes, en la parte izquierda 
-                                                                    encontrará la imagen de perfil que tiene asociada, el día que es hoy, la fecha y la hora actualizada. Debajo de esta información
-                                                                    tendrá su email, su móvil y la localidad que haya introducido. 
-                                                                    Más abajo encontrará un mapa con su ubicación y los botones de las redes sociales de la aplicación ChuguisApp, para poder 
-                                                                    estar siempre actualizado con las últimas noticias de la aplicación.
+                                                                   <p> En esta página de <strong>'Inicio' </strong>el usuario encontrará la página dividida en dos partes, en la parte izquierda 
+                                                                    encontrará el menú para desplazarse entre las distintas secciones que componen el panel de control. Estas secciones son Inicio,
+                                                                    Bebés, Altura, Peso, Tomas, Alimentos, Vacunación y Ayuda (sección donde nos encontramos ahora).
+                                                                    En el lado derecho de la página encontrará seis secciones distintas, diferenciadas por contenedores distintos. Cada uno de estos contenedores es 
+                                                                    el encargado de mostrar los datos sobre el último bebé que se haya introducido o añadido a la aplicación.                                                                    
                                                                     </p>
                                                                     <p>      
-                                                                    En el lado derecho encontrará un formulario con pestañas, las cuales se dividen en tres, Configuración, Perfil, Tablón Twitter.
+                                                                    A continuación se enumeran los distintos contenedores:
 
-                                                                    En la pestaña <em>'Configuración'</em> el usuario encontrará un formulario en el que podrá cambiar todos los datos que 
-                                                                    quiera en relación a su cuenta. Para ello lo único que debe hacer el usuario es introducir en cada cuadro de texto la información que 
-                                                                    quiera cambiar y presionar el botón de <em>'Actualizar Perfil'</em>. Podrá cambiar su imagen de avatar, su nombre de usuario, contraseña,
-                                                                    telefono, etc. En la pestaña <em>'Perfil'</em> encontrará estos datos de forma más visual, con las habilidades optenidas con el 
-                                                                    uso de la aplicación. Y en la tercera y última pestaña <em>'Tablón Twitter'</em>, encontrará las últimas noticias del tablón de 
-                                                                    twitter de la aplicación.   
+                                                                    El contenedor marcado con el número <strong>'1'</strong>: en este contenedor encontramos cuatro recuadros, cada uno se encarga de mostrar los 
+                                                                    datos según su enunciado. En el recuadro <em>'Bebés'</em>, se muestra el número total de bebés introducidos en la aplicación. En <em>'Altura'</em>, 
+                                                                    se encuentra la última altura medida del último bebe introducido. En <em>'Peso'</em>, se muestra el último peso del último bebé introducido. Por último, en 
+                                                                    <em>'Percentil'</em>, se calcula el percentil a raiz del género del bebé, su peso y su altura.
+                                                                    
                                                                     </p>                                                             
 
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/profile.jpg"><img class="img-fluid" src="../img/capturas/profile.jpg" alt="imagen ayuda perfil"></a>
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/home.jpg"><img class="img-fluid" src="../img/capturas/home.jpg" alt="imagen ayuda inicio"></a>
                                                                 </blockquote>
                                                             </div>
                                                         </div>
