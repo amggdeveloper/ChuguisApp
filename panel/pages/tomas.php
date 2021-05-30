@@ -176,7 +176,7 @@
                                             <div class="col-sm-12">
                                                 <div class="input-group input-group-danger">
                                                     <span class="input-group-prepend"><label class="input-group-text"><i class="ik ik-clock"></i></label></span>
-                                                    <input type="text" class="form-control" name="time" id="time">
+                                                    <input type="text" class="form-control" name="time" id="time" placeholder="tiempo de la toma">
                                                 </div>
                                             </div>
                                         </div>                                         

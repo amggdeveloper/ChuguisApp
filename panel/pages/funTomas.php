@@ -144,7 +144,7 @@ if(mysqli_num_rows($result)>0){
 
 //Creamos la consulta para borrar las entradas que seleccionemos
 if(isset($_POST['deleteTakes'])){
-    $sqlDelete="DELETE FROM takes WHERE id='$id'";
+    $sqlDelete="DELETE FROM takes WHERE id='$idTakes'";
     mysqli_query($con,$sqlDelete);
     header('Location:tomas.php');
 }

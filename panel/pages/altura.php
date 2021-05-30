@@ -171,10 +171,13 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
-                                    <div class="card-header"><h3>Tabla Bebés Introducidos</h3></div>
+                                    <div class="card-header">
+                                    <h3  class="col-md-11">Tabla Bebés Introducidos</h3>
+                                    <button id="impPdf" class="btn btn-info .col-6 .col-md-4" type="button" onclick="impPdf()"><i id="imp" class="ik ik-printer"></i></button>
+                                    </div>
                                         <div class="card-body">
-                                            <table id="data_table" class="table">
-                                                 <thead>
+                                            <table id="data_table_height" class="table">
+                                                 <thead class="thead-dark">
                                                         <tr>
                                                           <th>Id</th>                                                       
                                                           <th>Altura</th>
@@ -239,6 +242,28 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
         
+           <!--Script para imprimir las tablas pulsando el botón de imprimir-->        
+           <script>
+          function impPdf(){        
+            //creamos variable con el elemento tabla usuarios   
+            var tab = document.getElementById('data_table_height');
+            //Introducimos un estilo para el pdf
+            var style = "<style>";
+                style = style + "#avatarTable {width: 60px; height: 60px}";
+                style = style + "table {width: 100%; font: 17px Calibri;}";
+                style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+                style = style + "padding: 2px 3px; text-align: center;}";
+                style = style + "</style>";
+            //definimos la ventana de impresión    
+            var win = window.open('', '', 'height=700,width=700');
+            //Creamos el imprimible
+            win.document.write(style);
+            win.document.write(data_table_height.outerHTML);
+            win.document.close();
+            win.print();
+        }
+        </script>
+
         <!--Script para el Grafico-->
         <script type="text/javascript">
         // Obtener una referencia al elemento canvas del DOM

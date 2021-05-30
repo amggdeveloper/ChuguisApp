@@ -136,7 +136,7 @@ if(mysqli_num_rows($result)>0){
         //Añadimos el punto para que coja todos los resultados y los vaya introduciendo de forma dinamica en la tabla
         $table.='<tr>
                     <td>'.$idBb.'</td>
-                    <td><img src="../img/portfolio-1.jpg" class="table-user-thumb" alt=""></td>
+                    <td><img src="../img/portfolio-1.jpg" class="table-user-thumb" alt="" id="avatarTable"></td>
                     <td>'.$nameBb.'</td>
                     <td>'.$dateBb.'</td>
                     <td>'.$heightBb.'</td>

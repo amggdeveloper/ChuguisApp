@@ -1,4 +1,4 @@
-<?php include_once 'pages/sesion.php'; ?>
+<?php include_once 'pages/funindexA.php'; ?>
 <!doctype html>
 <html class="no-js" lang="es">
     <!--Empieza HEAD-->
@@ -38,7 +38,7 @@
     <body>
         <!--Barra de la Cabecera-->
         <div class="wrapper">
-            <header class="header-top" header-theme="<?php echo $color;?>">
+            <header class="header-top" header-theme="<?php echo $colorSelect;?>">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">

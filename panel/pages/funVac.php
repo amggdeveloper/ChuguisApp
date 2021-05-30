@@ -100,20 +100,24 @@ if(mysqli_num_rows($result)>0){
                     <td>'.$notesVac.'</td>  
                     <td>
                         <div class="table-actions">  
-                            <form action="vacunacion.php" method="POST">                                               
-                            <button name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>
+                            <form action="vacunacion.php" method="POST">   
+                            <input type="hidden" name="idV" value="'.$idVac.'">                                              
+                            <button type="submit" name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>   
                             </form>  
                         </div>
                     </td>
+                    
                 </tr>';
     }
 }else{
     
 }
 //Creamos la consulta para borrar las entradas que seleccionemos
-if(isset($_POST['delete'])){
-    $sqlDelete="DELETE FROM vaccines WHERE id='$idVac'";
-    mysqli_query($con,$sqlDelete);
-    header('Location:vacunacion.php');
+if(isset($_POST['delete'])){      
+    $id_vac=$_POST['idV'];
+    $sqlDelete="DELETE FROM vaccines WHERE id=$id_vac";
+    mysqli_query($con,$sqlDelete);   
+             
+    header('Location:vacunacion.php'); 
 }
 ?>

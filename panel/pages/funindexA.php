@@ -18,7 +18,7 @@ mysqli_query($con, "INSERT INTO profile (movil, descrip,country,local,color,idus
 
 //Creamos una consulta para seleccionar los datos de la base de datos 
 $result=mysqli_query($con,"SELECT * FROM users WHERE id='$id'") or die("Error de Sesión");//Usuarios   
-$resultColor=mysqli_query($con,"SELECT color FROM profile WHERE iduser='$id'") or die("Error de Sesión");//Perfil
+$resultColor=mysqli_query($con,"SELECT * FROM profile WHERE iduser='$id'") or die("Error de Sesión");//Perfil
 $resultBabies=mysqli_query($con,"SELECT COUNT(*) total FROM babies WHERE usuario='$id'") or die("Error de Sesión");//Contar cuantos registro en la tabla bebé hay
 $resultLastId=mysqli_query($con,"SELECT MAX(id) AS max FROM babies WHERE usuario='$id'")or die("Error de Sesión");//El último id introducido
 $resultLastIdVac=mysqli_query($con,"SELECT MAX(id) AS max FROM vaccines WHERE iduser='$id'")or die("Error de Sesión");//El último id introducido
@@ -39,7 +39,10 @@ $rowDataVac=mysqli_fetch_assoc($resultDataVac);
 //Introducimos los datos obtenidos en variables
 $nameUser=$row['name'];//nombre usuario
 $picture=$row['picture'];//Imagen Avatar usuario
-$color='';
+$colorSelect='';
+if(isset($rowColor['color'])){
+    $colorSelect=$rowColor['color'];
+}
 $lastHeight='';
 $lastWeight='';
 $countBabies=$rowBabies['total'];
@@ -88,62 +91,4 @@ $totalUsers=$rUsers['total'];
 $totalBabies=$rBabies['total'];
 $totalNews=$rNews['total'];
 $totalProfile=$rProfile['total'];
-
-//Seleccionar imagen para el Género en la pestaña de inicio del panel de control
-if($lastGender==='Masculino'){
-    $msg= '<div class="progres-value"><i class="fas fa-mars text-grey f-6"></i></div>';   
-
-}else{
-    $msg= '<div class="progres-value"><i class="fas fa-venus text-grey f-6"></i></div>';     
-}
-
-//Cambiamos el formato de fecha para poder introducirlo en la página de inicio de forma correcta
-$dayVac='';
-$monthVac='';
-$yearVac='';
-$dateSplitVac=explode('-',$lastDateVac);
-$dayVac=$dateSplitVac[2];//dia
-$monthVac=$dateSplitVac[1];//mes
-$yearVac=$dateSplitVac[0];//año
-
-//Creamos un switch para cambiar el número por el nombre del mes
-switch($monthVac){
-    case 1:
-        $monthVac='Enero';
-        break;
-    case 2:
-        $monthVac='Febrero';
-        break; 
-    case 3:
-        $monthVac='Marzo';
-        break; 
-    case 4:
-        $monthVac='Abril';
-        break;
-    case 5:
-        $monthVac='Mayo';
-        break; 
-    case 6:
-        $monthVac='Junio';
-        break; 
-    case 7:
-        $monthVac='Julio';
-        break;
-    case 8:
-        $monthVac='Agosto';
-        break; 
-    case 9:
-        $monthVac='Septiembre';
-        break; 
-    case 10:
-        $monthVac='Octubre';
-        break;
-    case 11:
-        $monthVac='Novimbre';
-        break; 
-    case 12:
-        $monthVac='Diciembre';
-        break;     
-        
-}
 ?>
