@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2021 a las 21:33:05
+-- Tiempo de generación: 30-05-2021 a las 21:36:15
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -38,15 +38,6 @@ CREATE TABLE `babies` (
   `usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
---
--- Volcado de datos para la tabla `babies`
---
-
-INSERT INTO `babies` (`id`, `name`, `date`, `height`, `weight`, `notes`, `gender`, `usuario`) VALUES
-(51, 'Diana', '2021-05-22', 98, 2500, 'añldkjñaslkjdf', 'Femenino', 1),
-(55, 'pepito', '2021-05-05', 65, 3500, 'uuuuuuuuuuuuuuuuuuuuuuu', '', 1),
-(78, 'Pedro', '2002-02-25', 78, 3500, 'sdfsdfsdfdfs', 'Masculino', 26);
-
 -- --------------------------------------------------------
 
 --
@@ -60,13 +51,6 @@ CREATE TABLE `food` (
   `week` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL,
   `iduser` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `food`
---
-
-INSERT INTO `food` (`id`, `name`, `date`, `week`, `iduser`) VALUES
-(3, 'Zanahoria', '2021-05-06', 'Jueves', 3);
 
 -- --------------------------------------------------------
 
@@ -82,13 +66,6 @@ CREATE TABLE `height` (
   `idbaby` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
---
--- Volcado de datos para la tabla `height`
---
-
-INSERT INTO `height` (`id`, `height`, `date`, `notes`, `idbaby`) VALUES
-(94, 98, '2021-05-26', 'qwrwqe', 78);
-
 -- --------------------------------------------------------
 
 --
@@ -100,14 +77,6 @@ CREATE TABLE `newsletter` (
   `email` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `newsletter`
---
-
-INSERT INTO `newsletter` (`id`, `email`, `date`) VALUES
-(22, 'holacaracola@gmail.com', '2021-05-27 23:21:02'),
-(23, 'holacaracola@gmail.com', '2021-05-27 23:21:48');
 
 -- --------------------------------------------------------
 
@@ -130,10 +99,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `movil`, `descrip`, `country`, `local`, `color`, `iduser`) VALUES
-(1, '666666666', 'adsfadfasdfdsfsdfadfasdfasdfasdf', 'España', 'Murcia', 'dark', 1),
-(24, '000 000 000', 'pues parace que ahora va prueba bien dafasfdasdfasdf', 'España', 'Murcia', 'dark', 3),
-(34, 'vacio', 'vacio', 'vacio', 'vacio', 'purple', 26),
-(35, '888888888', 'sddssd', 'España', 'Murcia', 'orange', 27);
+(1, '666666666', 'adsfadfasdfdsfsdfadfasdfasdfasdf', 'España', 'Murcia', 'dark', 1);
 
 -- --------------------------------------------------------
 
@@ -150,13 +116,6 @@ CREATE TABLE `takes` (
   `time` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL,
   `iduser` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `takes`
---
-
-INSERT INTO `takes` (`id`, `name`, `breast`, `sleep`, `date`, `time`, `iduser`) VALUES
-(24, 'Contacto', 'Derecho', 'Si', '2021-05-04', '34\'', 3);
 
 -- --------------------------------------------------------
 
@@ -180,10 +139,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `mail`, `pass`, `pass2`, `picture`, `created`, `role`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2y$10$vU6xNAAw2DKMI8emoE/iuOcONG0vfJ4n5a58nhTZVJBoleJaYqWXm', '$2y$10$vU6xNAAw2DKMI8emoE/iuOcONG0vfJ4n5a58nhTZVJBoleJaYqWXm', 'default.png', '2021-05-23 04:22:04', 1),
-(3, 'prueba', 'prueba@gmail.com', '$2y$10$47CfMPVcrYRsK/S2mMoemu0TjjZaFnW1B6n.ivXfJBjve1dBsZp52', '$2y$10$47CfMPVcrYRsK/S2mMoemu0TjjZaFnW1B6n.ivXfJBjve1dBsZp52', 'capitana.jpg', '2021-05-23 16:34:36', 0),
-(26, 'Hola', 'hola@gmail.com', '$2y$10$zQBk/GL6UYJg6b5qodq40uQTit5L7YtXBW5wvbUtZ8OQF01llEHSq', '$2y$10$zQBk/GL6UYJg6b5qodq40uQTit5L7YtXBW5wvbUtZ8OQF01llEHSq', 'fig_desdentao_pop.jpg', '2021-05-30 18:54:37', 0),
-(27, 'pedro', 'pedro@gmail.com', '$2y$10$Q35T4ioY0KpABCWDIhipmO0Cxe7L0lIWaio0lqB.dCPaX1MSQLaWG', '$2y$10$Q35T4ioY0KpABCWDIhipmO0Cxe7L0lIWaio0lqB.dCPaX1MSQLaWG', 'fig_Harry_Potter.jpg', '2021-05-30 19:25:28', 0);
+(1, 'admin', 'admin@gmail.com', '$2y$10$vU6xNAAw2DKMI8emoE/iuOcONG0vfJ4n5a58nhTZVJBoleJaYqWXm', '$2y$10$vU6xNAAw2DKMI8emoE/iuOcONG0vfJ4n5a58nhTZVJBoleJaYqWXm', 'default.png', '2021-05-23 04:22:04', 1);
 
 -- --------------------------------------------------------
 
@@ -198,13 +154,6 @@ CREATE TABLE `vaccines` (
   `notes` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
   `iduser` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `vaccines`
---
-
-INSERT INTO `vaccines` (`id`, `name`, `date`, `notes`, `iduser`) VALUES
-(58, 'Vesero 1', '3333-02-01', 'sdasd', 3);
 
 -- --------------------------------------------------------
 
