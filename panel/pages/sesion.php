@@ -18,7 +18,7 @@ mysqli_query($con, "INSERT INTO profile (movil, descrip,country,local,color,idus
 
 //Creamos una consulta para seleccionar los datos de la base de datos 
 $result=mysqli_query($con,"SELECT * FROM users WHERE id='$id'") or die("Error de Sesión");//Usuarios   
-$resultColor=mysqli_query($con,"SELECT color FROM profile WHERE iduser='$id'") or die("Error de Sesión");//Perfil
+$resultColor=mysqli_query($con,"SELECT * FROM profile WHERE iduser='$id'") or die("Error de Sesión");//Perfil
 $resultBabies=mysqli_query($con,"SELECT COUNT(*) total FROM babies WHERE usuario='$id'") or die("Error de Sesión");//Contar cuantos registro en la tabla bebé hay
 $resultLastId=mysqli_query($con,"SELECT MAX(id) AS max FROM babies WHERE usuario='$id'")or die("Error de Sesión");//El último id introducido
 $resultLastIdVac=mysqli_query($con,"SELECT MAX(id) AS max FROM vaccines WHERE iduser='$id'")or die("Error de Sesión");//El último id introducido
@@ -52,6 +52,11 @@ $msg='';
 $lastNameVac='';
 $lastDateVac='';
 $lastNotesVac='';
+//Seleccionamos el color de la base de datos y lo introducimos en la variable correspondiente
+$colorSelect='';
+if(isset($rowColor['color'])){
+    $colorSelect=$rowColor['color'];
+}
 
 
 //Comprobamos que no esten sin definir
@@ -101,6 +106,7 @@ if($lastGender==='Masculino'){
 $dayVac='';
 $monthVac='';
 $yearVac='';
+$lastDateVac='2021-01-01';
 $dateSplitVac=explode('-',$lastDateVac);
 $dayVac=$dateSplitVac[2];//dia
 $monthVac=$dateSplitVac[1];//mes
@@ -139,11 +145,34 @@ switch($monthVac){
         $monthVac='Octubre';
         break;
     case 11:
-        $monthVac='Novimbre';
+        $monthVac='Noviembre';
         break; 
     case 12:
         $monthVac='Diciembre';
         break;     
         
 }
+
+//DATOS INICIO ÚLTIMA TOMA INTRODUCIDA
+//Creamos la consulta a la base de datos
+$sqlTake="SELECT * FROM takes WHERE iduser=$id";
+$resultTake=mysqli_query($con,$sqlTake);
+
+$breastTk='';
+$timeTk='';
+$sleepTk='';
+$dateTk='';
+
+//Si encuentra resultados meterá los datos en el array mientras haya datos
+if(mysqli_num_rows($resultTake)>0){
+    while($rowTk=mysqli_fetch_assoc($resultTake)){
+        $breastTk=$rowTk['breast'];
+        $timeTk=$rowTk['time'];
+        $sleepTk=$rowTk['sleep'];
+        $dateTk=$rowTk['date'];
+
+    }
+}
+
+
 ?>

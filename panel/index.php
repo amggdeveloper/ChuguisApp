@@ -38,7 +38,7 @@
     <body>
         <!--Barra de la Cabecera-->
         <div class="wrapper">
-            <header class="header-top" header-theme="<?php echo $color;?>">
+            <header class="header-top" header-theme="<?php echo $colorSelect;?>">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
@@ -219,16 +219,16 @@
                                             <div class="col">
                                                 <h5 class="mb-25">Última Toma Introducida</h5>
                                                 <h6>Pecho: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(último tomado)</span></h6>
-                                                <h2 class="fw-700 text-blue">Derecho</h2>
+                                                <h2 class="fw-700 text-blue"><?php echo $breastTk;?></h2>
                                                 <hr>
                                                 <h6>Tiempo: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(en minutos)</span></h6>
-                                                <h2 class="fw-700 text-blue">15</h2>
+                                                <h2 class="fw-700 text-blue"><?php echo $timeTk;?></h2>
                                                 <hr>
                                                 <h6>Duerme: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(después de la toma)</span></h6>
-                                                <h2 class="fw-700 text-blue">Si</h2>
+                                                <h2 class="fw-700 text-blue"><?php echo $sleepTk;?></h2>
                                                 <hr>
                                                 <h6>Fecha: <span class="badge badge-pill badge-info" style='font-size:0.60em'>(actualizada)</span></h6>
-                                                <p class="mb-0">29 Mayo 2021</p>
+                                                <p class="mb-0"><?php echo $dateTk;?></p>
                                                 <hr>
                                             </div>
                                             <div class="col-auto">

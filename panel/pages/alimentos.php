@@ -136,28 +136,28 @@
                                 </div>
                             </div>
                         </div>
+                        <!--Modal para editar el evento-->
                         <div class="modal" id="editEvent" tabindex="-1" role="dialog" aria-labelledby="editEventLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <form class="editEventForm">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="editEventLabel">Edit Event</h5>
+                                            <h5 class="modal-title" id="editEventLabel">Editar</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
                                             <div class="form-group">
-                                                <label for="editEname">Event Title</label>
+                                                <label for="editEname">Titulo</label>
                                                 <input type="text" class="form-control" id="editEname" name="editEname" placeholder="Please enter event title">
                                             </div>
                                             <div class="form-group">
-                                                <label for="editStarts">Start</label>
+                                                <label for="editStarts">Fecha</label>
                                                 <input type="text" class="form-control datetimepicker-input" id="editStarts" name="editStarts" data-toggle="datetimepicker" data-target="#editStarts">
                                             </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button class="btn btn-danger delete-event" type="submit">Delete</button>
-                                            <button class="btn btn-success save-event" type="submit">Save</button>
+                                        <div class="modal-footer">                                           
+                                            <button class="btn btn-danger delete-event" type="submit">Borrar</button>
+                                            <button class="btn btn-success save-event" type="submit">Guardar</button>
                                         </div>
                                     </div>
                                 </form>
@@ -168,21 +168,21 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="addEventLabel">Add New Event</h5>
+                                        <h5 class="modal-title" id="addEventLabel">Añadir Etiqueta</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
                                     <div class="modal-body">
                                         <form id="addEventForm">
                                             <div class="form-group">
-                                                <label for="eventName">Event Title</label>
+                                                <label for="eventName">Titulo</label>
                                                 <input type="text" class="form-control" id="eventName" name="eventName" placeholder="Please enter event title">
                                             </div>
                                             <div class="form-group">
-                                                <label for="eventStarts">Starts</label>
+                                                <label for="eventStarts">Fecha</label>
                                                 <input type="text" class="form-control datetimepicker-input" id="eventStarts" name="eventStarts" data-toggle="datetimepicker" data-target="#eventStarts">
                                             </div>
                                             <div class="form-group mb-0" id="addColor">
-                                                <label for="colors">Choose Color</label>
+                                                <label for="colors">Selecciona Color</label>
                                                 <ul class="color-selector">
                                                     <li class="bg-aqua">
                                                         <input type="radio" data-color="bg-aqua" checked name="colorChosen" id="addColorAqua">
@@ -240,10 +240,9 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-success save-event">Save</button>
-                                        <button type="button" class="btn btn-danger delete-event" data-dismiss="modal">Delete</button>
+                                    <div class="modal-footer">                                       
+                                        <button type="button" class="btn btn-success save-event">Guardar</button>
+                                        <button type="button" class="btn btn-danger delete-event" data-dismiss="modal">Borrar</button>
                                     </div>
                                 </div>
                             </div>
