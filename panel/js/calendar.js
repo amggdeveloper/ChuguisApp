@@ -18,9 +18,9 @@ $(document).ready(function(t, e, i) {
         r = e.getFullYear();
     $("#calendar").fullCalendar({
         header: {
-            left: "prev,next today",
+            left: "prev,next",
             center: "title",
-            right: "month,agendaWeek,agendaDay"
+            right: "month"
         },
         buttonText: {
             today: "hoy",
@@ -28,6 +28,7 @@ $(document).ready(function(t, e, i) {
             week: "semana",
             day: "dia"
         },
+        events: [{}],
         editable: !0,
         selectable: !0,
         droppable: !0,
