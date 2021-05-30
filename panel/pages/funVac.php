@@ -49,7 +49,7 @@ if (isset($_POST['addVac'])) {
     if(empty($name) || empty($date) || empty($notes)) {
         $error = true;		
         $msg= '<div class="alert alert-danger alert-dismissable fade show" role="alert">
-                    <strong>¡Error en el nombre!</strong> Debe rellenar todos los campos.
+                    <strong>¡Error!</strong> Debe rellenar todos los campos.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>                    

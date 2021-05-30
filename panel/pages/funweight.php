@@ -18,12 +18,15 @@ $id=$_SESSION['idUser'];
 //Hacemos la consulta a la base de datos para seleccionar los datos que hay en ella
 $queryColorSelect="SELECT * FROM profile WHERE iduser='$id'";
 $querySelec="SELECT * FROM users WHERE id='$id'";
+$queryBabies="SELECT * FROM babies WHERE usuario='$id'";
 //realizamos la consulta de selección a la base de datos
 $resultColorSelect=mysqli_query($con,$queryColorSelect) ;
 $resultSelec=mysqli_query($con,$querySelec) ;
+$resultBabies=mysqli_query($con,$queryBabies);
 //Introducimos el resultado en un array
 $rowColor=mysqli_fetch_assoc($resultColorSelect);
 $rowSelec=mysqli_fetch_assoc($resultSelec);
+$rowBabies=mysqli_fetch_assoc($resultBabies);
 //Seleccionamos el color de la base de datos y lo introducimos en la variable correspondiente
 $colorSelect='';
 if(isset($rowColor['color'])){
@@ -32,96 +35,79 @@ if(isset($rowColor['color'])){
 $idSelec=$rowSelec['iduser'];
 $nameSelect=$rowSelec['name'];
 $pictureSelect=$rowSelec['picture'];
+$idBaby=$rowBabies['id'];
 
 //Establecemos el error de valición 
 $error=false;
 $msg='';
 
 //Comprobamos si el formulario no tiene valores nulos
-if (isset($_POST['addHeight'])) {
+if (isset($_POST['addWeight'])) {
 
     //Introducimos los datos en variables, teniendo en cuenta la inyección de SQL   
     $date = mysqli_real_escape_string($con,$_POST['date']);
-    $height = mysqli_real_escape_string($con,$_POST['height']);    
+    $weight = mysqli_real_escape_string($con,$_POST['weight']);    
     $notes= mysqli_real_escape_string($con,$_POST['notes']);    
     
     //Comprobamos que la fecha no esté vacia			
-    if(empty($date)) {
+    if(empty($weight) || empty($date) || empty($notes)) {
         $error = true;		
-        $msg= '<div class="alert alert-warning alert-dismissable fade show" role="alert">
-                    <strong>¡Error en la fecha!</strong> Debe rellenar el campo fecha.
+        $msg= '<div class="alert alert-danger alert-dismissable fade show" role="alert">
+                    <strong>¡Error!</strong> Debe rellenar todos los campos.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <i class="ik ik-x"></i>
+                        <span aria-hidden="true">&times;</span>
                     </button>                    
-                </div>';
-    
-    //Comprobamos que la altura no esté vacia				
-    }if(empty($height)) {
-        $error = true;		
-        $msg= '<div class="alert alert-warning alert-dismissable fade show" role="alert">
-                <strong>¡Error en la altura!</strong> Debe rellenar el campo altura.
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="ik ik-x"></i>
-                </button>                    
-               </div>';   
-    			
-    //Comprobamos que las notas no estén vacias			
-    }if(empty($notes)){
-        $error = true;		
-        $msg= '<div class="alert alert-danger alert-dismissable fade in">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>¡Error en las notas!</strong> Debe rellenar notas
                 </div>';
     
     //Si las otras condiciones no dan error, añadimos la altura	
     }if (!$error) {
-        if(mysqli_query($con, "INSERT INTO height(height,date, notes) VALUES ('" . $height . "', '" . $date . "', '" . $notes . "')")) {
-            $msg= '<div class="alert alert-success alert-dismissable fade in">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>!Enhorabuena!</strong> ¡Bebé Registrado Correctamente!
-                  </div>';
+        if(mysqli_query($con, "INSERT INTO weight(weight,date, notes,idbaby) VALUES ('" . $weight . "', '" . $date . "', '" . $notes . "','" . $idBaby . "')")) {
+            $msg= '<div class="alert alert-success alert-dismissable fade show">
+                        <strong>!Enhorabuena!</strong> ¡Peso Registrado Correctamente!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>                    
+                    </div>';
             
         } else {
-            $msg= '<div class="alert alert-danger alert-dismissable fade in">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>¡Error de registro!</strong> Verifica los datos.
-                </div>';
+            $msg= '<div class="alert alert-danger alert-dismissable fade show" role="alert">
+                        <strong>¡Error!</strong> No se ha podido registrar el peso.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>                    
+                        </div>';
         }
     }
 }
 
 //Creamos la consulta a la base de datos
-$sql="SELECT * FROM babies WHERE usuario='$id'";
-$result=mysqli_query($con,$sql);
-$table='';
-$idBb='';
-$nameBb='';
-$dateBb='';
-$heightBb='';
-$weightBb='';
-$notesBb='';    
+$queryWeight="SELECT * FROM weight WHERE idBaby='$idBaby'";
+$resultWeight=mysqli_query($con,$queryWeight);
+$tableWeight='';
+$idW='';
+$dateW='';
+$weightW='';
+$notesW='';
+$idbabyPe='';   
 
 //Si encuentra resultados meterá los datos en el array mientras que haya datos
-if(mysqli_num_rows($result)>0){
-    while($row=mysqli_fetch_assoc($result)){
-        $idH=$row['id'];
-        $nameBb=$row['name'];
-        $dateBb=$row['date'];
-        $heightBb=$row['height'];
-        $weightBb=$row['weight'];
-        $notesBb=$row['notes'];        
+if(mysqli_num_rows($resultWeight)>0){
+    while($rowWeight=mysqli_fetch_assoc($resultWeight)){
+        $idW=$rowWeight['id'];
+        $dateW=$rowWeight['date'];       
+        $weightW=$rowWeight['weight'];       
+        $notesW=$rowWeight['notes'];
+        $idbabyPe=$rowWeight['idbaby'];        
         //Añadimos el punto para que coja todos los resultados y los vaya introduciendo de forma dinamica en la tabla
-        $table.='<tr>
-                    <td>'.$idBb.'</td>
-                    <td><img src="../img/portfolio-1.jpg" class="table-user-thumb" alt=""></td>
-                    <td>'.$nameBb.'</td>
-                    <td>'.$dateBb.'</td>
-                    <td>'.$heightBb.'</td>
-                    <td>'.$weightBb.'</td>
+        $tableWeight.='<tr>
+                    <td>'.$idW.'</td>               
+                    <td>'.$dateW.'</td>
+                    <td>'.$weightW.'</td>
+                    <td>'.$notesW.'</td>
+                    <td>'.$idbabyPe.'</td>
                     <td>
                         <div class="table-actions">  
-                            <form action="altura.php" method="POST">   
-                            <button name="select" class="btn-info"><i class="ik ik-plus"></i></button>                   
+                            <form action="peso.php" method="POST"> 
                             <button name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>
                             </form>  
                         </div>
@@ -133,9 +119,9 @@ if(mysqli_num_rows($result)>0){
 }
 //Creamos la consulta para borrar las entradas que seleccionemos
 if(isset($_POST['delete'])){
-    $sqlDelete="DELETE FROM babies WHERE id='$idBb'";
+    $sqlDelete="DELETE FROM weight WHERE id='$idW'";
     mysqli_query($con,$sqlDelete);
-    header('Location:altura.php');
+    header('Location:peso.php');
 }
 
 ?>

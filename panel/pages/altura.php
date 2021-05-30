@@ -166,7 +166,7 @@
                                 </div>                                  
                             </div>
                         </div>  
-                        <?php echo $msg?> 
+                        <?php echo $msg?>                          
                         <!--Tabla-->            
                         <div class="row">
                             <div class="col-md-12">
@@ -176,20 +176,18 @@
                                             <table id="data_table" class="table">
                                                  <thead>
                                                         <tr>
-                                                          <th>Id</th>
-                                                          <th class="nosort">Imagen</th>
-                                                          <th>Nombre</th>
-                                                          <th>Fecha Nac.</th>
-                                                          <th>Altura (cm)</th>
-                                                          <th>Peso (gramos)</th>
+                                                          <th>Id</th>                                                       
+                                                          <th>Altura</th>
+                                                          <th>Fecha</th>                                                         
+                                                          <th>Anotaciones</th>
+                                                          <th>Bebé</th>
                                                           <th class="nosort">&nbsp;</th>
                                                         </tr>
                                                     </thead>
                                                 <tbody>                                            
-                                                  <?php echo $table?>                                                                                                                                            
+                                                  <?php echo $tableHeight?>                                                                                                                                            
                                                 </tbody>
-                                             </table> 
-                                             <?php echo $msg?>                                            
+                                             </table>                                                                                        
                                              </div>
                                             </div>
                                         </div>
@@ -226,7 +224,7 @@
         <script src="../plugins/flot-charts/jquery.flot.tooltip.min.js"></script>
         <script src="../dist/js/theme.min.js"></script>       
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-       
+             
 
         <!--Script para realizar la busqueda en la página-->
         <script src="../js/buscar.js"></script>
@@ -245,13 +243,15 @@
         <script type="text/javascript">
         // Obtener una referencia al elemento canvas del DOM
         var ctx = document.getElementById('grafica').getContext('2d');
+        var date=['<?php echo implode(",",$arrayDate)?>'];    
+        var height=[<?php echo implode(",",$arrayHeight)?>];       
         var myChart = new Chart(ctx, {
             type: 'bar',
                 data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+                labels: [date],
                 datasets: [{
                     label: '# Altura por Fecha',
-                    data: [50, 19, 3, 5, 2, 3,5,6,7,8,9,10],
+                    data: [height],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',

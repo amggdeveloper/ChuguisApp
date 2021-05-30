@@ -138,7 +138,7 @@
                                             <div class="col-sm-12">
                                                 <div class="input-group input-group-info">
                                                     <span class="input-group-prepend"><label class="input-group-text"><i class="ik ik-target"></i></label></span>
-                                                    <input type="text" class="form-control" placeholder="peso en gr" name="height" id="height">
+                                                    <input type="text" class="form-control" placeholder="peso en gr" name="weight" id="weight">
                                                 </div>
                                             </div>
                                         </div>
@@ -158,7 +158,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" name="addHeight" class="btn btn-dark"><i class="ik ik-share"></i>Añadir</button>
+                                        <button type="submit" name="addWeight" class="btn btn-dark"><i class="ik ik-share"></i>Añadir</button>
                                         </form> 
                                                                            
                                 </div>
@@ -176,20 +176,18 @@
                                             <table id="data_table" class="table">
                                                  <thead>
                                                         <tr>
-                                                          <th>Id</th>
-                                                          <th class="nosort">Imagen</th>
-                                                          <th>Nombre</th>
-                                                          <th>Fecha Nac.</th>
-                                                          <th>Altura (cm)</th>
-                                                          <th>Peso (gramos)</th>
+                                                          <th>Id</th>                                                          
+                                                          <th>Peso</th>
+                                                          <th>Fecha</th>
+                                                          <th>Anotaciones</th>
+                                                          <th>Bebé</th>
                                                           <th class="nosort">&nbsp;</th>
                                                         </tr>
                                                     </thead>
                                                 <tbody>                                            
-                                                  <?php echo $table?>                                                                                                                                            
+                                                  <?php echo $tableWeight?>                                                                                                                                            
                                                 </tbody>
-                                             </table> 
-                                             <?php echo $msg?>                                            
+                                             </table>                                                                                      
                                              </div>
                                             </div>
                                         </div>
