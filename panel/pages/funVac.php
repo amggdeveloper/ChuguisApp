@@ -105,8 +105,7 @@ if(mysqli_num_rows($result)>0){
                             <button type="submit" name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>   
                             </form>  
                         </div>
-                    </td>
-                    
+                    </td>                    
                 </tr>';
     }
 }else{

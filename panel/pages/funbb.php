@@ -145,8 +145,9 @@ if(mysqli_num_rows($result)>0){
                     <td>'.$genderBb.'</td>
                     <td>
                         <div class="table-actions">  
-                            <form action="bebes.php" method="POST">                      
-                            <button name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>
+                            <form action="bebes.php" method="POST">   
+                            <input type="hidden" name="idBb" value="'.$idBb.'">                    
+                            <button type="submit" name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>
                             </form>  
                         </div>
                     </td>
@@ -157,11 +158,10 @@ if(mysqli_num_rows($result)>0){
 }
 //Creamos la consulta para borrar las entradas que seleccionemos
 if(isset($_POST['delete'])){
-    $sqlDelete="DELETE FROM babies WHERE id='$idBb'";
+    $id_bb=$_POST['idBb'];
+    $sqlDelete="DELETE FROM babies WHERE id=$id_bb";
     mysqli_query($con,$sqlDelete);
     header('Location:bebes.php');
 }
-
-
 
 ?>

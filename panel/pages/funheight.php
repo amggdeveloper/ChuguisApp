@@ -108,8 +108,9 @@ if(mysqli_num_rows($resultHeight)>0){
                     <td>'.$idbabyAl.'</td>
                     <td>
                         <div class="table-actions">  
-                            <form action="altura.php" method="POST">                                               
-                            <button name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>
+                            <form action="altura.php" method="POST">    
+                            <input type="hidden" name="idH" value="'.$idH.'">                                            
+                            <button type="submit" name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>
                             </form>  
                         </div>
                     </td>
@@ -184,7 +185,8 @@ if(mysqli_num_rows($resultH)>0){
 
 //Creamos la consulta para borrar las entradas que seleccionemos
 if(isset($_POST['delete'])){
-    $sqlDelete="DELETE FROM height WHERE id='$idH'";
+    $id_height=$_POST['idH'];
+    $sqlDelete="DELETE FROM height WHERE id=$id_height";
     mysqli_query($con,$sqlDelete);
     header('Location:altura.php');
 }

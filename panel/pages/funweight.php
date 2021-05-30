@@ -108,6 +108,7 @@ if(mysqli_num_rows($resultWeight)>0){
                     <td>
                         <div class="table-actions">  
                             <form action="peso.php" method="POST"> 
+                            <input type="hidden" name="idW" value="'.$idW.'"> 
                             <button name="delete" class="btn-danger"><i class="ik ik-trash-2"></i></button>
                             </form>  
                         </div>
@@ -119,7 +120,8 @@ if(mysqli_num_rows($resultWeight)>0){
 }
 //Creamos la consulta para borrar las entradas que seleccionemos
 if(isset($_POST['delete'])){
-    $sqlDelete="DELETE FROM weight WHERE id='$idW'";
+    $id_weight=$_POST['idW'];
+    $sqlDelete="DELETE FROM weight WHERE id=$id_weight";
     mysqli_query($con,$sqlDelete);
     header('Location:peso.php');
 }
