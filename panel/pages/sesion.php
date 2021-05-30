@@ -1,4 +1,6 @@
 <?php
+//no mostramos los errores en el front-end
+error_reporting(0);
 //Conectamos a la base de datos
 include '../includes/conexion.php';
 
@@ -106,7 +108,6 @@ if($lastGender==='Masculino'){
 $dayVac='';
 $monthVac='';
 $yearVac='';
-$lastDateVac='2021-01-01';
 $dateSplitVac=explode('-',$lastDateVac);
 $dayVac=$dateSplitVac[2];//dia
 $monthVac=$dateSplitVac[1];//mes

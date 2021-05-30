@@ -1,4 +1,6 @@
 <?php
+//no mostramos los errores en el front-end
+error_reporting(0);
 //Conectamos a la base de datos
 include '../includes/conexion.php';
 

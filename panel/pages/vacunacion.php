@@ -184,8 +184,7 @@
                                                           <th>Nombre</th>
                                                           <th>Fecha</th> 
                                                           <th>Anotaciones</th>  
-                                                          <th class="nosort">&nbsp;</th>
-                                                          <th class="nosort">&nbsp;</th>
+                                                          <th class="nosort">&nbsp;</th>                                                          
                                                         </tr>
                                                     </thead>
                                                 <tbody>                                            

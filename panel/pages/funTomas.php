@@ -1,5 +1,6 @@
 <?php 
-
+//no mostramos los errores en el front-end
+error_reporting(0);
 //Añadimos la conexión a la base de datos
 include_once '../../includes/conexion.php';
 
