@@ -79,7 +79,6 @@
 												</span>
 											</div>
 										</form>
-
 									</div>
 								</div>
 								<!-- Termina Boletín de Noticias -->
