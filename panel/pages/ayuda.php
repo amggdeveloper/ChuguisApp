@@ -321,12 +321,10 @@
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                  <p> En esta sección de <strong>'Vacunas' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
+                                                                  <p> En esta sección de <strong>'Vacunación' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
                                                                   de la vacuna puesta a nuestro bebé. En el segundo contenedor vemos una tabla con la relación de las vacunas añadidas a los distintos bebés. El último 
                                                                   contenedor podemos visualizar una relación de la edad de nuestro bebé con las vacunas que hay que ponerle.
-                                                                  </p>                                                                
-                                                            
-
+                                                                  </p>                                                               
                                                                     <a class="m-0 row justify-content-center" href="../img/capturas/vaccines.jpg"><img class="img-fluid" src="../img/capturas/vaccines.jpg" alt="imagen ayuda configuración"></a>
                                                                 </blockquote>
                                                             </div>

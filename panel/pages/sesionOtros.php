@@ -14,6 +14,12 @@ if(empty($_SESSION['active'])){
 global $id;
 $id=$_SESSION['idUser'];//recogemos el id de usuario de sesión
 
+//Creamos una consulta a la base de datos para insertar los datos por defecto  
+if(isset($_POST['example-name'])==""){  
+    $queryProfile="INSERT INTO profile (movil, descrip, country, local, color, iduser) VALUES('vacio','vacio','vacio','blue',$id)";
+    mysqli_query($con, $queryProfile);
+}
+
 //Hacemos la consulta a la base de datos para seleccionar los datos que hay en ella
 $queryColorSelect="SELECT * FROM profile WHERE iduser='$id'";
 $querySelec="SELECT * FROM users WHERE id='$id'";
@@ -24,13 +30,18 @@ $resultSelec=mysqli_query($con,$querySelec) ;
 $rowColor=mysqli_fetch_assoc($resultColorSelect);
 $rowSelec=mysqli_fetch_assoc($resultSelec);
 //Seleccionamos el color de la base de datos y lo introducimos en la variable correspondiente
-$colorSelect='';
-if(isset($rowColor['color'])){
+$colorSelect='';//color
+$idSelec='';//id
+$nameSelect='';//nombre usuario
+$mailSelect='';//email
+
+//Recogemos los datos en sus variables correspondientes
+if(isset($rowColor['color'],$rowSelec['iduser'],$rowSelec['name'],$rowSelec['mail'])){
     $colorSelect=$rowColor['color'];
+    $idSelec=$rowSelec['iduser'];
+    $nameSelect=$rowSelec['name'];
+    $mailSelect=$rowSelec['mail'];    
 }
-$idSelec=$rowSelec['iduser'];
-$nameSelect=$rowSelec['name'];
-$mailSelect=$rowSelec['mail'];
 
 //establecemos la zona horaria predeterminada
 setlocale(LC_ALL,'es_Es.UTF-8');
@@ -84,7 +95,7 @@ if (isset($_POST['profile'])) {
     $extension = strtolower($array_nombre[--$cuenta_arr_nombre]);    
 
     //Si la imagen tiene un tamaño correcto y los tipos
-    if($sizePicture>100000 && $typeSuccess)
+    if($sizePicture>100000 && $typeSuccess){
         //validamos la extension
         if(!in_array($extension, $typeSuccess)){
         }else{
@@ -131,8 +142,8 @@ if (isset($_POST['profile'])) {
                                 </button>                                
                             </div>';
 	        }	
-        } 
-}   
- 
+        }
+    } 
+} 
 
 ?>

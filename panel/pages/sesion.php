@@ -13,10 +13,8 @@ if(empty($_SESSION['active'])){
 }
 
 //Instanciamos e inicializamos las variables del usuario
+global $id;
 $id=$_SESSION['idUser'];
-
-//Creamos una consulta a la base de datos para insertar los datos por defecto  
-mysqli_query($con, "INSERT INTO profile (movil, descrip,country,local,color,iduser) VALUES ('vacio','vacio','vacio','blue','".$id."')");
 
 //Creamos una consulta para seleccionar los datos de la base de datos 
 $result=mysqli_query($con,"SELECT * FROM users WHERE id='$id'") or die("Error de Sesión");//Usuarios   
@@ -24,21 +22,21 @@ $resultColor=mysqli_query($con,"SELECT * FROM profile WHERE iduser='$id'") or di
 $resultBabies=mysqli_query($con,"SELECT COUNT(*) total FROM babies WHERE usuario='$id'") or die("Error de Sesión");//Contar cuantos registro en la tabla bebé hay
 $resultLastId=mysqli_query($con,"SELECT MAX(id) AS max FROM babies WHERE usuario='$id'")or die("Error de Sesión");//El último id introducido
 $resultLastIdVac=mysqli_query($con,"SELECT MAX(id) AS max FROM vaccines WHERE iduser='$id'")or die("Error de Sesión");//El último id introducido
+$resultDataBabies=mysqli_query($con,"SELECT * FROM babies WHERE id='$lastId'") or die("Error de Sesión");//Datos último bebe
+$resultDataVac=mysqli_query($con,"SELECT * FROM vaccines WHERE id='$lastIdVac'") or die("Error de Sesión");//Datos última vacuna
 
-//Recogemos los resultados de la consulta
+//Recogemos los resultados de las consultas
 $row=mysqli_fetch_assoc($result);
 $rowColor=mysqli_fetch_assoc($resultColor);
 $rowBabies=mysqli_fetch_assoc($resultBabies);
 $rowLastId=mysqli_fetch_assoc($resultLastId);
 $rowLastIdVac=mysqli_fetch_assoc($resultLastIdVac);
-$lastId=$rowLastId['max'];
-$lastIdVac=$rowLastIdVac['max'];
-$resultDataBabies=mysqli_query($con,"SELECT * FROM babies WHERE id='$lastId'") or die("Error de Sesión");//Datos último bebe
-$resultDataVac=mysqli_query($con,"SELECT * FROM vaccines WHERE id='$lastIdVac'") or die("Error de Sesión");//Datos última vacuna
 $rowDataBabies=mysqli_fetch_assoc($resultDataBabies);
 $rowDataVac=mysqli_fetch_assoc($resultDataVac);
 
 //Introducimos los datos obtenidos en variables
+$lastId=$rowLastId['max'];
+$lastIdVac=$rowLastIdVac['max'];
 $nameUser=$row['name'];//nombre usuario
 $picture=$row['picture'];//Imagen Avatar usuario
 $color='';
