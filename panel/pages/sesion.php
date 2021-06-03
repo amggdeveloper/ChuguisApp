@@ -22,24 +22,34 @@ $resultColor=mysqli_query($con,"SELECT * FROM profile WHERE iduser='$id'") or di
 $resultBabies=mysqli_query($con,"SELECT COUNT(*) total FROM babies WHERE usuario='$id'") or die("Error de Sesión");//Contar cuantos registro en la tabla bebé hay
 $resultLastId=mysqli_query($con,"SELECT MAX(id) AS max FROM babies WHERE usuario='$id'")or die("Error de Sesión");//El último id introducido
 $resultLastIdVac=mysqli_query($con,"SELECT MAX(id) AS max FROM vaccines WHERE iduser='$id'")or die("Error de Sesión");//El último id introducido
-$resultDataBabies=mysqli_query($con,"SELECT * FROM babies WHERE id='$lastId'") or die("Error de Sesión");//Datos último bebe
-$resultDataVac=mysqli_query($con,"SELECT * FROM vaccines WHERE id='$lastIdVac'") or die("Error de Sesión");//Datos última vacuna
 
 //Recogemos los resultados de las consultas
 $row=mysqli_fetch_assoc($result);
 $rowColor=mysqli_fetch_assoc($resultColor);
 $rowBabies=mysqli_fetch_assoc($resultBabies);
+
+$lastId='';
+$lastIdVac='';
+
 $rowLastId=mysqli_fetch_assoc($resultLastId);
 $rowLastIdVac=mysqli_fetch_assoc($resultLastIdVac);
-$rowDataBabies=mysqli_fetch_assoc($resultDataBabies);
-$rowDataVac=mysqli_fetch_assoc($resultDataVac);
 
 //Introducimos los datos obtenidos en variables
 $lastId=$rowLastId['max'];
 $lastIdVac=$rowLastIdVac['max'];
+
+//Creamos una consulta para seleccionar los datos de la base de datos 
+$resultDataBabies=mysqli_query($con,"SELECT * FROM babies WHERE id='$lastId'") or die("Error de Sesión");//Datos último bebe
+$resultDataVac=mysqli_query($con,"SELECT * FROM vaccines WHERE id='$lastIdVac'") or die("Error de Sesión");//Datos última vacuna
+
 $nameUser=$row['name'];//nombre usuario
 $picture=$row['picture'];//Imagen Avatar usuario
-$color='';
+
+//Recogemos los resultados de las consultas
+$rowDataBabies=mysqli_fetch_assoc($resultDataBabies);
+$rowDataVac=mysqli_fetch_assoc($resultDataVac);
+
+//Variables bebé
 $lastHeight='';
 $lastWeight='';
 $countBabies=$rowBabies['total'];
@@ -48,20 +58,20 @@ $percentil='';
 $lastGender='';
 $lastBabyName='';
 $msg='';
+
 //Variables para vacunas
 $lastNameVac='';
 $lastDateVac='';
 $lastNotesVac='';
+
 //Seleccionamos el color de la base de datos y lo introducimos en la variable correspondiente
 $colorSelect='';
 if(isset($rowColor['color'])){
     $colorSelect=$rowColor['color'];
 }
 
-
 //Comprobamos que no esten sin definir
-if(isset($rowColor['color'],$rowDataBabies['height'],$rowDataBabies['weight'],$rowDataBabies['gender'],$rowDataBabies['name'],$rowDataVac['name'],$rowDataVac['date'],$rowDataVac['notes'])){//color usuario
-    $color=$rowColor['color'];
+if(isset($rowDataBabies['height'],$rowDataBabies['weight'],$rowDataBabies['gender'],$rowDataBabies['name'],$rowDataVac['name'],$rowDataVac['date'],$rowDataVac['notes'])){//color usuario
     $lastHeight=$rowDataBabies['height'];
     $lastWeight=$rowDataBabies['weight']; 
     $cmM=$lastHeight/100;//Convertimos los cm a metros para calcular el IMC del bebé
@@ -73,7 +83,6 @@ if(isset($rowColor['color'],$rowDataBabies['height'],$rowDataBabies['weight'],$r
     $lastNameVac=$rowDataVac['name'];//último nombre de la vacuna puesta
     $lastDateVac=$rowDataVac['date'];//última fecha de la vacuna puesta
     $lastNotesVac=$rowDataVac['notes'];//últimas notas de la vacuna puesta
-
 }
 
 //Contabilizamos los registros en las tablas de la base de datos para el panel de control del administrador

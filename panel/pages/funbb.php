@@ -6,7 +6,6 @@ include_once '../../includes/conexion.php';
 
 //Iniciamos sesión
 session_start();
-
 //Comprobamos si la sesión está vacia
 if(empty($_SESSION['active'])){
     header('Location:../../login.php'); //redirigimos al login
