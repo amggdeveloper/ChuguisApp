@@ -1,6 +1,7 @@
 <?php
 //Inicializamos la sesión
 session_start();
+$msg='';
 //Comprobamos si hay una sesión activa
 if(!empty($_SESSION['active'])){
 	header('location:panel/index.php');
@@ -8,7 +9,7 @@ if(!empty($_SESSION['active'])){
 	//Comprobramos que los recuadros del formulario están vacios
 	if(!empty($_POST)){
 		if(empty($_POST['email']) || empty($_POST['pass'])){
-			echo  '<div class="alert alert-danger">
+			$msg=  '<div class="alert alert-danger">
 						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 						<strong>¡Error!</strong> , Debe ingresar un email y contraseña
  		   	  		</div>';
@@ -19,6 +20,7 @@ if(!empty($_SESSION['active'])){
 			//Inicializamos las variables
 			$mail = mysqli_real_escape_string($con,$_POST['email']);//evitamos la inyeccion de codigo SQL
 			$pass = mysqli_real_escape_string($con,$_POST['pass']);//evitamos la inyeccion de codigo SQL
+			
 			
 			//Creamos las consultas a la base de datos
 			$consulta = mysqli_query($con,"SELECT * FROM users WHERE mail='$mail'");
@@ -50,10 +52,11 @@ if(!empty($_SESSION['active'])){
 					}					
 					
 			}else{
-					echo  '<div class="alert alert-danger">
-							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>¡Error!</strong> , Email o Contraseña incorrectos.
- 		   	  			</div>';
+					
+					$msg=  '<div class="alert alert-danger">
+								<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+								<strong>¡Error!</strong> , Email o Contraseña incorrectos.
+ 		   	  				</div>';
 					session_destroy();		  
 							  	
 			}
@@ -190,7 +193,9 @@ if(!empty($_SESSION['active'])){
 									</div>
 									<button type="submit" class="btn btn-primary btn-inline" name="login">Entrar</button>&nbsp; &nbsp; &nbsp; 
 									<span class="pull-right"><a href="registro.php">¿No tienes cuenta, registrate?</a></span>
-								</form>							
+								</form>	
+								<br>
+								<?php echo $msg?>						
 							</div>
 						</div>						
 					</div>

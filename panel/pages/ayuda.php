@@ -199,7 +199,7 @@
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                   <p> En esta sección de <strong>'Bebés' </strong>el usuario encontrará un panel con dos pestañas. La primera pestaña es <em>'Datos'</em> y la 
+                                                                   <p> En esta página de <strong>'Bebés' </strong>el usuario encontrará un panel con dos pestañas. La primera pestaña es <em>'Datos'</em> y la 
                                                                    segunda pestaña es <em>'Añadir'</em>. En la pestaña <strong>'Datos'</strong>: 
                                                                    Esta pestaña está dividida en dos secciones, la primera donde tenemos los datos relacionados con 
                                                                    el último bebé introducido y la segunda una tabla con la relación de los bebés introducidos.  
@@ -224,7 +224,7 @@
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                  <p> En esta sección de <strong>'Altura' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
+                                                                  <p> En esta página de <strong>'Altura' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
                                                                   de la altura medida de nuestro bebé. En el segundo contenedor vemos una tabla con la relación de las alturas añadidas de los distintos bebés. El último 
                                                                   contenedor podemos visualizar la evolución de las alturas dependiendo de los meses en una gráfica de barras.
                                                                   </p>                                                                
@@ -247,7 +247,7 @@
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                <p> En esta sección de <strong>'Peso' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
+                                                                <p> En esta página de <strong>'Peso' </strong>encontramos tres contendedores diferenciados. El primer contenedor introduciremos los datos 
                                                                   del peso medido de nuestro bebé. En el segundo contenedor vemos una tabla con la relación de los pesos añadidos de los distintos bebés. El último 
                                                                   contenedor podemos visualizar la evolución de los pesos dependiendo de los meses en una gráfica de barras.
                                                                   </p>                                                                
@@ -266,17 +266,21 @@
                                             <div class="card-body">
                                             <div class="profiletimeline mt-0">
                                             <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-left"> <img src="../img/portfolio-4.jpg" alt="user" class="rounded-circle" /> </div>
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
-                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
-                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
-                                                                   correspondiente.
+                                                                  <p> Esta página de <strong>'Tomas' </strong> está dividida en dos partes, la parte que se ve al pulsar el botón ‘Tomas’, 
+                                                                  la cual siempre está visible y otra parte, la cual es una pestaña modal que aparece al seleccionar uno de los elementos 
+                                                                  de la anterior parte. En la parte, llamémosla principal, encontraremos dos contenedores. El primer contenedor es un formulario 
+                                                                  para introducir los datos de la toma, el segundo contenedor son paneles individuales con los datos introducidos de la toma. 
+                                                                  Conforme se vayan introduciendo datos en el formulario, se irán añadiendo estos paneles por registro. Estos paneles tienen 
+                                                                  dos formas de visualizarse, con o sin imagen mostrando el último pecho ofrecido. Si pulsamos sobre cualquier panel, 
+                                                                  se abrirá la última toma en una pestaña modal, que en su posición normal permanecerá oculta hasta que se presione dichos 
+                                                                  paneles. En los paneles también podemos encontrar un botón para eliminar el registro que queramos.
                                                                   </p>                                                                
 
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/takes.jpg"><img class="img-fluid" src="../img/capturas/takes.jpg" alt="imagen ayuda configuración"></a>
                                                                 </blockquote>
                                                             </div>
                                                         </div>
@@ -290,17 +294,16 @@
                                             <div class="card-body">
                                             <div class="profiletimeline mt-0">
                                             <div class="sl-item">
-                                                        <div class="sl-left"> <img src="../img/portfolio-1.jpg" alt="user" class="rounded-circle" /> </div>
+                                                        <div class="sl-left"> <img src="../img/portfolio-4.jpg" alt="user" class="rounded-circle" /> </div>
                                                         <div class="sl-right">
                                                             <div><a href="http://amggdeveloper.pythonanywhere.com/" target='_blank' class="link"><strong>amggDeveloper</strong></a> <span class="sl-date">hace 3 días</span>
                                                                 <blockquote class="mt-10">
-                                                                  <p> En esta página de <strong>'Ayuda' </strong>es donde te encuentras ahora mismo. En ella como podrás 
-                                                                   ver, se encuentran los casos de usos para el menu superior. Esta página está dividida en cuatro pestañas, coincidiendo 
-                                                                   con los enlaces del menú desplegable. En cada una de las pestañas irás encontrando la ayuda de la página 
-                                                                   correspondiente.
+                                                                  <p> Esta página de <strong>'Alimentos' </strong>está dividida en dos contenedores. En el primer contenedor encontramos
+                                                                   una tabla con los registros de los alimentos añadidos. Al igual que las otras tablas contiene un botón para imprimir
+                                                                    reportes y un botón para eliminar el registro. El segundo contenedor contiene el formulario para ir añadiendo los datos.
                                                                   </p>                                                                
 
-                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/help.jpg"><img class="img-fluid" src="../img/capturas/help.jpg" alt="imagen ayuda configuración"></a>
+                                                                    <a class="m-0 row justify-content-center" href="../img/capturas/food.jpg"><img class="img-fluid" src="../img/capturas/food.jpg" alt="imagen ayuda configuración"></a>
                                                                 </blockquote>
                                                             </div>
                                                         </div>

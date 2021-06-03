@@ -76,7 +76,7 @@
 													id="subscribe-email">
 												<span class="input-group-btn">
 													<button name="newsletter" type="submit" class="btn btn-success btn-block" data-loading-text="Cargando...">Enviar</button>
-												</span>
+												</span>												
 											</div>
 										</form>
 									</div>

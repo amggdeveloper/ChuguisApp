@@ -11,6 +11,7 @@ include_once 'includes/conexion.php';
 
 //Establecemos el error de valición 
 $error=false;
+$msg='';
  
 //Comprobamos si el formulario ha sido empezado
 if (isset($_POST['registro'])) {
@@ -21,66 +22,56 @@ if (isset($_POST['registro'])) {
 	$pass2= mysqli_real_escape_string($con,$_POST['pass2']);
 	$passCifrada=password_hash($pass,PASSWORD_DEFAULT);//Encriptamos la contraseña	
 	$picture="default.png";	
+	$email='';
 
 	//Creamos una consulta a la base de datos
 	$querySelec="SELECT * FROM users WHERE mail='$mail'";
 	$resultSelec=mysqli_query($con,$querySelec) ;
 	$rowSelec=mysqli_fetch_assoc($resultSelec);	
-	$email='';
 	if(isset($rowSelec['mail'])){
 		$email=$rowSelec['mail'];
 	}
-	
 
-	//Comprobamos que el nombre no esté vacio
-	if (empty($nombre)){
+	//Comprobamos que no hay ningun campo vacio
+	if ((empty($nombre)) or (empty($mail)) or (empty($pass)) or (empty($pass2))){
 		$error = true;		
-		echo '<div class="alert alert-danger alert-dismissable fade in">
+		$msg= '<div class="alert alert-danger alert-dismissable fade in">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>¡Error en el nombre!</strong> Debe rellenar el campo nombre.
+					<strong>¡Error!</strong> Debe rellenar todos los campos.
 				</div>';
-	
-	//Comprobamos que el email no esté vacio			
-	}if(empty($mail)) {
+	//Comprobamos que el email está escrito correctamente			
+	}elseif(!filter_var($mail,FILTER_VALIDATE_EMAIL)) {
 		$error = true;		
-		echo '<div class="alert alert-danger alert-dismissable fade in">
+		$msg= '<div class="alert alert-danger alert-dismissable fade in">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>¡Error en el email!</strong> Debe rellenar el campo email.
+					<strong>¡Error en el email!</strong> Introduzca un email válido.
 				</div>';
-	
+
 	//Comprobamos que la contraseña no esté vacia				
-	}if(empty($pass)) {
+	}elseif($email==$mail) {
 		$error = true;		
-		echo '<div class="alert alert-danger alert-dismissable fade in">
+		$msg= '<div class="alert alert-danger alert-dismissable fade in">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>¡Error en la contraseña!</strong> La contraseña no puede estar en blanco.
-				</div>';
-	
-	//Comprobamos que la contraseña no esté vacia				
-	}if($email==$mail) {
-	$error = true;		
-	echo '<div class="alert alert-danger alert-dismissable fade in">
-				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				<strong>¡Error en el email!</strong> El email ya está registrado utilice otro email.
-			</div>';			
+					<strong>¡Error en el email!</strong> El email ya está registrado utilice otro email.
+				</div>';			
 	//Comprobamos que las contraseñas coinciden			
-	}if($pass!=$pass2){
+	}elseif($pass!=$pass2){
 		$error = true;		
-		echo '<div class="alert alert-danger alert-dismissable fade in">
+		$msg= '<div class="alert alert-danger alert-dismissable fade in">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<strong>¡Error en las contraseñas!</strong> Las contraseñas deben coincidir.
 				</div>';
 	
 	//Si las otras condiciones no dan error, añadimos el nuevo usuario	
-	}if (!$error) {
+	}elseif (!$error) {
 		if(mysqli_query($con, "INSERT INTO users(name,mail,pass,pass2, picture) VALUES('" . $nombre . "', '" . $mail . "', '" . $passCifrada . "','" . $passCifrada . "','" . $picture . "')")) {
-			echo '<div class="alert alert-success alert-dismissable fade in">
+			$msg='<div class="alert alert-success alert-dismissable fade in">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<strong>!Enhorabuena!</strong> ¡Usuario Registrado Correctamente!
 		  		</div>';
 			
 		} else {
-			echo '<div class="alert alert-danger alert-dismissable fade in">
+			$msg= '<div class="alert alert-danger alert-dismissable fade in">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<strong>¡Error de registro!</strong> Verifica tus datos.
 				</div>';
@@ -230,7 +221,9 @@ if (isset($_POST['registro'])) {
 										</div>
 									</div>
 									<button name="registro" type="submit" class="btn btn-primary">Registrar</button>
-								</form>								
+								</form>	
+								<br>
+								<?php echo $msg?>							
 							</div>
 						</div>
 					</div>
