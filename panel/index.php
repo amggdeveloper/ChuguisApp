@@ -162,7 +162,7 @@
                                                 <i class="ik ik-star"></i>
                                             </div>
                                         </div>
-                                        <small class="text-small mt-10 d-block">última altura medida en cm</small>
+                                        <small class="text-small mt-10 d-block">altura inicial en cm</small>
                                     </div>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
@@ -182,7 +182,7 @@
                                                 <i class="ik ik-target"></i>
                                             </div>
                                         </div>
-                                        <small class="text-small mt-10 d-block">último peso introducido en gramos</small>
+                                        <small class="text-small mt-10 d-block">altura inicial en gramos</small>
                                     </div>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100" style="width: 31%;"></div>
@@ -250,76 +250,8 @@
                                                 <h6 class="mb-0 text-yellow">Semanal</h6>
                                             </div>
                                         </div>
-                                        <!--Lunes-->
-                                        <div class="row align-items-center text-center">
-                                            <div class="col">
-                                                <h6 class="mb-0">Lunes</h6>                                               
-                                            </div>
-                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
-                                            <div class="col">
-                                                <h6 class="mb-0">Verdura</h6></div>
-                                        </div>
-                                        <hr>
-                                        <!--Martes-->
-                                        <div class="row align-items-center text-center">
-                                            <div class="col">
-                                                <h6 class="mb-0">Martes</h6>                                               
-                                            </div>
-                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
-                                            <div class="col">
-                                                <h6 class="mb-0">Pasta</h6></div>
-                                        </div>
-                                        <hr>
-                                        <!--Miercoles-->
-                                        <div class="row align-items-center text-center">
-                                            <div class="col">
-                                                <h6 class="mb-0">Miercoles</h6>                                               
-                                            </div>
-                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
-                                            <div class="col">
-                                                <h6 class="mb-0">Cereales</h6></div>
-                                        </div>
-                                        <hr>
-                                         <!--Jueves-->
-                                         <div class="row align-items-center text-center">
-                                            <div class="col">
-                                                <h6 class="mb-0">Jueves</h6>                                               
-                                            </div>
-                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
-                                            <div class="col">
-                                                <h6 class="mb-0">Carne</h6></div>
-                                        </div>
-                                        <hr>
-                                        <!--Viernes-->
-                                        <div class="row align-items-center text-center">
-                                            <div class="col">
-                                                <h6 class="mb-0">Viernes</h6>                                               
-                                            </div>
-                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
-                                            <div class="col">
-                                                <h6 class="mb-0">Pescado</h6></div>
-                                        </div>
-                                        <hr>
-                                         <!--Sabado-->
-                                         <div class="row align-items-center text-center">
-                                            <div class="col">
-                                                <h6 class="mb-0">Sabado</h6>                                               
-                                            </div>
-                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
-                                            <div class="col">
-                                                <h6 class="mb-0">Huevo</h6></div>
-                                        </div>
-                                        <hr>
-                                        <!--Domingo-->
-                                        <div class="row align-items-center text-center">
-                                            <div class="col">
-                                                <h6 class="mb-0">Domingo</h6>                                               
-                                            </div>
-                                            <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
-                                            <div class="col">
-                                                <h6 class="mb-0">Fruta</h6></div>
-                                        </div>
-                                        <hr>
+                                        <!--Alimento a la semana-->
+                                        <?php echo $foods?>                                    
                                         <h6 class="pt-badge bg-yellow">Semanal</h6>
                                     </div>
                                 </div>

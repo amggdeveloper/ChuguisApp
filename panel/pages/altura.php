@@ -267,16 +267,14 @@
         <!--Script para el Grafico-->
         <script type="text/javascript">
         // Obtener una referencia al elemento canvas del DOM
-        var ctx = document.getElementById('grafica').getContext('2d');
-        var date=['<?php echo implode(",",$arrayDate)?>'];    
-        var height=[<?php echo implode(",",$arrayHeight)?>];       
+        var ctx = document.getElementById('grafica').getContext('2d');      
         var myChart = new Chart(ctx, {
             type: 'bar',
                 data: {
-                labels: [date],
+                labels: ['1','2','3','4','5','6','7','8','9','10'],
                 datasets: [{
                     label: '# Altura por Fecha',
-                    data: [height],
+                    data: [<?php echo $heights?>,],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',

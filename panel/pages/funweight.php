@@ -119,6 +119,67 @@ if(mysqli_num_rows($resultWeight)>0){
 }else{
     
 }
+//DATOS GRAFICO
+$queryW="SELECT * FROM weight WHERE idbaby=$idBaby";
+$resultW=mysqli_query($con,$queryW);
+$weightGrap='';
+$dateGrap='';
+//Recogemos los datos de la base de datos de peso
+if(mysqli_num_rows($resultW)>0){
+    while($rowW=mysqli_fetch_array($resultW)){         
+        $weightGrap=$rowW['weight'];
+        $dateGrap=$rowW['date'];    
+        
+        $weights.=($weightGrap.',');
+      
+        //Recogemos solo el mes para posteriormente meterlo en una variable para ver los meses de la gráfica
+        $month='';
+        $dateSplit=explode('-',$dateGrap);
+        $month=$dateSplit[1];//mes
+    //condicional para recoger el resultado y meterlo en una variable
+    switch($month){
+        case 1:
+            $month='Enero';            
+            break;
+        case 2:
+            $month='Febrero';            
+            break;  
+        case 3:
+            $month='Marzo';           
+            break;
+        case 4:
+            $month='Abril';            
+             break;  
+        case 5:
+            $month='Mayo';         
+            break;
+        case 6:
+            $month='Junio';
+            break;  
+        case 7:
+            $month='Julio';            
+            break;
+        case 8:
+            $month='Agosto';            
+            break; 
+        case 9:
+            $month='Septiembre';           
+            break;
+        case 10:
+            $month='Octubre';           
+            break;  
+        case 11:
+            $month='Noviembre';            
+            break;
+        case 12:
+            $month='Diciembre';            
+            break;   
+        }
+        
+    }  
+
+}
+
 //Creamos la consulta para borrar las entradas que seleccionemos
 if(isset($_POST['delete'])){
     $id_weight=$_POST['idW'];

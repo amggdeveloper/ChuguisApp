@@ -265,10 +265,10 @@
         var myChart = new Chart(ctx, {
             type: 'bar',
                 data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+                labels: ['1','2','3','4','5','6','7','8','9','10'],
                 datasets: [{
                     label: '# Peso por Fecha',
-                    data: [50, 19, 3, 5, 2, 3,5,6,7,8,9,10],
+                    data: [<?php echo $weights?>,],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 99, 132, 0.2)',                        

@@ -122,67 +122,67 @@ if(mysqli_num_rows($resultHeight)>0){
 }
 
 //DATOS GRAFICO
-$queryH="SELECT * FROM height";
+$queryH="SELECT * FROM height WHERE idbaby=$idBaby";
 $resultH=mysqli_query($con,$queryH);
-$dateGrap='';
 $heightGrap='';
+$dateGrap='';
+//Recogemos los datos de la base de datos de altura
 if(mysqli_num_rows($resultH)>0){
-    while($rowH=mysqli_fetch_array($resultH)){
+    while($rowH=mysqli_fetch_array($resultH)){         
+        $heightGrap=$rowH['height'];
         $dateGrap=$rowH['date'];   
-        $heightGrap=$rowH['height'];  
-        //Cambiamos el formato de fecha para poder introducirlo en la página de inicio de forma correcta
-        $dateSplitH=explode('-',$dateGrap);
-        $dayH=$dateSplitH[2];//dia
-        $monthH=$dateSplitH[1];//mes
-        $yearH=$dateSplitH[0];//año
-
-        //Creamos un switch para cambiar el número por el nombre del mes
-        switch($monthH){
-            case 1:
-            $monthH='Enero';
+        
+        $heights.=($heightGrap.',');
+        
+      
+        //Recogemos solo el mes para posteriormente meterlo en una variable para ver los meses de la gráfica
+        $month='';
+        $dateSplit=explode('-',$dateGrap);
+        $month=$dateSplit[1];//mes
+    //condicional para recoger el resultado y meterlo en una variable
+    switch($month){
+        case 1:
+            $month='Enero';            
             break;
         case 2:
-            $monthH='Febrero';
-            break; 
+            $month='Febrero';            
+            break;  
         case 3:
-            $monthH='Marzo';
-            break; 
-        case 4:
-            $monthH='Abril';
+            $month='Marzo';           
             break;
+        case 4:
+            $month='Abril';            
+             break;  
         case 5:
-            $monthH='Mayo';
-            break; 
+            $month='Mayo';         
+            break;
         case 6:
-            $monthH='Junio';
-            break; 
+            $month='Junio';
+            break;  
         case 7:
-            $monthH='Julio';
+            $month='Julio';            
             break;
         case 8:
-            $monthH='Agosto';
+            $month='Agosto';            
             break; 
         case 9:
-            $monthH='Septiembre';
-            break; 
-        case 10:
-            $monthH='Octubre';
+            $month='Septiembre';           
             break;
+        case 10:
+            $month='Octubre';           
+            break;  
         case 11:
-            $monthH='Novimbre';
-            break; 
+            $month='Noviembre';            
+            break;
         case 12:
-            $monthH='Diciembre';
-            break;    
-        }  
-                        
-        $arrayDate[]=$monthH;
-        $arrayHeight[]=$heightGrap;
-    }
-    
-    
+            $month='Diciembre';            
+            break;   
+        }        
+        
+    }  
 
 }
+
 
 //Creamos la consulta para borrar las entradas que seleccionemos
 if(isset($_POST['delete'])){

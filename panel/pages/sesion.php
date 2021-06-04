@@ -111,6 +111,7 @@ if($lastGender==='Masculino'){
     $msg= '<div class="progres-value"><i class="fas fa-venus text-grey f-6"></i></div>';     
 }
 
+//VACUNAS
 //Cambiamos el formato de fecha para poder introducirlo en la página de inicio de forma correcta
 $dayVac='';
 $monthVac='';
@@ -182,5 +183,28 @@ if(mysqli_num_rows($resultTake)>0){
     }
 }
 
+//COMIDA
+//Creamos la consulta a la base de datos
+$resultFood=mysqli_query($con,"SELECT * FROM food WHERE iduser='$id'") or die("Error de Sesión");//Perfil
+$nameFood='';
+$weekFood='';
+
+//Recogemos los datos de la base de datos de comida
+if(mysqli_num_rows($resultFood)>0){
+    while($rowFood=mysqli_fetch_array($resultFood)){         
+        $nameFood=$rowFood['name'];
+        $weekFood=$rowFood['week'];
+        
+        $foods.= '<div class="row align-items-center text-center">
+                        <div class="col">
+                            <h6 class="mb-0">'.$weekFood.'</h6>                                               
+                        </div>
+                    <div class="col"><i class="fas fa-exchange-alt text-yellow f-18"></i></div>
+                        <div class="col">
+                    <h6 class="mb-0">'.$nameFood.'</h6></div>
+                    </div>
+                    <hr>';
+    }
+}
 
 ?>
