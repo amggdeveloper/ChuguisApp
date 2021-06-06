@@ -59,9 +59,18 @@ if (isset($_POST['addWeight'])) {
                         <span aria-hidden="true">&times;</span>
                     </button>                    
                 </div>';
+
+    }elseif(!is_numeric($weight)){
+        $error = true;		
+        $msg= '<div class="alert alert-danger alert-dismissable fade show" role="alert">
+                    <strong>¡Error!</strong> El campo peso debe ser númerico.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>                    
+                </div>';
     
     //Si las otras condiciones no dan error, añadimos la altura	
-    }if (!$error) {
+    }elseif (!$error) {
         if(mysqli_query($con, "INSERT INTO weight(weight,date, notes,idbaby) VALUES ('" . $weight . "', '" . $date . "', '" . $notes . "','" . $idBaby . "')")) {
             $msg= '<div class="alert alert-success alert-dismissable fade show">
                         <strong>!Enhorabuena!</strong> ¡Peso Registrado Correctamente!
@@ -124,6 +133,7 @@ $queryW="SELECT * FROM weight WHERE idbaby=$idBaby";
 $resultW=mysqli_query($con,$queryW);
 $weightGrap='';
 $dateGrap='';
+$weights='';
 //Recogemos los datos de la base de datos de peso
 if(mysqli_num_rows($resultW)>0){
     while($rowW=mysqli_fetch_array($resultW)){         

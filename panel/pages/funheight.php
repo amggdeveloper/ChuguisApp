@@ -28,15 +28,20 @@ $resultBabies=mysqli_query($con,$queryBabies);
 $rowColor=mysqli_fetch_assoc($resultColorSelect);
 $rowSelec=mysqli_fetch_assoc($resultSelec);
 $rowBabies=mysqli_fetch_assoc($resultBabies);
+
+$idBaby='';
 //Seleccionamos el color de la base de datos y lo introducimos en la variable correspondiente
 $colorSelect='';
 if(isset($rowColor['color'])){
     $colorSelect=$rowColor['color'];
+    
 }
+
 $idSelec=$rowSelec['iduser'];
+$idBaby=$rowBabies['id'];
 $nameSelect=$rowSelec['name'];
 $pictureSelect=$rowSelec['picture'];
-$idBaby=$rowBabies['id'];
+
 
 //Establecemos el error de valición 
 $error=false;
@@ -59,8 +64,16 @@ if (isset($_POST['addHeight'])) {
                         <span aria-hidden="true">&times;</span>
                     </button>                    
                 </div>';
+    }elseif(!is_numeric($height)){
+        $error = true;		
+        $msg= '<div class="alert alert-danger alert-dismissable fade show" role="alert">
+                    <strong>¡Error!</strong> El campo altura debe ser númerico.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>                    
+                    </div>';            
     //Si las otras condiciones no dan error, añadimos la altura	
-    }if (!$error) {
+    }elseif (!$error) {
         if(mysqli_query($con, "INSERT INTO height(height,date, notes,idbaby) VALUES ('" . $height . "', '" . $date . "', '" . $notes . "', '" . $idBaby . "')")) {
             $msg= '<div class="alert alert-success alert-dismissable fade show">
                         <strong>!Enhorabuena!</strong> ¡Altura Registrada Correctamente!
@@ -71,7 +84,7 @@ if (isset($_POST['addHeight'])) {
             
         } else {
             $msg= '<div class="alert alert-danger alert-dismissable fade show" role="alert">
-                    <strong>¡Error!</strong> No se ha podido registrar la altura.
+                    <strong>¡Error!</strong> No se ha podido registrar la altura, compruebe los datos introducidos.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>                    
@@ -126,6 +139,7 @@ $queryH="SELECT * FROM height WHERE idbaby=$idBaby";
 $resultH=mysqli_query($con,$queryH);
 $heightGrap='';
 $dateGrap='';
+$heights='';
 //Recogemos los datos de la base de datos de altura
 if(mysqli_num_rows($resultH)>0){
     while($rowH=mysqli_fetch_array($resultH)){         
@@ -178,10 +192,8 @@ if(mysqli_num_rows($resultH)>0){
             $month='Diciembre';            
             break;   
         }        
-        
-    }  
-
-}
+     }  
+  }
 
 
 //Creamos la consulta para borrar las entradas que seleccionemos
