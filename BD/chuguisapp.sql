@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2021 a las 21:33:05
+-- Tiempo de generación: 06-06-2021 a las 14:09:14
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -43,9 +43,7 @@ CREATE TABLE `babies` (
 --
 
 INSERT INTO `babies` (`id`, `name`, `date`, `height`, `weight`, `notes`, `gender`, `usuario`) VALUES
-(51, 'Diana', '2021-05-22', 98, 2500, 'añldkjñaslkjdf', 'Femenino', 1),
-(55, 'pepito', '2021-05-05', 65, 3500, 'uuuuuuuuuuuuuuuuuuuuuuu', '', 1),
-(78, 'Pedro', '2002-02-25', 78, 3500, 'sdfsdfsdfdfs', 'Masculino', 26);
+(2, 'Diana', '2020-03-13', 45, 1500, 'Nace prematura. La alimentación la toma por sonda.', 'Femenino', 2);
 
 -- --------------------------------------------------------
 
@@ -66,7 +64,7 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`id`, `name`, `date`, `week`, `iduser`) VALUES
-(3, 'Zanahoria', '2021-05-06', 'Jueves', 3);
+(1, 'Pimiento', '2021-06-02', 'Lunes', 2);
 
 -- --------------------------------------------------------
 
@@ -87,7 +85,7 @@ CREATE TABLE `height` (
 --
 
 INSERT INTO `height` (`id`, `height`, `date`, `notes`, `idbaby`) VALUES
-(94, 98, '2021-05-26', 'qwrwqe', 78);
+(1, 60, '2021-06-02', 'primera medida 3 semanas después del nacimiento. ', 2);
 
 -- --------------------------------------------------------
 
@@ -106,8 +104,7 @@ CREATE TABLE `newsletter` (
 --
 
 INSERT INTO `newsletter` (`id`, `email`, `date`) VALUES
-(22, 'holacaracola@gmail.com', '2021-05-27 23:21:02'),
-(23, 'holacaracola@gmail.com', '2021-05-27 23:21:48');
+(1, 'prueba@gmail.com', '2021-06-06 12:08:42');
 
 -- --------------------------------------------------------
 
@@ -130,10 +127,8 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `movil`, `descrip`, `country`, `local`, `color`, `iduser`) VALUES
-(1, '666666666', 'adsfadfasdfdsfsdfadfasdfasdfasdf', 'España', 'Murcia', 'dark', 1),
-(24, '000 000 000', 'pues parace que ahora va prueba bien dafasfdasdfasdf', 'España', 'Murcia', 'dark', 3),
-(34, 'vacio', 'vacio', 'vacio', 'vacio', 'purple', 26),
-(35, '888888888', 'sddssd', 'España', 'Murcia', 'orange', 27);
+(1, 'vacio', 'vacio', 'vacio', 'vacio', 'dark', 1),
+(2, '666666666', 'usuario de prueba', 'España', 'Murcia', 'purple', 2);
 
 -- --------------------------------------------------------
 
@@ -156,7 +151,7 @@ CREATE TABLE `takes` (
 --
 
 INSERT INTO `takes` (`id`, `name`, `breast`, `sleep`, `date`, `time`, `iduser`) VALUES
-(24, 'Contacto', 'Derecho', 'Si', '2021-05-04', '34\'', 3);
+(1, 'Primera toma de la Mañana', 'Izquierdo', 'No', '2021-06-10', '15\'', 2);
 
 -- --------------------------------------------------------
 
@@ -180,10 +175,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `mail`, `pass`, `pass2`, `picture`, `created`, `role`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2y$10$vU6xNAAw2DKMI8emoE/iuOcONG0vfJ4n5a58nhTZVJBoleJaYqWXm', '$2y$10$vU6xNAAw2DKMI8emoE/iuOcONG0vfJ4n5a58nhTZVJBoleJaYqWXm', 'default.png', '2021-05-23 04:22:04', 1),
-(3, 'prueba', 'prueba@gmail.com', '$2y$10$47CfMPVcrYRsK/S2mMoemu0TjjZaFnW1B6n.ivXfJBjve1dBsZp52', '$2y$10$47CfMPVcrYRsK/S2mMoemu0TjjZaFnW1B6n.ivXfJBjve1dBsZp52', 'capitana.jpg', '2021-05-23 16:34:36', 0),
-(26, 'Hola', 'hola@gmail.com', '$2y$10$zQBk/GL6UYJg6b5qodq40uQTit5L7YtXBW5wvbUtZ8OQF01llEHSq', '$2y$10$zQBk/GL6UYJg6b5qodq40uQTit5L7YtXBW5wvbUtZ8OQF01llEHSq', 'fig_desdentao_pop.jpg', '2021-05-30 18:54:37', 0),
-(27, 'pedro', 'pedro@gmail.com', '$2y$10$Q35T4ioY0KpABCWDIhipmO0Cxe7L0lIWaio0lqB.dCPaX1MSQLaWG', '$2y$10$Q35T4ioY0KpABCWDIhipmO0Cxe7L0lIWaio0lqB.dCPaX1MSQLaWG', 'fig_Harry_Potter.jpg', '2021-05-30 19:25:28', 0);
+(1, 'admin', 'admin@gmail.com', '$2y$10$IvFtMnF3JrBZvmjzEaGPJuSIkSPKhJupy0akEM5/wceQr.CjiH5R6', '$2y$10$IvFtMnF3JrBZvmjzEaGPJuSIkSPKhJupy0akEM5/wceQr.CjiH5R6', 'default.png', '2021-06-06 13:55:22', 1),
+(2, 'prueba', 'prueba@gmail.com', '$2y$10$.4/6c0izZr3ZWFEDclKXOeL/O20rm24NMToAhS5NsIvX4x9ehy0QG', '$2y$10$.4/6c0izZr3ZWFEDclKXOeL/O20rm24NMToAhS5NsIvX4x9ehy0QG', 'capitana.jpg', '2021-06-06 13:56:54', 0);
 
 -- --------------------------------------------------------
 
@@ -204,7 +197,7 @@ CREATE TABLE `vaccines` (
 --
 
 INSERT INTO `vaccines` (`id`, `name`, `date`, `notes`, `iduser`) VALUES
-(58, 'Vesero 1', '3333-02-01', 'sdasd', 3);
+(1, 'Vesero', '2021-06-02', 'Primera dosis', 2);
 
 -- --------------------------------------------------------
 
@@ -219,6 +212,13 @@ CREATE TABLE `weight` (
   `notes` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
   `idbaby` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `weight`
+--
+
+INSERT INTO `weight` (`id`, `weight`, `date`, `notes`, `idbaby`) VALUES
+(1, 2500, '2021-06-10', 'Primera medida de peso, sin pañal.', 2);
 
 --
 -- Índices para tablas volcadas
@@ -293,55 +293,55 @@ ALTER TABLE `weight`
 -- AUTO_INCREMENT de la tabla `babies`
 --
 ALTER TABLE `babies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `food`
 --
 ALTER TABLE `food`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `height`
 --
 ALTER TABLE `height`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `newsletter`
 --
 ALTER TABLE `newsletter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `takes`
 --
 ALTER TABLE `takes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `vaccines`
 --
 ALTER TABLE `vaccines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `weight`
 --
 ALTER TABLE `weight`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
