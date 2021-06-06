@@ -258,7 +258,7 @@
         <script src="../dist/js/theme.min.js"></script>
 
         <!--Script para realizar la busqueda en la página-->
-        <script src="js/buscar.js"></script>
+        <script src="../js/buscar.js"></script>
 
         <!-- Google Analytics -->
         <script>
